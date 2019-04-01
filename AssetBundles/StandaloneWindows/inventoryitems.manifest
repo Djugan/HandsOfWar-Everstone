@@ -1,0 +1,735 @@
+ManifestFileVersion: 0
+CRC: 321287613
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5afcabbee0ad10e241d86dcf18faeb4a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f6e0873cb01370a03ae028a7e006beae
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8a32e849975f44149986373523cc5e2f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8eebe44c2322aa2478cdb80848a54d3e, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Inventory Items/Zone 5/438_Dusk.asset
+- Assets/Resources/Inventory Items/Zone 6/583_Rage.asset
+- Assets/Resources/Inventory Items/Zone 6/612_Specter's Boots.asset
+- Assets/Resources/Inventory Items/Zone 5/383_Primordial Staff.asset
+- Assets/Resources/Inventory Items/Zone 6/540_Perfect Obsidian.asset
+- Assets/Resources/Inventory Items/Zone 5/422_Outrider's Vestments.asset
+- Assets/Resources/Inventory Items/Zone 5/358_Excellent Amethyst.asset
+- Assets/Resources/Inventory Items/Zone 6/512_Flawless Onyx.asset
+- Assets/Resources/Inventory Items/Zone 4/286_Chancelor's Robe.asset
+- Assets/Resources/Inventory Items/Zone 5/410_Prophet's Pants.asset
+- Assets/Resources/Inventory Items/Zone 4/258_Blazing Pants.asset
+- Assets/Resources/Inventory Items/Zone 3/125_Ironwood Composite Bow.asset
+- Assets/Resources/Inventory Items/Zone 4/264_Quickened Pants.asset
+- Assets/Resources/Inventory Items/Zone 6/584_Fear.asset
+- Assets/Resources/Inventory Items/Zone 5/368_Merciless Greatsword.asset
+- Assets/Resources/Inventory Items/Zone 4/194_Sniper's Leggings.asset
+- Assets/Resources/Inventory Items/Zone 6/559_Judge's Pants.asset
+- Assets/Resources/Inventory Items/Zone 4/158_Blademaster's Braces.asset
+- Assets/Resources/Inventory Items/Zone 2/50_Flawed Topaz.asset
+- Assets/Resources/Inventory Items/Zone 6/465_Enlightened Slippers.asset
+- Assets/Resources/Inventory Items/Zone 6/461_Enlightened Cowl.asset
+- Assets/Resources/Inventory Items/Zone 4/218_Quality Shadowstone.asset
+- Assets/Resources/Inventory Items/Zone 4/226_Rapier.asset
+- Assets/Resources/Inventory Items/Zone 3/87_Voidbringer Boots.asset
+- Assets/Resources/Inventory Items/Zone 4/280_Azure Stinger.asset
+- Assets/Resources/Inventory Items/Zone 2/64_Old Staff.asset
+- Assets/Resources/Inventory Items/Zone 5/429_Godly Garnet.asset
+- Assets/Resources/Inventory Items/Zone 1/8_Tattered Gloves.asset
+- Assets/Resources/Inventory Items/Zone 6/511_Flawless Amber.asset
+- Assets/Resources/Inventory Items/Zone 6/486_Umbra Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/588_Duress.asset
+- Assets/Resources/Item Sets/26_Dread Knight Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 2/71_Heartwood Staff.asset
+- Assets/Resources/Inventory Items/Zone 4/281_Corrupted Longbow.asset
+- Assets/Resources/Inventory Items/Zone 2/46_Wraps.asset
+- Assets/Resources/Inventory Items/Zone 6/453_Raging Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 3/93_Voidbringer Cowl.asset
+- Assets/Resources/Inventory Items/Zone 5/380_Mystic Staff.asset
+- Assets/Resources/Inventory Items/Zone 3/82_Alliance Boots.asset
+- Assets/Resources/Inventory Items/Zone 5/434_Dreadnaught's Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 1/22_Misaligned Bow.asset
+- Assets/Resources/Inventory Items/Zone 6/596_Saint's Greaves.asset
+- Assets/Resources/Inventory Items/Zone 6/530_Celestial Staff.asset
+- Assets/Resources/Inventory Items/Zone 2/57_Bastard Sword.asset
+- Assets/Resources/Inventory Items/Zone 6/452_Raging Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 6/614_Archon's Robe.asset
+- Assets/Resources/Inventory Items/Zone 6/593_Saint's Helm.asset
+- Assets/Resources/Inventory Items/Zone 6/598_Reaver's Helm.asset
+- Assets/Resources/Inventory Items/Zone 6/642_Widowmaker's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/485_Harmonious Shoes.asset
+- Assets/Resources/Inventory Items/Zone 5/425_Outrider's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/527_Bow of the Plains.asset
+- Assets/Resources/Inventory Items/Zone 5/393_Bastion.asset
+- Assets/Resources/Inventory Items/Zone 5/293_Noble Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 5/357_Excellent Garnet.asset
+- Assets/Resources/Inventory Items/Zone 5/409_Prophet's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 6/622_Heretic's Slippers.asset
+- Assets/Resources/Inventory Items/Zone 5/296_Noble Boots.asset
+- Assets/Resources/Inventory Items/Zone 6/635_Justicar's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 6/576_Stormkeeper's Greatbow.asset
+- Assets/Resources/Inventory Items/Zone 5/398_Gladiator's Greaves.asset
+- Assets/Resources/Inventory Items/Zone 4/289_Duskblade.asset
+- Assets/Resources/Inventory Items/Zone 6/476_Winter's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 4/180_Mystical Slippers.asset
+- Assets/Resources/Inventory Items/Zone 2/41_Gloves.asset
+- Assets/Resources/Inventory Items/Zone 3/137_Cobalt Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/579_Primordial Amber.asset
+- Assets/Resources/Inventory Items/Zone 4/151_Cursed Helm.asset
+- Assets/Resources/Inventory Items/Zone 6/509_Flawless Diamond.asset
+- Assets/Resources/Inventory Items/Zone 5/396_Gladiator's Chestplate.asset
+- Assets/Resources/Inventory Items/Zone 6/589_Alacrity.asset
+- Assets/Resources/Inventory Items/Zone 4/288_Sword of the Lion.asset
+- Assets/Resources/Inventory Items/Zone 6/573_Mistwalker's Leggings.asset
+- Assets/Resources/Inventory Items/Zone 5/379_Peacemaker's Needler.asset
+- Assets/Resources/Inventory Items/Zone 4/212_Quality Amethyst.asset
+- Assets/Resources/Item Sets/46_Deadeye Zone 6 Set.asset
+- Assets/Resources/Item Sets/31_Psymancer Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/284_Punisher's Headpiece.asset
+- Assets/Resources/Inventory Items/Zone 3/126_Ironwood Staff.asset
+- Assets/Resources/Inventory Items/Zone 5/418_Watcher's Leggings.asset
+- Assets/Resources/Inventory Items/Zone 5/327_Frigid Cowl.asset
+- Assets/Resources/Item Sets/13_Paladin Zone 4 Set.asset
+- Assets/Resources/Inventory Items/Zone 5/349_Headhunter's Wraps.asset
+- Assets/Resources/Item Sets/21_Sentinel Zone 4 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/239_Imbued Topaz.asset
+- Assets/Resources/Inventory Items/Zone 6/606_Juggernaut's Greaves.asset
+- Assets/Resources/Inventory Items/Zone 6/504_Flawless Ruby.asset
+- Assets/Resources/Inventory Items/Zone 1/25_Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 6/442_Sacred Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 6/650_Huntmaster's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 2/43_Slippers.asset
+- Assets/Resources/Inventory Items/Zone 5/369_Jagged Sunderer.asset
+- Assets/Resources/Inventory Items/Zone 4/150_Holy Boots.asset
+- Assets/Resources/Inventory Items/Zone 1/27_Longsword.asset
+- Assets/Resources/Inventory Items/Zone 3/135_Magi Robe.asset
+- Assets/Resources/Inventory Items/Zone 4/215_Quality Sapphire.asset
+- Assets/Resources/Inventory Items/Zone 4/228_Reinforced Tower Shield.asset
+- Assets/Resources/Item Sets/51_Berzerker Final Set.asset
+- Assets/Resources/Inventory Items/Zone 3/79_Alliance Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 1/21_Battered Shield.asset
+- Assets/Resources/Item Sets/37_Paladin Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 2/34_Helmet.asset
+- Assets/Resources/Inventory Items/Zone 4/183_Frostbitten Gloves.asset
+- Assets/Resources/Inventory Items/Zone 4/247_Veteran's Cloak.asset
+- Assets/Resources/Inventory Items/Zone 4/152_Cursed Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 1/1_Rusty Helmet.asset
+- Assets/Resources/Inventory Items/Zone 6/582_Chaos.asset
+- Assets/Resources/Inventory Items/Zone 6/502_Flawless Wardstone.asset
+- Assets/Resources/Inventory Items/Zone 5/408_Prophet's Robe.asset
+- Assets/Resources/Inventory Items/Zone 1/33_Composite Bow.asset
+- Assets/Resources/Inventory Items/Zone 2/49_Flawed Peridot.asset
+- Assets/Resources/Inventory Items/Zone 6/562_Zodiac Staff.asset
+- Assets/Resources/Inventory Items/Zone 5/338_Corrupt Vest.asset
+- Assets/Resources/Inventory Items/Zone 4/164_Glorious Trousers.asset
+- Assets/Resources/Inventory Items/Zone 3/133_Reinforced Kite Shield.asset
+- Assets/Resources/Inventory Items/Zone 2/63_Brittle Staff.asset
+- Assets/Resources/Inventory Items/Zone 3/90_Alliance Gloves.asset
+- Assets/Resources/Inventory Items/Zone 6/638_Widowmaker's Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/651_Huntmaster's Leggings.asset
+- Assets/Resources/Inventory Items/Zone 3/108_Topaz.asset
+- Assets/Resources/Inventory Items/Zone 3/123_Ironwood Bow.asset
+- Assets/Resources/Inventory Items/Zone 4/209_Quality Ruby.asset
+- Assets/Resources/Inventory Items/Zone 6/649_Huntmaster's Vest.asset
+- Assets/Resources/Inventory Items/Zone 4/169_Lightweaver's Pants.asset
+- Assets/Resources/Inventory Items/Zone 4/175_Necrotic Slippers.asset
+- Assets/Resources/Inventory Items/Zone 4/248_Veteran's Cuffs.asset
+- Assets/Resources/Inventory Items/Zone 6/472_Savant's Robe.asset
+- Assets/Resources/Inventory Items/Zone 4/176_Mystical Cowl.asset
+- Assets/Resources/Inventory Items/Zone 4/189_Watcher's Leggings.asset
+- Assets/Resources/Inventory Items/Zone 3/84_Voidbringer Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 6/572_Mistwalker's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 4/227_Reinforced Buckler.asset
+- Assets/Resources/Inventory Items/Zone 1/11_Weathered Hood.asset
+- Assets/Resources/Inventory Items/Zone 5/416_Watcher's Vestments.asset
+- Assets/Resources/Inventory Items/Zone 3/102_Alliance Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/474_Savant's Pants.asset
+- Assets/Resources/Item Sets/59_Pathfinder Final Set.asset
+- Assets/Resources/Inventory Items/Zone 4/157_Blademaster's Pauldrons.asset
+- Assets/Resources/Inventory Items/Zone 2/45_Vest.asset
+- Assets/Resources/Inventory Items/Zone 6/443_Sacred Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 6/535_Arbiter's Helm.asset
+- Assets/Resources/Item Sets/25_Paladin Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/231_Steelwood Composite Bow.asset
+- Assets/Resources/Inventory Items/Zone 2/76_Adorned Robe.asset
+- Assets/Resources/Inventory Items/Zone 4/263_Quickened Gloves.asset
+- Assets/Resources/Inventory Items/Zone 4/208_Quality Peridot.asset
+- Assets/Resources/Inventory Items/Zone 6/556_Judge's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 3/124_Ironwood Short Bow.asset
+- Assets/Resources/Inventory Items/Zone 6/537_Arbiter's Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 6/551_Genesis Robe.asset
+- Assets/Resources/Inventory Items/Zone 4/188_Watcher's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 1/6_Tattered Cowl.asset
+- Assets/Resources/Inventory Items/Zone 6/508_Flawless Bloodstone.asset
+- Assets/Resources/Inventory Items/Zone 5/390_Stalwart Boots.asset
+- Assets/Resources/Inventory Items/Zone 3/98_Alliance Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/630_Archmage's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 5/294_Noble Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 2/60_Chipped Buckler.asset
+- Assets/Resources/Inventory Items/Zone 5/342_Earthweaver's Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/634_Justicar's Vest.asset
+- Assets/Resources/Inventory Items/Zone 6/580_Law.asset
+- Assets/Resources/Inventory Items/Zone 5/412_Prophet's Staff.asset
+- Assets/Resources/Inventory Items/Zone 5/385_Elegant Topaz.asset
+- Assets/Resources/Inventory Items/Zone 6/458_Assassin's Cuffs.asset
+- Assets/Resources/Inventory Items/Zone 6/616_Archon's Pants.asset
+- Assets/Resources/Inventory Items/Zone 6/450_Damned Boots.asset
+- Assets/Resources/Inventory Items/Zone 6/558_Judge's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 4/232_Steelwood Flatbow.asset
+- Assets/Resources/Inventory Items/Zone 5/337_Corrupt Hood.asset
+- Assets/Resources/Inventory Items/Zone 4/210_Quality Obsidian.asset
+- Assets/Resources/Inventory Items/Zone 4/265_Quickened Slippers.asset
+- Assets/Resources/Inventory Items/Zone 5/377_Merciless Bow.asset
+- Assets/Resources/Inventory Items/Zone 6/604_Juggernaut's Pauldrons.asset
+- Assets/Resources/Item Sets/50_Dread Knight Final Set.asset
+- Assets/Resources/Inventory Items/Zone 6/489_Umbra Leggings.asset
+- Assets/Resources/Inventory Items/Zone 1/28_Tailored Cowl.asset
+- Assets/Resources/Inventory Items/Zone 2/73_Cured Vest.asset
+- Assets/Resources/Inventory Items/Zone 5/312_Noble Cowl.asset
+- Assets/Resources/Inventory Items/Zone 1/30_Timberwood Staff.asset
+- Assets/Resources/Item Sets/57_Sentinel Final Set.asset
+- Assets/Resources/Inventory Items/Zone 6/500_Lunar Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/543_Patriarch's Cuffs.asset
+- Assets/Resources/Inventory Items/Zone 5/371_Seraph Longsword.asset
+- Assets/Resources/Inventory Items/Zone 4/206_Quality Topaz.asset
+- Assets/Resources/Inventory Items/Zone 4/163_Glorious Cuffs.asset
+- Assets/Resources/Item Sets/35_Pathfinder Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 1/23_Chipped Staff.asset
+- Assets/Resources/Inventory Items/Zone 3/113_Antique Bloodstone.asset
+- Assets/Resources/Inventory Items/Zone 6/501_Flawless Topaz.asset
+- Assets/Resources/Inventory Items/Zone 4/272_Feathered Leggings.asset
+- Assets/Resources/Inventory Items/Zone 5/428_Godly Topaz.asset
+- Assets/Resources/Inventory Items/Zone 5/317_Corrupt Cowl.asset
+- Assets/Resources/Inventory Items/Zone 5/319_Corrupt Gloves.asset
+- Assets/Resources/Item Sets/5_Wizard Zone 2 Set.asset
+- Assets/Resources/Inventory Items/Zone 5/374_Vanguard's Bulwark.asset
+- Assets/Resources/Inventory Items/Zone 5/351_Headhunter's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 5/356_Excellent Obsidian.asset
+- Assets/Resources/Inventory Items/Zone 6/523_Celestial Bulwark.asset
+- Assets/Resources/Inventory Items/Zone 6/493_Ageless Wraps.asset
+- Assets/Resources/Inventory Items/Zone 4/186_Watcher's Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/566_Nightarrow's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 6/529_Ascended Staff.asset
+- Assets/Resources/Inventory Items/Zone 6/610_Specter's Cuffs.asset
+- Assets/Resources/Inventory Items/Zone 6/468_Nightmare Gloves.asset
+- Assets/Resources/Inventory Items/Zone 4/269_Feathered Headpiece.asset
+- Assets/Resources/Item Sets/33_Sentinel Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/172_Necrotic Robe.asset
+- Assets/Resources/Inventory Items/Zone 6/644_Planeswalker's Vest.asset
+- Assets/Resources/Inventory Items/Zone 2/61_Warped Short Bow.asset
+- Assets/Resources/Inventory Items/Zone 4/240_Captain's Helm.asset
+- Assets/Resources/Item Sets/22_Deadeye Zone 4 Set.asset
+- Assets/Resources/Inventory Items/Zone 5/415_Watcher's Hood.asset
+- Assets/Resources/Inventory Items/Zone 5/437_Dawn.asset
+- Assets/Resources/Inventory Items/Zone 3/139_Greatbow.asset
+- Assets/Resources/Inventory Items/Zone 4/271_Feathered Wraps.asset
+- Assets/Resources/Inventory Items/Zone 4/167_Lightweaver's Robe.asset
+- Assets/Resources/Inventory Items/Zone 4/237_Mystwood Staff.asset
+- Assets/Resources/Inventory Items/Zone 5/424_Outrider's Leggings.asset
+- Assets/Resources/Item Sets/8_Dread Knight Zone 3 Set.asset
+- Assets/Resources/Inventory Items/Zone 3/119_Tempered Longsword.asset
+- Assets/Resources/Item Sets/24_Stalker Zone 4 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/177_Mystical Robe.asset
+- Assets/Resources/Inventory Items/Zone 6/451_Raging Helm.asset
+- Assets/Resources/Inventory Items/Zone 3/96_Voidbringer Pants.asset
+- Assets/Resources/Inventory Items/Zone 6/624_Arcanist's Robe.asset
+- Assets/Resources/Inventory Items/Zone 5/306_Dominator's Boots.asset
+- Assets/Resources/Inventory Items/Zone 2/68_Dirk.asset
+- Assets/Resources/Inventory Items/Zone 6/628_Archmage's Cowl.asset
+- Assets/Resources/Item Sets/6_Ranger Zone 2 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/266_Ancestral Staff.asset
+- Assets/Resources/Inventory Items/Zone 5/307_Ebon Mask.asset
+- Assets/Resources/Inventory Items/Zone 4/229_Steelwood Bow.asset
+- Assets/Resources/Inventory Items/Zone 6/627_Arcanist's Slippers.asset
+- Assets/Resources/Inventory Items/Zone 5/384_Winter's Staff.asset
+- Assets/Resources/Inventory Items/Zone 4/267_Infernal Staff.asset
+- Assets/Resources/Inventory Items/Zone 5/365_Excellent Pearl.asset
+- Assets/Resources/Inventory Items/Zone 4/146_Holy Helm.asset
+- Assets/Resources/Inventory Items/Zone 6/517_Abyssal Greatsword.asset
+- Assets/Resources/Inventory Items/Zone 6/507_Flawless Amethyst.asset
+- Assets/Resources/Inventory Items/Zone 6/546_Bloodseeker's Highblade.asset
+- Assets/Resources/Inventory Items/Zone 5/345_Earthweaver's Leggings.asset
+- Assets/Resources/Inventory Items/Zone 3/136_Ritual Stave.asset
+- Assets/Resources/Inventory Items/Zone 6/636_Justicar's Leggings.asset
+- Assets/Resources/Item Sets/17_Radiant Zone 4 Set.asset
+- Assets/Resources/Inventory Items/Zone 2/58_Short Sword.asset
+- Assets/Resources/Inventory Items/Zone 6/592_Sorrow.asset
+- Assets/Resources/Inventory Items/Zone 5/322_Sorcerer's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 5/417_Watcher's Wraps.asset
+- Assets/Resources/Item Sets/28_Rogue Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 5/433_Draconic Bandana.asset
+- Assets/Resources/Inventory Items/Zone 4/246_Veteran's Mask.asset
+- Assets/Resources/Inventory Items/Zone 5/389_Stalwart Greaves.asset
+- Assets/Resources/Inventory Items/Zone 6/578_Primordial Garnet.asset
+- Assets/Resources/Item Sets/41_Radiant Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/184_Frostbitten Pants.asset
+- Assets/Resources/Inventory Items/Zone 5/388_Stalwart Gauntlets.asset
+- Assets/Resources/Item Sets/20_Frost Weaver Zone 4 Set.asset
+- Assets/Resources/Inventory Items/Zone 6/518_Darksteel Greataxe.asset
+- Assets/Resources/Item Sets/12_Deadeye Zone 3 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/224_Kris.asset
+- Assets/Resources/Inventory Items/Zone 6/516_Ascended Greatsword.asset
+- Assets/Resources/Inventory Items/Zone 3/94_Voidbringer Robe.asset
+- Assets/Resources/Inventory Items/Zone 6/522_Ascended Kite Shield.asset
+- Assets/Resources/Inventory Items/Zone 4/242_Captain's Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 5/295_Noble Greaves.asset
+- Assets/Resources/Inventory Items/Zone 3/110_Peridot.asset
+- Assets/Resources/Inventory Items/Zone 6/539_Arbiter's Boots.asset
+- Assets/Resources/Inventory Items/Zone 6/544_Patriarch's Trousers.asset
+- Assets/Resources/Inventory Items/Zone 3/112_Amethyst.asset
+- Assets/Resources/Inventory Items/Zone 3/122_Tower Shield.asset
+- Assets/Resources/Inventory Items/Zone 5/305_Dominator's Greaves.asset
+- Assets/Resources/Item Sets/54_Reaper Final Set.asset
+- Assets/Resources/Inventory Items/Zone 2/42_Pants.asset
+- Assets/Resources/Inventory Items/Zone 5/326_Sorcerer's Slippers.asset
+- Assets/Resources/Inventory Items/Zone 6/632_Archmage's Slippers.asset
+- Assets/Resources/Inventory Items/Zone 4/277_Tribal Wraps.asset
+- Assets/Resources/Inventory Items/Zone 6/547_Molten Eviscerator.asset
+- Assets/Resources/Inventory Items/Zone 4/262_Quickened Robe.asset
+- Assets/Resources/Inventory Items/Zone 2/70_Enchanted Robe.asset
+- Assets/Resources/Inventory Items/Zone 2/53_Flawed Amber.asset
+- Assets/Resources/Inventory Items/Zone 4/170_Lightweaver's Slippers.asset
+- Assets/Resources/Inventory Items/Zone 3/85_Voidbringer Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 4/193_Sniper's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 4/233_Steelwood Reflex Bow.asset
+- Assets/Resources/Inventory Items/Zone 6/581_Order.asset
+- Assets/Resources/Inventory Items/Zone 6/462_Enlightened Robe.asset
+- Assets/Resources/Inventory Items/Zone 5/300_Corrupt Greaves.asset
+- Assets/Resources/Item Sets/27_Berzerker Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/174_Necrotic Pants.asset
+- Assets/Resources/Inventory Items/Zone 4/255_Blazing Cowl.asset
+- Assets/Resources/Inventory Items/Zone 5/392_Crimson Spike.asset
+- Assets/Resources/Inventory Items/Zone 2/38_Boots.asset
+- Assets/Resources/Inventory Items/Zone 4/160_Blademaster's Boots.asset
+- Assets/Resources/Inventory Items/Zone 6/574_Mistwalker's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/647_Planeswalker's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 5/420_Elegant Shadowstone.asset
+- Assets/Resources/Item Sets/15_Berzerker Gear Set.asset
+- Assets/Resources/Inventory Items/Zone 3/103_Voidbringer Hood.asset
+- Assets/Resources/Inventory Items/Zone 4/159_Blademaster's Greaves.asset
+- Assets/Resources/Inventory Items/Zone 4/222_Dreadsword.asset
+- Assets/Resources/Inventory Items/Zone 5/439_Blazespire.asset
+- Assets/Resources/Inventory Items/Zone 5/419_Watcher's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 2/54_Flawed Onyx.asset
+- Assets/Resources/Inventory Items/Zone 4/203_Cunning Wraps.asset
+- Assets/Resources/Inventory Items/Zone 2/77_Reinforced Vest.asset
+- Assets/Resources/Inventory Items/Zone 3/144_Divine Circlet.asset
+- Assets/Resources/Item Sets/38_Dread Knight Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 3/86_Voidbringer Greaves.asset
+- Assets/Resources/Inventory Items/Zone 6/488_Umbra Wraps.asset
+- Assets/Resources/Item Sets/34_Deadeye Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 1/12_Weathered Vest.asset
+- Assets/Resources/Inventory Items/Zone 5/292_Noble Helm.asset
+- Assets/Resources/Inventory Items/Zone 1/24_Cap.asset
+- Assets/Resources/Inventory Items/Zone 6/528_Moonstone Reflex Bow.asset
+- Assets/Resources/Item Sets/42_Reaper Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 3/99_Alliance Vest.asset
+- Assets/Resources/Inventory Items/Zone 5/304_Dominator's Braces.asset
+- Assets/Resources/Inventory Items/Zone 6/590_Condemnation.asset
+- Assets/Resources/Inventory Items/Zone 5/361_Excellent Sapphire.asset
+- Assets/Resources/Inventory Items/Zone 6/448_Damned Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 5/381_Dreamer's Staff.asset
+- Assets/Resources/Inventory Items/Zone 6/471_Savant's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 4/202_Cunning Vest.asset
+- Assets/Resources/Inventory Items/Zone 4/260_Imbued Amethyst.asset
+- Assets/Resources/Inventory Items/Zone 4/253_Masterwork Tower Shield.asset
+- Assets/Resources/Inventory Items/Zone 2/37_Greaves.asset
+- Assets/Resources/Inventory Items/Zone 2/56_Great Sword.asset
+- Assets/Resources/Inventory Items/Zone 4/259_Blazing Slippers.asset
+- Assets/Resources/Inventory Items/Zone 6/510_Flawless Sapphire.asset
+- Assets/Resources/Inventory Items/Zone 4/153_Cursed Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 6/459_Assassin's Trousers.asset
+- Assets/Resources/Inventory Items/Zone 6/536_Arbiter's Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 5/402_Clairvoyant's Robe.asset
+- Assets/Resources/Inventory Items/Zone 4/191_Sniper's Hood.asset
+- Assets/Resources/Inventory Items/Zone 3/100_Alliance Wraps.asset
+- Assets/Resources/Inventory Items/Zone 6/460_Assassin's Boots.asset
+- Assets/Resources/Inventory Items/Zone 3/97_Voidbringer Slippers.asset
+- Assets/Resources/Inventory Items/Zone 4/250_Veteran's Boots.asset
+- Assets/Resources/Inventory Items/Zone 5/426_Bloodstone Short Bow.asset
+- Assets/Resources/Inventory Items/Zone 5/403_Clairvoyant's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 6/478_Winter's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 5/367_Mithril Greatsword.asset
+- Assets/Resources/Inventory Items/Zone 5/320_Corrupt Pants.asset
+- Assets/Resources/Inventory Items/Zone 6/503_Flawless Peridot.asset
+- Assets/Resources/Inventory Items/Zone 1/26_Claymore.asset
+- Assets/Resources/Inventory Items/Zone 3/142_Polished Amber.asset
+- Assets/Resources/Inventory Items/Zone 6/533_Staff of the North.asset
+- Assets/Resources/Inventory Items/Zone 6/464_Enlightened Pants.asset
+- Assets/Resources/Inventory Items/Zone 3/132_Lightbringer.asset
+- Assets/Resources/Inventory Items/Zone 4/196_Warden's Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/605_Juggernaut's Bracers.asset
+- Assets/Resources/Inventory Items/Zone 4/185_Frostbitten Slippers.asset
+- Assets/Resources/Inventory Items/Zone 6/585_Hope.asset
+- Assets/Resources/Item Sets/18_Reaper Zone 4 Set.asset
+- Assets/Resources/Inventory Items/Zone 2/59_Dented Tower Shield.asset
+- Assets/Resources/Item Sets/23_Pathfinder Zone 4 Set.asset
+- Assets/Resources/Inventory Items/Zone 5/404_Clairvoyant's Pants.asset
+- Assets/Resources/Inventory Items/Zone 4/220_Quality Moonstone.asset
+- Assets/Resources/Inventory Items/Zone 3/118_Executioner's Sword.asset
+- Assets/Resources/Inventory Items/Zone 2/36_Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 5/395_Gladiator's Helm.asset
+- Assets/Resources/Inventory Items/Zone 6/617_Archon's Slippers.asset
+- Assets/Resources/Inventory Items/Zone 6/514_Flawless Pearl.asset
+- Assets/Resources/Inventory Items/Zone 4/204_Cunning Leggings.asset
+- Assets/Resources/Inventory Items/Zone 6/467_Nightmare Robe.asset
+- Assets/Resources/Inventory Items/Zone 6/641_Widowmaker's Leggings.asset
+- Assets/Resources/Inventory Items/Zone 5/394_Elegant Obsidian.asset
+- Assets/Resources/Inventory Items/Zone 6/621_Heretic's Pants.asset
+- Assets/Resources/Inventory Items/Zone 4/201_Cunning Hood.asset
+- Assets/Resources/Inventory Items/Zone 1/3_Rusty Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 1/20_Rusty Shortsword.asset
+- Assets/Resources/Inventory Items/Zone 4/256_Blazing Robe.asset
+- Assets/Resources/Inventory Items/Zone 6/639_Widowmaker's Vest.asset
+- Assets/Resources/Item Sets/4_Warrior Zone 2 Set.asset
+- Assets/Resources/Inventory Items/Zone 6/538_Arbiter's Greaves.asset
+- Assets/Resources/Inventory Items/Zone 6/531_Abyssal Staff.asset
+- Assets/Resources/Inventory Items/Zone 6/571_Mistwalker's Vestments.asset
+- Assets/Resources/Inventory Items/Zone 6/563_Perfect Amber.asset
+- Assets/Resources/Inventory Items/Zone 6/495_Ageless Shoes.asset
+- Assets/Resources/Inventory Items/Zone 4/165_Glorious Boots.asset
+- Assets/Resources/Inventory Items/Zone 4/182_Frostbitten Robe.asset
+- Assets/Resources/Inventory Items/Zone 1/13_Weathered Wraps.asset
+- Assets/Resources/Inventory Items/Zone 2/47_Leggings.asset
+- Assets/Resources/Inventory Items/Zone 4/168_Lightweaver's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 1/17_Poor Garnet.asset
+- Assets/Resources/Inventory Items/Zone 4/244_Captain's Boots.asset
+- Assets/Resources/Inventory Items/Zone 6/524_Ascended Bow.asset
+- Assets/Resources/Inventory Items/Zone 4/216_Quality Amber.asset
+- Assets/Resources/Inventory Items/Zone 4/225_Scimitar.asset
+- Assets/Resources/Inventory Items/Zone 3/104_Voidbringer Vest.asset
+- Assets/Resources/Inventory Items/Zone 3/127_Whitewood Staff.asset
+- Assets/Resources/Inventory Items/Zone 6/513_Flawless Shadowstone.asset
+- Assets/Resources/Item Sets/55_Psymancer Final Set.asset
+- Assets/Resources/Inventory Items/Zone 6/484_Harmonious Leggings.asset
+- Assets/Resources/Inventory Items/Zone 4/181_Frostbitten Cowl.asset
+- Assets/Resources/Inventory Items/Zone 5/299_Corrupt Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 4/287_Punisher's Vestment.asset
+- Assets/Resources/Inventory Items/Zone 5/414_Elegant Amber.asset
+- Assets/Resources/Inventory Items/Zone 6/557_Judge's Robe.asset
+- Assets/Resources/Inventory Items/Zone 5/340_Corrupt Leggings.asset
+- Assets/Resources/Inventory Items/Zone 5/399_Gladiator's Boots.asset
+- Assets/Resources/Item Sets/7_Paladin Zone 3 Set .asset
+- Assets/Resources/Inventory Items/Zone 6/586_Despair.asset
+- Assets/Resources/Inventory Items/Zone 5/435_Primus Robe.asset
+- Assets/Resources/Inventory Items/Zone 5/363_Excellent Onyx.asset
+- Assets/Resources/Inventory Items/Zone 6/490_Umbra Shoes.asset
+- Assets/Resources/Inventory Items/Zone 4/147_Holy Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 6/595_Saint's Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 4/236_Black Oakwood Staff.asset
+- Assets/Resources/Inventory Items/Zone 6/521_Adamantine Shiv.asset
+- Assets/Resources/Inventory Items/Zone 4/155_Cursed Boots.asset
+- Assets/Resources/Inventory Items/Zone 6/491_Ageless Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/603_Juggernaut's Helm.asset
+- Assets/Resources/Inventory Items/Zone 6/646_Planeswalker's Leggings.asset
+- Assets/Resources/Inventory Items/Zone 5/325_Sorcerer's Pants.asset
+- Assets/Resources/Item Sets/52_Rogue Final Set.asset
+- Assets/Resources/Inventory Items/Zone 6/611_Specter's Trousers.asset
+- Assets/Resources/Inventory Items/Zone 6/643_Planeswalker's Hood.asset
+- Assets/Resources/Inventory Items/Zone 3/141_Polished Garnet.asset
+- Assets/Resources/Inventory Items/Zone 6/498_Lunar Wraps.asset
+- Assets/Resources/Inventory Items/Zone 2/40_Robe.asset
+- Assets/Resources/Item Sets/39_Berzerker Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/279_Tribal Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/577_Primordial Topaz.asset
+- Assets/Resources/Inventory Items/Zone 4/257_Blazing Gloves.asset
+- Assets/Resources/Inventory Items/Zone 6/618_Heretic's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 4/261_Quickened Cowl.asset
+- Assets/Resources/Inventory Items/Zone 6/587_Clarity.asset
+- Assets/Resources/Inventory Items/Zone 6/480_Winter's Slippers.asset
+- Assets/Resources/Item Sets/3_Ranger Zone 1 Set.asset
+- Assets/Resources/Inventory Items/Zone 6/542_Patriarch's Cloak.asset
+- Assets/Resources/Inventory Items/Zone 5/332_Noble Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/623_Arcanist's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 3/138_Cobalt Vest.asset
+- Assets/Resources/Inventory Items/Zone 2/75_Valiant Cuirass.asset
+- Assets/Resources/Inventory Items/Zone 4/268_Imbued Amber.asset
+- Assets/Resources/Inventory Items/Zone 5/364_Excellent Shadowstone.asset
+- Assets/Resources/Inventory Items/Zone 2/72_Cured Hood.asset
+- Assets/Resources/Inventory Items/Zone 4/190_Watcher's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/455_Raging Boots.asset
+- Assets/Resources/Inventory Items/Zone 5/308_Ebon Cloak.asset
+- Assets/Resources/Inventory Items/Zone 6/597_Saint's Boots.asset
+- Assets/Resources/Inventory Items/Zone 4/187_Watcher's Vest.asset
+- Assets/Resources/Inventory Items/Zone 5/405_Clairvoyant's Slippers.asset
+- Assets/Resources/Inventory Items/Zone 4/235_White Oakwood Staff.asset
+- Assets/Resources/Inventory Items/Zone 3/91_Alliance Pants.asset
+- Assets/Resources/Inventory Items/Zone 5/336_Noble Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/506_Flawless Garnet.asset
+- Assets/Resources/Inventory Items/Zone 6/441_Sacred Helm.asset
+- Assets/Resources/Inventory Items/Zone 5/323_Sorcerer's Robe.asset
+- Assets/Resources/Inventory Items/Zone 4/278_Tribal Leggings.asset
+- Assets/Resources/Inventory Items/Zone 6/463_Enlightened Gloves.asset
+- Assets/Resources/Inventory Items/Zone 6/479_Winter's Pants.asset
+- Assets/Resources/Inventory Items/Zone 6/541_Patriarch's Mask.asset
+- Assets/Resources/Inventory Items/Zone 5/382_Nightmare Staff.asset
+- Assets/Resources/Inventory Items/Zone 5/301_Corrupt Boots.asset
+- Assets/Resources/Item Sets/56_Frost Weaver Final Set.asset
+- Assets/Resources/Inventory Items/Zone 4/234_Oakwood Staff.asset
+- Assets/Resources/Inventory Items/Zone 4/283_Chancelor's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 5/353_Excellent Wardstone.asset
+- Assets/Resources/Inventory Items/Zone 2/39_Cowl.asset
+- Assets/Resources/Inventory Items/Zone 5/354_Excellent Peridot.asset
+- Assets/Resources/Inventory Items/Zone 3/107_Voidbringer Shoes.asset
+- Assets/Resources/Item Sets/16_Rogue Gear Set.asset
+- Assets/Resources/Inventory Items/Zone 3/145_Seeker's Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/515_Flawless Moonstone.asset
+- Assets/Resources/Item Sets/45_Sentinel Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 6/526_Abyssal Greatbow.asset
+- Assets/Resources/Inventory Items/Zone 6/466_Nightmare Cowl.asset
+- Assets/Resources/Inventory Items/Zone 3/101_Alliance Leggings.asset
+- Assets/Resources/Inventory Items/Zone 5/316_Noble Slippers.asset
+- Assets/Resources/Inventory Items/Zone 3/115_Onyx.asset
+- Assets/Resources/Inventory Items/Zone 5/431_Dreadnaught's Helm.asset
+- Assets/Resources/Inventory Items/Zone 3/129_Winged Helm.asset
+- Assets/Resources/Inventory Items/Zone 5/406_Elegant Amethyst.asset
+- Assets/Resources/Inventory Items/Zone 6/564_Nightarrow's Hood.asset
+- Assets/Resources/Inventory Items/Zone 4/254_Imbued Garnet.asset
+- Assets/Resources/Inventory Items/Zone 6/499_Lunar Leggings.asset
+- Assets/Resources/Inventory Items/Zone 4/213_Quality Bloodstone.asset
+- Assets/Resources/Inventory Items/Zone 6/454_Raging Greaves.asset
+- Assets/Resources/Inventory Items/Zone 1/19_Rusty Two-Handed Sword.asset
+- Assets/Resources/Inventory Items/Zone 5/314_Noble Gloves.asset
+- Assets/Resources/Inventory Items/Zone 4/243_Captain's Greaves.asset
+- Assets/Resources/Inventory Items/Zone 3/143_Darksteel Helmet.asset
+- Assets/Resources/Inventory Items/Zone 6/449_Damned Greaves.asset
+- Assets/Resources/Inventory Items/Zone 6/470_Nightmare Slippers.asset
+- Assets/Resources/Inventory Items/Zone 6/565_Nightarrow's Vestments.asset
+- Assets/Resources/Inventory Items/Zone 6/548_Virtuous Aegis.asset
+- Assets/Resources/Inventory Items/Zone 5/324_Sorcerer's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 1/5_Rusty Boots.asset
+- Assets/Resources/Inventory Items/Zone 4/162_Glorious Cloak.asset
+- Assets/Resources/Inventory Items/Zone 6/609_Specter's Cloak.asset
+- Assets/Resources/Inventory Items/Zone 4/276_Tribal Vestments.asset
+- Assets/Resources/Inventory Items/Zone 4/273_Feathered Shoes.asset
+- Assets/Resources/Inventory Items/Zone 4/166_Lightweaver's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 5/297_Corrupt Helm.asset
+- Assets/Resources/Inventory Items/Zone 4/148_Holy Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 6/570_Mistwalker's Hood.asset
+- Assets/Resources/Inventory Items/Zone 5/333_Noble Vest.asset
+- Assets/Resources/Inventory Items/Zone 6/552_Genesis Gloves.asset
+- Assets/Resources/Item Sets/60_Stalker Final Set.asset
+- Assets/Resources/Inventory Items/Zone 6/525_Celestial Shortbow.asset
+- Assets/Resources/Item Sets/40_Rogue Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 6/554_Genesis Slippers.asset
+- Assets/Resources/Inventory Items/Zone 4/207_Quality Wardstone.asset
+- Assets/Resources/Inventory Items/Zone 2/51_Flawed Garnet.asset
+- Assets/Resources/Inventory Items/Zone 4/251_Flamberge.asset
+- Assets/Resources/Inventory Items/Zone 5/343_Earthweaver's Vest.asset
+- Assets/Resources/Inventory Items/Zone 6/625_Arcanist's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 6/613_Archon's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 6/550_Genesis Cowl.asset
+- Assets/Resources/Inventory Items/Zone 6/483_Harmonious Wraps.asset
+- Assets/Resources/Inventory Items/Zone 4/230_Steelwood Short Bow.asset
+- Assets/Resources/Inventory Items/Zone 6/648_Huntmaster's Hood.asset
+- Assets/Resources/Inventory Items/Zone 3/92_Alliance Slippers.asset
+- Assets/Resources/Inventory Items/Zone 5/303_Dominator's Pauldrons.asset
+- Assets/Resources/Inventory Items/Zone 4/270_Feathered Vestments.asset
+- Assets/Resources/Inventory Items/Zone 6/615_Archon's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 2/67_Tempered Broadsword.asset
+- Assets/Resources/Inventory Items/Zone 6/645_Planeswalker's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 5/330_Frigid Pants.asset
+- Assets/Resources/Inventory Items/Zone 6/594_Saint's Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 2/62_Warped Composite Bow.asset
+- Assets/Resources/Item Sets/10_Reaper Zone 3 Set.asset
+- Assets/Resources/Inventory Items/Zone 5/397_Gladiator's Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 3/128_Rotwood Staff.asset
+- Assets/Resources/Inventory Items/Zone 3/116_Antique Shadowstone.asset
+- Assets/Resources/Inventory Items/Zone 4/285_Conquerer's Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 4/154_Cursed Greaves.asset
+- Assets/Resources/Inventory Items/Zone 6/637_Justicar's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 4/217_Quality Onyx.asset
+- Assets/Resources/Inventory Items/Zone 1/10_Tattered Slippers.asset
+- Assets/Resources/Item Sets/9_Radiant Zone 3 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/198_Warden's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 6/445_Sacred Boots.asset
+- Assets/Resources/Inventory Items/Zone 2/69_Enchanted Cowl.asset
+- Assets/Resources/Inventory Items/Zone 4/171_Necrotic Cowl.asset
+- Assets/Resources/Inventory Items/Zone 6/545_Patriarch's Boots.asset
+- Assets/Resources/Inventory Items/Zone 6/600_Reaver's Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 5/355_Excellent Ruby.asset
+- Assets/Resources/Inventory Items/Zone 6/591_Transcendence.asset
+- Assets/Resources/Inventory Items/Zone 5/310_Ebon Trousers.asset
+- Assets/Resources/Inventory Items/Zone 5/350_Headhunter's Leggings.asset
+- Assets/Resources/Item Sets/19_Psymancer Zone 4 Set.asset
+- Assets/Resources/Inventory Items/Zone 6/519_Vanguard Saber.asset
+- Assets/Resources/Inventory Items/Zone 5/411_Prophet's Slippers.asset
+- Assets/Resources/Inventory Items/Zone 6/487_Umbra Vest.asset
+- Assets/Resources/Inventory Items/Zone 5/423_Outrider's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 5/387_Stalwart Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 5/348_Headhunter's Vest.asset
+- Assets/Resources/Inventory Items/Zone 5/400_Elegant Garnet.asset
+- Assets/Resources/Inventory Items/Zone 6/494_Ageless Leggings.asset
+- Assets/Resources/Inventory Items/Zone 3/105_Voidbringer Wraps.asset
+- Assets/Resources/Inventory Items/Zone 2/48_Shoes.asset
+- Assets/Resources/Inventory Items/Zone 3/83_Voidbringer Helm.asset
+- Assets/Resources/Inventory Items/Zone 3/106_Voidbringer Leggings.asset
+- Assets/Resources/Inventory Items/Zone 1/14_Weathered Leggings.asset
+- Assets/Resources/Inventory Items/Zone 5/321_Corrupt Slippers.asset
+- Assets/Resources/Inventory Items/Zone 5/360_Excellent Diamond.asset
+- Assets/Resources/Inventory Items/Zone 5/427_Sovereign Greatbow.asset
+- Assets/Resources/Inventory Items/Zone 6/534_Perfect Topaz.asset
+- Assets/Resources/Inventory Items/Zone 2/65_Tempered Helmet.asset
+- Assets/Resources/Inventory Items/Zone 6/607_Juggernaut's Boots.asset
+- Assets/Resources/Inventory Items/Zone 5/339_Corrupt Wraps.asset
+- Assets/Resources/Inventory Items/Zone 5/315_Noble Pants.asset
+- Assets/Resources/Inventory Items/Zone 5/430_Godly Amber.asset
+- Assets/Resources/Inventory Items/Zone 1/18_Poor Amber.asset
+- Assets/Resources/Inventory Items/Zone 5/432_Primus Crown.asset
+- Assets/Resources/Inventory Items/Zone 3/140_Polished Topaz.asset
+- Assets/Resources/Item Sets/48_Stalker Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 5/436_Dragon Hide Vestment.asset
+- Assets/Resources/Inventory Items/Zone 6/447_Damned Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 4/241_Captain's Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 6/555_Perfect Amethyst.asset
+- Assets/Resources/Inventory Items/Zone 4/197_Warden's Vest.asset
+- Assets/Resources/Inventory Items/Zone 6/567_Nightarrow's Leggings.asset
+- Assets/Resources/Inventory Items/Zone 6/633_Justicar's Hood.asset
+- Assets/Resources/Inventory Items/Zone 1/9_Tattered Pants.asset
+- Assets/Resources/Inventory Items/Zone 2/66_Tempered Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 6/631_Archmage's Pants.asset
+- Assets/Resources/Inventory Items/Zone 5/413_Clairvoyant's Staff.asset
+- Assets/Resources/Inventory Items/Zone 6/481_Harmonious Hood.asset
+- Assets/Resources/Inventory Items/Zone 3/81_Alliance Greaves.asset
+- Assets/Resources/Inventory Items/Zone 1/31_Leather Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/620_Heretic's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 4/252_Enchanted Dirk.asset
+- Assets/Resources/Inventory Items/Zone 4/282_Conquerer's Helm.asset
+- Assets/Resources/Inventory Items/Zone 4/149_Holy Greaves.asset
+- Assets/Resources/Inventory Items/Zone 5/407_Prophet's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 4/221_Fullblade.asset
+- Assets/Resources/Inventory Items/Zone 5/372_Obsidian Slicer.asset
+- Assets/Resources/Inventory Items/Zone 1/7_Tattered Robe.asset
+- Assets/Resources/Item Sets/53_Radiant Final Set.asset
+- Assets/Resources/Inventory Items/Zone 5/376_Legionnaire Short Bow.asset
+- Assets/Resources/Inventory Items/Zone 5/329_Frigid Gloves.asset
+- Assets/Resources/Inventory Items/Zone 3/134_Emblazoned Circlet.asset
+- Assets/Resources/Inventory Items/Zone 4/173_Necrotic Gloves.asset
+- Assets/Resources/Inventory Items/Zone 5/311_Ebon Boots.asset
+- Assets/Resources/Inventory Items/Zone 5/341_Corrupt Shoes.asset
+- Assets/Resources/Inventory Items/Zone 3/131_Lightbane.asset
+- Assets/Resources/Item Sets/58_Deadeye Final Set.asset
+- Assets/Resources/Inventory Items/Zone 6/520_Celestial Longsword.asset
+- Assets/Resources/Inventory Items/Zone 6/599_Reaver's Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 5/313_Noble Robe.asset
+- Assets/Resources/Inventory Items/Zone 6/456_Assassin's Mask.asset
+- Assets/Resources/Inventory Items/Zone 4/205_Cunning Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/497_Lunar Vest.asset
+- Assets/Resources/Inventory Items/Zone 5/302_Dominator's Helm.asset
+- Assets/Resources/Inventory Items/Zone 5/421_Outrider's Hood.asset
+- Assets/Resources/Inventory Items/Zone 4/200_Warden's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 4/195_Sniper's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/602_Reaver's Boots.asset
+- Assets/Resources/Inventory Items/Zone 4/199_Warden's Leggings.asset
+- Assets/Resources/Inventory Items/Zone 6/482_Harmonious Vest.asset
+- Assets/Resources/Inventory Items/Zone 6/549_Perfect Garnet.asset
+- Assets/Resources/Inventory Items/Zone 4/274_Imbued Shadowstone.asset
+- Assets/Resources/Inventory Items/Zone 2/44_Hood.asset
+- Assets/Resources/Inventory Items/Zone 1/4_Rusty Greaves.asset
+- Assets/Resources/Inventory Items/Zone 4/211_Quality Garnet.asset
+- Assets/Resources/Inventory Items/Zone 3/89_Alliance Robe.asset
+- Assets/Resources/Inventory Items/Zone 6/457_Assassin's Cloak.asset
+- Assets/Resources/Inventory Items/Zone 6/561_Shiverpeak.asset
+- Assets/Resources/Inventory Items/Zone 5/334_Noble Wraps.asset
+- Assets/Resources/Inventory Items/Zone 5/359_Excellent Bloodstone.asset
+- Assets/Resources/Inventory Items/Zone 4/290_Staff of the Devout.asset
+- Assets/Resources/Item Sets/30_Reaper Zone 5 Set.asset
+- Assets/Resources/Item Sets/43_Psymancer Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 5/347_Headhunter's Hood.asset
+- Assets/Resources/Inventory Items/Zone 5/378_Ogrewood Composite Bow.asset
+- Assets/Resources/Inventory Items/Zone 3/121_Buckler.asset
+- Assets/Resources/Item Sets/1_Rusty Armor.asset
+- Assets/Resources/Inventory Items/Zone 3/120_Alliance Longsword.asset
+- Assets/Resources/Inventory Items/Zone 3/95_Voidbringer Gloves.asset
+- Assets/Resources/Inventory Items/Zone 6/640_Widowmaker's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 4/245_Imbued Obsidian.asset
+- Assets/Resources/Inventory Items/Zone 6/608_Specter's Mask.asset
+- Assets/Resources/Inventory Items/Zone 3/117_Two-Handed Battle Axe.asset
+- Assets/Resources/Inventory Items/Zone 1/2_Rusty Scalemail.asset
+- Assets/Resources/Inventory Items/Zone 1/29_Tailored Robe.asset
+- Assets/Resources/Inventory Items/Zone 6/629_Archmage's Robe.asset
+- Assets/Resources/Item Sets/32_Frost Weaver Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/156_Blademaster's Helm.asset
+- Assets/Resources/Inventory Items/Zone 1/15_Weathered Shoes.asset
+- Assets/Resources/Inventory Items/Zone 5/344_Earthweaver's Wraps.asset
+- Assets/Resources/Inventory Items/Zone 4/275_Tribal Headpiece.asset
+- Assets/Resources/Inventory Items/Zone 5/373_Mithril Kite Shield.asset
+- Assets/Resources/Inventory Items/Zone 4/178_Mystical Gloves.asset
+- Assets/Resources/Inventory Items/Zone 5/401_Clairvoyant's Cowl.asset
+- Assets/Resources/Inventory Items/Zone 2/52_Flawed Amethyst.asset
+- Assets/Resources/Inventory Items/Zone 4/219_Quality Pearl.asset
+- Assets/Resources/Inventory Items/Zone 1/16_Poor Peridot.asset
+- Assets/Resources/Item Sets/11_Sentinel Zone 3 Set.asset
+- Assets/Resources/Inventory Items/Zone 6/652_Huntmaster's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 5/318_Corrupt Robe.asset
+- Assets/Resources/Inventory Items/Zone 4/249_Veteran's Trousers.asset
+- Assets/Resources/Inventory Items/Zone 3/88_Alliance Cowl.asset
+- Assets/Resources/Inventory Items/Zone 6/496_Lunar Hood.asset
+- Assets/Resources/Inventory Items/Zone 6/475_Savant's Slippers.asset
+- Assets/Resources/Inventory Items/Zone 1/32_Leather Vest.asset
+- Assets/Resources/Item Sets/36_Stalker Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 6/619_Heretic's Robe.asset
+- Assets/Resources/Inventory Items/Zone 3/111_Garnet.asset
+- Assets/Resources/Inventory Items/Zone 4/161_Glorious Boots.asset
+- Assets/Resources/Inventory Items/Zone 5/440_Shadow Runner's Lost Bow.asset
+- Assets/Resources/Inventory Items/Zone 5/386_Stalwart Helm.asset
+- Assets/Resources/Inventory Items/Zone 6/469_Nightmare Pants.asset
+- Assets/Resources/Inventory Items/Zone 5/352_Excellent Topaz.asset
+- Assets/Resources/Inventory Items/Zone 4/223_Greataxe.asset
+- Assets/Resources/Item Sets/47_Pathfinder Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/179_Mystical Pants.asset
+- Assets/Resources/Inventory Items/Zone 6/444_Sacred Greaves.asset
+- Assets/Resources/Inventory Items/Zone 6/505_Flawless Obsidian.asset
+- Assets/Resources/Inventory Items/Zone 3/114_Amber.asset
+- Assets/Resources/Inventory Items/Zone 6/568_Nightarrow's Shoes.asset
+- Assets/Resources/Inventory Items/Zone 6/477_Winter's Robe.asset
+- Assets/Resources/Inventory Items/Zone 6/553_Genesis Pants.asset
+- Assets/Resources/Inventory Items/Zone 5/309_Ebon Cuffs.asset
+- Assets/Resources/Item Sets/29_Radiant Zone 5 Set.asset
+- Assets/Resources/Inventory Items/Zone 6/569_Perfect Moonstone.asset
+- Assets/Resources/Item Sets/2_Tattered Armor.asset
+- Assets/Resources/Inventory Items/Zone 4/192_Sniper's Vest.asset
+- Assets/Resources/Inventory Items/Zone 3/78_Alliance Helm.asset
+- Assets/Resources/Inventory Items/Zone 4/214_Quality Diamond.asset
+- Assets/Resources/Inventory Items/Zone 6/532_Spellslinger's Column.asset
+- Assets/Resources/Inventory Items/Zone 3/130_Engraved Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 6/601_Reaver's Greaves.asset
+- Assets/Resources/Item Sets/44_Frost Weaver Zone 6 Set.asset
+- Assets/Resources/Inventory Items/Zone 4/238_Frostbitten Staff.asset
+- Assets/Resources/Inventory Items/Zone 5/335_Noble Leggings.asset
+- Assets/Resources/Inventory Items/Zone 5/331_Frigid Slippers.asset
+- Assets/Resources/Item Sets/49_Paladin Final Set.asset
+- Assets/Resources/Inventory Items/Zone 5/328_Frigid Robe.asset
+- Assets/Resources/Inventory Items/Zone 3/109_Antique Wardstone.asset
+- Assets/Resources/Inventory Items/Zone 5/370_Gladius.asset
+- Assets/Resources/Item Sets/14_Dread Knight Zone 4 Set.asset
+- Assets/Resources/Inventory Items/Zone 5/391_Searing Vanquisher.asset
+- Assets/Resources/Inventory Items/Zone 5/366_Excellent Moonstone.asset
+- Assets/Resources/Inventory Items/Zone 2/74_Heartwood Bow.asset
+- Assets/Resources/Inventory Items/Zone 3/80_Alliance Gauntlets.asset
+- Assets/Resources/Inventory Items/Zone 6/473_Savant's Gloves.asset
+- Assets/Resources/Inventory Items/Zone 4/291_Exalted Greatbow.asset
+- Assets/Resources/Inventory Items/Zone 5/298_Corrupt Breastplate.asset
+- Assets/Resources/Inventory Items/Zone 6/560_Judge's Slippers.asset
+- Assets/Resources/Inventory Items/Zone 6/575_Shadowfang.asset
+- Assets/Resources/Inventory Items/Zone 6/626_Arcanist's Pants.asset
+- Assets/Resources/Inventory Items/Zone 6/492_Ageless Vest.asset
+- Assets/Resources/Inventory Items/Zone 2/35_Scalemail.asset
+- Assets/Resources/Inventory Items/Zone 5/375_Mithril Bow.asset
+- Assets/Resources/Inventory Items/Zone 5/362_Excellent Amber.asset
+- Assets/Resources/Inventory Items/Zone 6/446_Damned Helm.asset
+- Assets/Resources/Inventory Items/Zone 2/55_Broadsword.asset
+- Assets/Resources/Inventory Items/Zone 5/346_Earthweaver's Shoes.asset
+Dependencies: []
