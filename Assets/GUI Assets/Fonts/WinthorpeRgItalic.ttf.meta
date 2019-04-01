@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 9de71a79b9ff4344eb77a86fee912ab9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Winthorpe
+  fontNames:
+  - Winthorpe
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5f75d2a14b067cb44aaf93f0388e4d65, type: 3}
+  - {fileID: 12800000, guid: 00092887ec68488489a33338dcabeb1e, type: 3}
+  - {fileID: 12800000, guid: 60f083caf50decb42a40ac116455e5c9, type: 3}
+  - {fileID: 12800000, guid: 67935d6c5571bff438a90d15cec9a369, type: 3}
+  - {fileID: 12800000, guid: 9d639bacc23355949b52fc06a06adf92, type: 3}
+  - {fileID: 12800000, guid: 82377dfce0e676443a4af0f95768f3e8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
