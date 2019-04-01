@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: fe8cb895604c8c24fa4930cfc10bb4a9
+labels:
+- warrior
+- knight
+- fight
+- slash
+- blow
+- run
+- trust
+- walk
+- army
+- battle
+- death
+- character
+- block
+- parry
+- animation
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
