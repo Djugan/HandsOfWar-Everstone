@@ -1,0 +1,80 @@
+ManifestFileVersion: 0
+CRC: 741241653
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8d9cc7f211f5a29962362c19e9167f1f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 846a2de9b755720e7103fa1d2e731c36
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 8a32e849975f44149986373523cc5e2f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8eebe44c2322aa2478cdb80848a54d3e, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Item Sets/26_Dread Knight Zone 5 Set.asset
+- Assets/Resources/Item Sets/46_Deadeye Zone 6 Set.asset
+- Assets/Resources/Item Sets/31_Psymancer Zone 5 Set.asset
+- Assets/Resources/Item Sets/13_Paladin Zone 4 Set.asset
+- Assets/Resources/Item Sets/21_Sentinel Zone 4 Set.asset
+- Assets/Resources/Item Sets/51_Berzerker Final Set.asset
+- Assets/Resources/Item Sets/37_Paladin Zone 6 Set.asset
+- Assets/Resources/Item Sets/59_Pathfinder Final Set.asset
+- Assets/Resources/Item Sets/25_Paladin Zone 5 Set.asset
+- Assets/Resources/Item Sets/50_Dread Knight Final Set.asset
+- Assets/Resources/Item Sets/57_Sentinel Final Set.asset
+- Assets/Resources/Item Sets/35_Pathfinder Zone 5 Set.asset
+- Assets/Resources/Item Sets/5_Wizard Zone 2 Set.asset
+- Assets/Resources/Item Sets/33_Sentinel Zone 5 Set.asset
+- Assets/Resources/Item Sets/22_Deadeye Zone 4 Set.asset
+- Assets/Resources/Item Sets/8_Dread Knight Zone 3 Set.asset
+- Assets/Resources/Item Sets/24_Stalker Zone 4 Set.asset
+- Assets/Resources/Item Sets/6_Ranger Zone 2 Set.asset
+- Assets/Resources/Item Sets/17_Radiant Zone 4 Set.asset
+- Assets/Resources/Item Sets/28_Rogue Zone 5 Set.asset
+- Assets/Resources/Item Sets/41_Radiant Zone 6 Set.asset
+- Assets/Resources/Item Sets/20_Frost Weaver Zone 4 Set.asset
+- Assets/Resources/Item Sets/12_Deadeye Zone 3 Set.asset
+- Assets/Resources/Item Sets/54_Reaper Final Set.asset
+- Assets/Resources/Item Sets/27_Berzerker Zone 5 Set.asset
+- Assets/Resources/Item Sets/15_Berzerker Gear Set.asset
+- Assets/Resources/Item Sets/38_Dread Knight Zone 6 Set.asset
+- Assets/Resources/Item Sets/34_Deadeye Zone 5 Set.asset
+- Assets/Resources/Item Sets/42_Reaper Zone 6 Set.asset
+- Assets/Resources/Item Sets/18_Reaper Zone 4 Set.asset
+- Assets/Resources/Item Sets/23_Pathfinder Zone 4 Set.asset
+- Assets/Resources/Item Sets/4_Warrior Zone 2 Set.asset
+- Assets/Resources/Item Sets/55_Psymancer Final Set.asset
+- Assets/Resources/Item Sets/7_Paladin Zone 3 Set .asset
+- Assets/Resources/Item Sets/52_Rogue Final Set.asset
+- Assets/Resources/Item Sets/39_Berzerker Zone 6 Set.asset
+- Assets/Resources/Item Sets/3_Ranger Zone 1 Set.asset
+- Assets/Resources/Item Sets/56_Frost Weaver Final Set.asset
+- Assets/Resources/Item Sets/16_Rogue Gear Set.asset
+- Assets/Resources/Item Sets/45_Sentinel Zone 6 Set.asset
+- Assets/Resources/Item Sets/60_Stalker Final Set.asset
+- Assets/Resources/Item Sets/40_Rogue Zone 6 Set.asset
+- Assets/Resources/Item Sets/10_Reaper Zone 3 Set.asset
+- Assets/Resources/Item Sets/9_Radiant Zone 3 Set.asset
+- Assets/Resources/Item Sets/19_Psymancer Zone 4 Set.asset
+- Assets/Resources/Item Sets/48_Stalker Zone 6 Set.asset
+- Assets/Resources/Item Sets/53_Radiant Final Set.asset
+- Assets/Resources/Item Sets/58_Deadeye Final Set.asset
+- Assets/Resources/Item Sets/30_Reaper Zone 5 Set.asset
+- Assets/Resources/Item Sets/43_Psymancer Zone 6 Set.asset
+- Assets/Resources/Item Sets/1_Rusty Armor.asset
+- Assets/Resources/Item Sets/32_Frost Weaver Zone 5 Set.asset
+- Assets/Resources/Item Sets/11_Sentinel Zone 3 Set.asset
+- Assets/Resources/Item Sets/36_Stalker Zone 5 Set.asset
+- Assets/Resources/Item Sets/47_Pathfinder Zone 6 Set.asset
+- Assets/Resources/Item Sets/29_Radiant Zone 5 Set.asset
+- Assets/Resources/Item Sets/2_Tattered Armor.asset
+- Assets/Resources/Item Sets/44_Frost Weaver Zone 6 Set.asset
+- Assets/Resources/Item Sets/49_Paladin Final Set.asset
+- Assets/Resources/Item Sets/14_Dread Knight Zone 4 Set.asset
+Dependencies:
+- D:/Dropbox/Axis Games/Hands of War - Everstone/_Game Files/AssetBundles/StandaloneWindows/inventoryitems
