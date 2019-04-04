@@ -6,9 +6,13 @@ using TMPro;
 
 public class TargetFrameManager : MonoBehaviour {
 
-	[SerializeField] private Image portrait_Img;
+	[SerializeField] private TextMeshProUGUI targetName_Txt;
+ 	[SerializeField] private Image portrait_Img;
 	[SerializeField] private Image healthBar_Img;
+	[SerializeField] private Image factionBar_Img;
+
 	[SerializeField] private TextMeshProUGUI health_Txt;
+	[SerializeField] private TextMeshProUGUI faction_Txt;
 
 	[SerializeField] private TextMeshProUGUI npcName_Txt;
 

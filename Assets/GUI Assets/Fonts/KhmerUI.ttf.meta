@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 5f2a4f39402643c449e0071fce7ab34d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Khmer UI
+  fontNames:
+  - Khmer UI
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 11e79cb5e03cd384c9c95aad67df6ed9, type: 3}
+  - {fileID: 12800000, guid: 83f5fbe68bfe51943a450e7e14f02593, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
