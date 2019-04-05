@@ -5,22 +5,47 @@ using UnityEngine.UI;
 using TMPro;
 
 public class TargetFrameManager : MonoBehaviour {
+	
+	[Header ("Main")]
+	[SerializeField] private GameObject mainWindow_GO;
 
+	[Header ("Target Name")]
 	[SerializeField] private TextMeshProUGUI targetName_Txt;
- 	[SerializeField] private Image portrait_Img;
+
+	[Header ("Health Bar")]
 	[SerializeField] private Image healthBar_Img;
-	[SerializeField] private Image factionBar_Img;
-
 	[SerializeField] private TextMeshProUGUI health_Txt;
+
+	[Header ("Faction Bar")]
+	[SerializeField] private Image factionBar_Img;
 	[SerializeField] private TextMeshProUGUI faction_Txt;
+	[SerializeField] private Sprite [] factionBars;
 
-	[SerializeField] private TextMeshProUGUI npcName_Txt;
+	[Header ("Faction Icon")]
+	[SerializeField] private Image factionIcon_Img;
 
+	[Header ("Portrait")]
+ 	[SerializeField] private Image portrait_Img;
+	[SerializeField] private Image specialNPCIndicator;
+	[SerializeField] private Sprite [] specialNPCSprites;
+
+	[Header ("Level")]
 	[SerializeField] private TextMeshProUGUI level_Txt;
+	[SerializeField] private GameObject bossLevelIndicator_GO;
 
+	[Header ("Ranger Points")]
+	[SerializeField] private GameObject rangerPoints_GO;
+	[SerializeField] private GameObject [] points;
 
 	private EnemyNPCManager enemyNPCTarget;
 
+
+	public void Hide () {
+		mainWindow_GO.SetActive (false);
+	}
+	public void Show () {
+		mainWindow_GO.SetActive (true);
+	}
 	public void SetInitalTargetDisplay () {
 
 		NPCManager target = TargetManager.instance.GetTarget ();
@@ -34,7 +59,7 @@ public class TargetFrameManager : MonoBehaviour {
 		if (target is EnemyNPCManager) {
 
 			enemyNPCTarget = (EnemyNPCManager)target;
-			npcName_Txt.text = target.GetSourceData ().npcName;
+			targetName_Txt.text = target.GetSourceData ().npcName;
 			SetTargetHealth ();
 		}
 		/*
@@ -47,7 +72,7 @@ public class TargetFrameManager : MonoBehaviour {
 			enemyNPCTarget = null;
 		}
 		*/
-
+		Show ();
 
 	}
 

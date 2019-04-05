@@ -16,7 +16,9 @@ public class EnemyNPCManager : NPCManager {
 	private bool isAlive;
 	private int numberOfDeathAnimations;
 	private int despawnTimer;
-	private int defaultDespawnTime = 50 * 5;		// 50 frames * seconds
+	private int defaultDespawnTime = 50 * 5;        // 50 frames * seconds
+	private int respawnTimer;
+	private Vector3 spawnPoint;
 
 	private void Start () {
 
@@ -32,14 +34,9 @@ public class EnemyNPCManager : NPCManager {
 			return;
 		}
 
-		isAlive = true;
-		damage = sourceData.damage;
-		maxHealth = sourceData.baseHealth;
-		currentHealth = maxHealth;
-		numberOfDeathAnimations = sourceData.numberOfDeathAnimations;
-
+		spawnPoint = transform.position;
+		Spawn ();
 		// print ("My name is: " + sourceData.npcName + " and I deal " + sourceData.damage + " damage");
-
 	}
 
 	private void FixedUpdate () {
@@ -66,12 +63,30 @@ public class EnemyNPCManager : NPCManager {
 	}
 
 	public void Despawn () {
+
+		// Clear target on despawn
+		if (IsThisTheCurrentTarget ()) {
+			TargetManager.instance.SetTarget (null);
+		}
+
+		// Add to respawn manager
+		instanceLink.timeUntilRespawn = respawnTimer;
+		RespawnManager.instance.AddEnemyToRespawnList (instanceLink);
+
 		instanceLink.active = false;
 		gameObject.SetActive (false);
 	}
 
 	public void Spawn () {
-		instanceLink.active = true;
+
+		transform.position = spawnPoint;
+		isAlive = true;
+		damage = sourceData.damage;
+		maxHealth = sourceData.baseHealth;
+		currentHealth = maxHealth;
+		numberOfDeathAnimations = sourceData.numberOfDeathAnimations;
+		respawnTimer = instanceLink.respawnTimer;
+
 		gameObject.SetActive (true);
 	}
 
@@ -79,7 +94,7 @@ public class EnemyNPCManager : NPCManager {
 		currentHealth -= amount;
 
 		// Update target display
-		if (TargetManager.instance.GetTarget () == this) {
+		if (IsThisTheCurrentTarget ()) {
 			GUIManager.instance.targetFrameManager.SetTargetHealth ();
 		}
 
@@ -87,10 +102,12 @@ public class EnemyNPCManager : NPCManager {
 			KillNPC ();
 		}
 	}
+	public bool IsThisTheCurrentTarget () {
+		return TargetManager.instance.GetTarget () == this;
+	}
 
 	void KillNPC () {
 
-		print (isAlive);
 		if (isAlive == false)
 			return;
 

@@ -9,6 +9,7 @@ public class WorldManager : MonoBehaviour {
 
 	public List<Zone> zones;
 	public int activeZone;
+	public int defaultRespawnTimer;
 
 	#region EnemyNPCs
 	[SerializeField] private EnemyNPCData weakRatWarrior;
@@ -28,6 +29,9 @@ public class WorldManager : MonoBehaviour {
 
 	private void Init () {
 
+		defaultRespawnTimer = 1500;
+		activeZone = 1;
+
 		zones = new List<Zone> ();
 		zones.Add (CreateZone1 ());
 	}
@@ -45,14 +49,17 @@ public class WorldManager : MonoBehaviour {
 	#endregion
 
 	private Zone CreateZone1 () {
+
+		int zone = 1;
 		Zone z = new Zone ();
 
 		List<EnemyNPCInstanceLink> enemyNPCList = new List<EnemyNPCInstanceLink> ();
 
 
+
 		// Enemy NPCs
-		enemyNPCList.Add (new EnemyNPCInstanceLink (true, weakRatWarrior));      // 0
-		enemyNPCList.Add (new EnemyNPCInstanceLink (true, ratWarrior));      // 1
+		enemyNPCList.Add (new EnemyNPCInstanceLink (true, zone, weakRatWarrior,		300));						// 0
+		enemyNPCList.Add (new EnemyNPCInstanceLink (true, zone, ratWarrior,			400));		// 1
 
 		z.enemyNPCList = enemyNPCList;
 

@@ -18,10 +18,20 @@ public class TargetManager : MonoBehaviour {
 		}
 	}
 
+	private void Start () {
+		SetTarget (null);
+	}
+
 	public void SetTarget (NPCManager _target) {
 
 		target = _target;
-		GUIManager.instance.targetFrameManager.SetInitalTargetDisplay ();
+
+		if (target == null) {
+			GUIManager.instance.targetFrameManager.Hide ();
+		} else {
+			GUIManager.instance.targetFrameManager.SetInitalTargetDisplay ();
+		}
+		
 	}
 
 	public NPCManager GetTarget () {
