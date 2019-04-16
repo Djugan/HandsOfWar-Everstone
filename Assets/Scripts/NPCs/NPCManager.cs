@@ -6,8 +6,30 @@ public class NPCManager : MonoBehaviour {
 
 	//private NPCInstanceLink instanceLink;
 
-	private void OnMouseDown () {
+	private void OnMouseOver () {
+
+		HandleMouseOver ();
+
+		// Left Mouse Click
+		if (Input.GetMouseButtonDown (0)) {
+
+			HandleLeftMouseClick ();
+		}
+
+		// Right Mouse Click
+		else if (Input.GetMouseButtonDown (1)) {
+			HandleRightMouseClick ();
+		}
+	}
+
+	public virtual void HandleMouseOver () {
+
+	}
+	public virtual void HandleLeftMouseClick () {
 		TargetManager.instance.SetTarget (this);
+	}
+	public virtual void HandleRightMouseClick () {
+
 	}
 
 	public virtual NPCData GetSourceData () {

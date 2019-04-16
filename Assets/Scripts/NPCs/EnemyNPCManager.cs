@@ -16,17 +16,26 @@ public class EnemyNPCManager : NPCManager {
 	private bool isAlive;
 	private int numberOfDeathAnimations;
 	private int despawnTimer;
-	private int defaultDespawnTime = 50 * 5;        // 50 frames * seconds
+	private static int defaultDespawnTime = 50 * 60;        // 50 frames * seconds
+	private static int noLootDespawnTime = 50 * 5;	
 	private int respawnTimer;
 	private Vector3 spawnPoint;
 
+	// Dropped Items
+	private int goldDropped;
+	private List<InventoryItemData> itemsDropped;
+	private int healthPotionsDropped;
+	private int energyPotionsDropped;
+
+	#region Start and Update
 	private void Start () {
 
 		// Find InstanceLink from zone list in WorldManager
 		instanceLink = WorldManager.instance.FindInstanceLink (indexInZone);
 
 		instanceLink.instanceManager = this;
-		sourceData = instanceLink.sourceData;
+		sourceData = (EnemyNPCData)instanceLink.sourceData;
+		itemsDropped = new List<InventoryItemData> ();
 
 		// This guy should be dead
 		if (instanceLink.active == false) {
@@ -57,11 +66,29 @@ public class EnemyNPCManager : NPCManager {
 			}
 		}
 	}
+	#endregion
 
-	public override NPCData GetSourceData () {
-		return sourceData;
+	#region Target & Mouse Interactions
+	public override void HandleRightMouseClick () {
+		
+		if (isAlive == false) {
+			print ("Drops:");
+			print ("Gold: " + goldDropped);
+			print ("Health Potions: " + healthPotionsDropped);
+			print ("Energy Potions: " + energyPotionsDropped);
+			print ("Inventory Items: ");
+			for (int i = 0; i < itemsDropped.Count; i++) {
+				print ("item: " + itemsDropped [i].itemName);
+			}
+		}
+
 	}
+	public bool IsThisTheCurrentTarget () {
+		return TargetManager.instance.GetTarget () == this;
+	}
+	#endregion
 
+	#region Spawn and Despawn
 	public void Despawn () {
 
 		// Clear target on despawn
@@ -90,6 +117,80 @@ public class EnemyNPCManager : NPCManager {
 		gameObject.SetActive (true);
 	}
 
+	void KillNPC () {
+
+		if (isAlive == false)
+			return;
+
+		isAlive = false;
+
+		// Play dying animation
+		animator.SetInteger ("DeathValue", Random.Range (1, numberOfDeathAnimations + 1));
+		StartCoroutine (ResetDeathValue ());
+
+		// Get drops from loot table
+		DetermineDrops ();
+
+		if (HasItemsToLoot ()) {
+			despawnTimer = defaultDespawnTime;
+		} else {
+			despawnTimer = noLootDespawnTime;
+		}
+	}
+
+	void DetermineDrops () {
+
+		goldDropped = Mathf.RoundToInt (Random.Range (sourceData.lootTable.goldDrop_Min, sourceData.lootTable.goldDrop_Max) * sourceData.goldDropMultiplier);
+
+		float rng = Random.Range (0f, 100f);
+		if (rng < sourceData.lootTable.healthPotionChance) {
+			healthPotionsDropped = 1;
+		} else {
+			healthPotionsDropped = 0;
+		}
+
+		rng = Random.Range (0f, 100f);
+		if (rng < sourceData.lootTable.energyPotionChance) {
+			energyPotionsDropped = 1;
+		} else {
+			healthPotionsDropped = 0;
+		}
+
+		itemsDropped.Clear ();
+		rng = Random.Range (0f, 100f);
+		if (rng < sourceData.lootTable.list1DropChance) {
+			itemsDropped.Add (sourceData.lootTable.list1 [Random.Range (0, sourceData.lootTable.list1.Length)]);
+		}
+
+		if (rng < sourceData.lootTable.list2DropChance) {
+			itemsDropped.Add (sourceData.lootTable.list2 [Random.Range (0, sourceData.lootTable.list2.Length)]);
+		}
+
+		if (rng < sourceData.lootTable.list3DropChance) {
+			itemsDropped.Add (sourceData.lootTable.list3 [Random.Range (0, sourceData.lootTable.list3.Length)]);
+		}
+	}
+
+	IEnumerator ResetDeathValue () {
+		yield return null;
+		animator.SetInteger ("DeathValue", 0);
+	}
+
+	bool HasItemsToLoot () {
+		if (goldDropped > 0)
+			return true;
+		if (healthPotionsDropped > 0)
+			return true;
+		if (energyPotionsDropped > 0)
+			return true;
+		if (itemsDropped.Count > 0)
+			return true;
+
+		return false;
+	}
+	#endregion
+
+	#region Combat Functions
 	public override void ReceiveDamage (int amount) {
 		currentHealth -= amount;
 
@@ -102,29 +203,6 @@ public class EnemyNPCManager : NPCManager {
 			KillNPC ();
 		}
 	}
-	public bool IsThisTheCurrentTarget () {
-		return TargetManager.instance.GetTarget () == this;
-	}
-
-	void KillNPC () {
-
-		if (isAlive == false)
-			return;
-
-		isAlive = false;
-
-		// Play dying animation
-		animator.SetInteger ("DeathValue", Random.Range (1, numberOfDeathAnimations + 1));
-		StartCoroutine (ResetDeathValue ());
-
-		// Start despawn timer
-		despawnTimer = defaultDespawnTime;
-	}
-
-	IEnumerator ResetDeathValue () {
-		yield return null;
-		animator.SetInteger ("DeathValue", 0);
-	}
 
 	public string GetHealthText () {
 		return currentHealth + "/" + maxHealth;
@@ -132,4 +210,11 @@ public class EnemyNPCManager : NPCManager {
 	public float GetHealthPercent () {
 		return (float)currentHealth / maxHealth;
 	}
+	#endregion
+
+	#region Misc
+	public override NPCData GetSourceData () {
+		return sourceData;
+	}
+	#endregion
 }

@@ -19,5 +19,10 @@ public class ScriptableObjectCreator {
 		ScriptableObjectUtility.CreateAsset<EnemyNPCData> ();
 	}
 
+	[MenuItem ("Assets/Create/Scriptable Object/Loot Table")]
+	static public void CreateLootTable () {
+		ScriptableObjectUtility.CreateAsset<LootTable> ();
+	}
+
 
 }
