@@ -14,6 +14,7 @@ public class GUIManager : MonoBehaviour {
 	public ItemStatsWindow itemStatsWindow;
 	public PlayerFrameManager playerUnitFrame;
 	public TargetFrameManager targetFrameManager;
+	public LootWindowManager lootWindow;
 
 	private void Awake () {
 		if (instance == null) {
@@ -56,6 +57,7 @@ public class GUIManager : MonoBehaviour {
 		characterMenu.HideWindow ();
 		mapMenu.HideWindow ();
 		itemStatsWindow.HideWindow ();
+		lootWindow.HideWindow ();
 	}
 	#endregion
 }

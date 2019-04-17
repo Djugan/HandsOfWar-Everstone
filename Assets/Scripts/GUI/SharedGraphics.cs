@@ -15,6 +15,11 @@ public class SharedGraphics : MonoBehaviour {
 	public Sprite inventoryItem_Epic;
 	public Sprite inventoryItem_Quest;
 
+	[Header ("Misc Icons")]
+	public Sprite goldIcon;
+	public Sprite healthPotionIcon;
+	public Sprite energyPotionIcon;
+
 	private void Awake () {
 		instance = this;
 	}

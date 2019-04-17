@@ -72,14 +72,7 @@ public class EnemyNPCManager : NPCManager {
 	public override void HandleRightMouseClick () {
 		
 		if (isAlive == false) {
-			print ("Drops:");
-			print ("Gold: " + goldDropped);
-			print ("Health Potions: " + healthPotionsDropped);
-			print ("Energy Potions: " + energyPotionsDropped);
-			print ("Inventory Items: ");
-			for (int i = 0; i < itemsDropped.Count; i++) {
-				print ("item: " + itemsDropped [i].itemName);
-			}
+			GUIManager.instance.lootWindow.SetLoot (goldDropped, healthPotionsDropped, energyPotionsDropped, itemsDropped);
 		}
 
 	}
