@@ -22,10 +22,10 @@ public class EnemyNPCManager : NPCManager {
 	private Vector3 spawnPoint;
 
 	// Dropped Items
-	private int goldDropped;
-	private List<InventoryItemData> itemsDropped;
-	private int healthPotionsDropped;
-	private int energyPotionsDropped;
+	[HideInInspector] public int goldDropped;
+	[HideInInspector] public List<InventoryItemData> itemsDropped;
+	[HideInInspector] public int healthPotionsDropped;
+	[HideInInspector] public int energyPotionsDropped;
 
 	#region Start and Update
 	private void Start () {
@@ -72,7 +72,7 @@ public class EnemyNPCManager : NPCManager {
 	public override void HandleRightMouseClick () {
 		
 		if (isAlive == false) {
-			GUIManager.instance.lootWindow.SetLoot (goldDropped, healthPotionsDropped, energyPotionsDropped, itemsDropped);
+			GUIManager.instance.lootWindow.SetLoot (this);
 		}
 
 	}
@@ -131,6 +131,15 @@ public class EnemyNPCManager : NPCManager {
 		}
 	}
 
+	IEnumerator ResetDeathValue () {
+		yield return null;
+		animator.SetInteger ("DeathValue", 0);
+	}
+
+
+	#endregion
+
+	#region Loot Functions
 	void DetermineDrops () {
 
 		goldDropped = Mathf.RoundToInt (Random.Range (sourceData.lootTable.goldDrop_Min, sourceData.lootTable.goldDrop_Max) * sourceData.goldDropMultiplier);
@@ -138,14 +147,16 @@ public class EnemyNPCManager : NPCManager {
 		float rng = Random.Range (0f, 100f);
 		if (rng < sourceData.lootTable.healthPotionChance) {
 			healthPotionsDropped = 1;
-		} else {
+		}
+		else {
 			healthPotionsDropped = 0;
 		}
 
 		rng = Random.Range (0f, 100f);
 		if (rng < sourceData.lootTable.energyPotionChance) {
 			energyPotionsDropped = 1;
-		} else {
+		}
+		else {
 			healthPotionsDropped = 0;
 		}
 
@@ -164,11 +175,6 @@ public class EnemyNPCManager : NPCManager {
 		}
 	}
 
-	IEnumerator ResetDeathValue () {
-		yield return null;
-		animator.SetInteger ("DeathValue", 0);
-	}
-
 	bool HasItemsToLoot () {
 		if (goldDropped > 0)
 			return true;
@@ -181,6 +187,9 @@ public class EnemyNPCManager : NPCManager {
 
 		return false;
 	}
+
+
+
 	#endregion
 
 	#region Combat Functions

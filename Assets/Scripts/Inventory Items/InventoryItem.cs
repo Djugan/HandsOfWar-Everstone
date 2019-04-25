@@ -17,6 +17,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	[SerializeField] private Image hover_Img;
 	[SerializeField] private Image icon_Img;
 	[SerializeField] private Sprite defaultIcon_Spr;
+	[SerializeField] private RectTransform itemStatsWindowLocation;
 	
 	public static CharacterMenuManager characterMenu;
 	public static GUIManager gui;
@@ -34,7 +35,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		// There is an inventory item at this slot -> show stats
 		else if (sourceData != null) {
 			ShowHover ();
-			gui.itemStatsWindow.ShowWindow (sourceData, trans);
+			gui.itemStatsWindow.ShowWindow (sourceData, itemStatsWindowLocation);
 		}
 	}
 
@@ -95,6 +96,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	}
 
 	public void SetData (InventoryItemData _sourceData) {
+
 		sourceData = _sourceData;
 
 		// Removing inventory item

@@ -6,6 +6,8 @@ using TMPro;
 
 public class PlayerFrameManager : MonoBehaviour {
 
+	[SerializeField] private TextMeshProUGUI playerName_Txt;
+
 	[SerializeField] private Image healthBar_Img;
 	[SerializeField] private TextMeshProUGUI health_Txt;
 
@@ -13,6 +15,14 @@ public class PlayerFrameManager : MonoBehaviour {
 	[SerializeField] private TextMeshProUGUI energy_Txt;
 
 	[SerializeField] private TextMeshProUGUI level_Txt;
+
+	public void SetPlayerName () {
+		playerName_Txt.text = CharacterManager.instance.playerName;
+	}
+
+	public void SetPlayerLevel () {
+		level_Txt.text = CharacterManager.instance.level.ToString ();
+	}
 
 	public void SetHealthBar () {
 		float perc = (float)CharacterManager.instance.currentHealth / CharacterManager.instance.maxHealth;
@@ -27,10 +37,5 @@ public class PlayerFrameManager : MonoBehaviour {
 
 		energy_Txt.text = CharacterManager.instance.currentEnergy + "/" + CharacterManager.instance.maxEnergy;
 	}
-
-	public void SetLevelText () {
-		level_Txt.text = CharacterManager.instance.level.ToString ();
-	}
-
 
 }

@@ -16,6 +16,7 @@ public class CharacterManager : MonoBehaviour
 
 	[Header ("Attributes")]
 	[HideInInspector]
+	public string playerName;
 	public int maxHealth, currentHealth;
 	public int maxEnergy, currentEnergy;
 
@@ -261,7 +262,7 @@ public class CharacterManager : MonoBehaviour
 	void Update () {
 
 		if (Input.GetKeyDown (KeyCode.T)) {
-			TargetManager.instance.DamageTarget (5);
+			TargetManager.instance.DamageTarget (500);
 		}
 
 		// Regen

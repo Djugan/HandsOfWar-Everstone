@@ -7,6 +7,8 @@ public class LootWindowManager : MonoBehaviour {
 	[SerializeField] private GameObject mainWindow;
 	[SerializeField] private LootItemSlot [] lootItemSlots;
 
+	[HideInInspector] public EnemyNPCManager enemyBeingLooted;
+
 	public void ShowWindow () {
 		mainWindow.SetActive (true);
 	}
@@ -14,26 +16,37 @@ public class LootWindowManager : MonoBehaviour {
 		mainWindow.SetActive (false);
 	}
 
-	public void SetLoot (int gold, int healthPot, int energyPot, List<InventoryItemData> items) {
+	public void SetLoot (EnemyNPCManager enemy) {
+
+		enemyBeingLooted = enemy;
 
 		int slotIndex = 0;
 
-		if (gold > 0) {
-			lootItemSlots [slotIndex].SetGold (gold);
+		if (enemy.goldDropped > 0) {
+			lootItemSlots [slotIndex].SetGold (enemy.goldDropped);
 			slotIndex++;
 		}
-		if (healthPot > 0) {
-			lootItemSlots [slotIndex].SetHealthPotions (healthPot);
+		if (enemy.healthPotionsDropped > 0) {
+			lootItemSlots [slotIndex].SetHealthPotions (1);
 			slotIndex++;
 		}
-		if (energyPot > 0) {
-			lootItemSlots [slotIndex].SetEnergyPotions (energyPot);
+		if (enemy.energyPotionsDropped > 0) {
+			lootItemSlots [slotIndex].SetEnergyPotions (1);
 			slotIndex++;
 		}
 
-		for (int i = 0; i < items.Count; i++) {
-			lootItemSlots [slotIndex].SetItem (items [i]);
+		for (int i = 0; i < enemy.itemsDropped.Count; i++) {
+			lootItemSlots [slotIndex].SetItem (enemy.itemsDropped [i]);
 			slotIndex++;
+
+			// In the rare case where we run out of loot item slots
+			if (slotIndex == lootItemSlots.Length - 1)
+				break;
+		}
+
+		// Hide the unused loot item slots
+		for (int i = slotIndex; i < lootItemSlots.Length; i++) {
+			lootItemSlots [i].HideSlot ();
 		}
 
 		ShowWindow ();

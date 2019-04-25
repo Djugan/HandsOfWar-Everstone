@@ -66,10 +66,7 @@ public class ItemStatsWindow : MonoBehaviour {
 	}
 
 	public void SetLocation (RectTransform _trans) {
-		float xOffset = 25f;
-		float yOffset = 35f;
-		Vector3 position = new Vector3 (_trans.position.x + xOffset, _trans.position.y + yOffset, 0f);
-
+		Vector3 position = new Vector3 (_trans.position.x, _trans.position.y, 0f);
 		trans.position = position;
 	}
 

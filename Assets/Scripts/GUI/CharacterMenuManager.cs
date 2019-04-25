@@ -42,6 +42,11 @@ public class CharacterMenuManager : MonoBehaviour {
 
 	[Header ("Equipment")]
 	[SerializeField] private InventoryItem [] equipment;
+	[SerializeField] private TextMeshProUGUI gold_Txt;
+
+	[HideInInspector] public int gold;
+	[HideInInspector] public int energyPotions;
+	[HideInInspector] public int healthPotions;
 
 	public void Start () {
 		InventoryItem.characterMenu = this;
@@ -94,25 +99,32 @@ public class CharacterMenuManager : MonoBehaviour {
 	public void HideWindow () {
 		mainWindow.SetActive (false);
 	}
+	#endregion
 
+
+	#region Loading Inventory & Equipment From Save Data
 	/// <summary>
 	/// Takes the data loaded in and equips items on the character and puts loaded
 	/// inventory items in thier correct position.
 	/// </summary>
-	public void SetLoadedItemsInInventory () {
+	public void SetLoadedEquipment (int[] loadedItems) {
 
 		// Add equipment to inventory and equip on character
 		for (int i = 0; i < equipment.Length; i++) {
 
 			// Is there an item saved in this slot
-			if (SavedGameManager.instance.characterData.equipment [i] != 0) {
-
-				int itemID = SavedGameManager.instance.characterData.equipment [i];
-				InventoryItemData item = InventoryItemDatabase.GetItem (itemID);
+			if (loadedItems [i] != -1) {
+				InventoryItemData item = InventoryItemDatabase.GetItem ( loadedItems [i] );
 				equipment [i].SetData (item);
 				EquipItem (item, i, false);
 			}
-
+		}
+	}
+	public void SetLoadedInventory (int[] loadedItems) {
+		for (int i = 0; i < loadedItems.Length; i++) {
+			if (loadedItems [i] != -1) {
+				AddItemToInventory (loadedItems [i], i, false);
+			}
 		}
 	}
 	#endregion
@@ -121,7 +133,9 @@ public class CharacterMenuManager : MonoBehaviour {
 	#region Equipment Functions
 	void SetupEquipment () {
 		for (int i = 0; i < equipment.Length; i++) {
-			equipment [i].SetDefaultIcon ();
+			if (equipment [i].sourceData == null) {
+				equipment [i].SetDefaultIcon ();
+			}
 		}
 	}
 	void EquipItem (InventoryItemData item, int equipmentSlotIndex, bool autoSave = true) {
@@ -132,7 +146,6 @@ public class CharacterMenuManager : MonoBehaviour {
 		// Update save data
 		if (autoSave) {
 			SavedGameManager.instance.characterData.SaveEquipmentItem (item.itemID, equipmentSlotIndex);
-			SavedGameManager.instance.SaveCharacterData ();
 		}
 
 		SetAttributeValues ();
@@ -143,7 +156,7 @@ public class CharacterMenuManager : MonoBehaviour {
 		CharacterManager.instance.RemoveEquipmentAttributes (item);
 
 		// Update save data
-		SavedGameManager.instance.characterData.SaveEquipmentItem (0, equipmentSlotIndex);
+		SavedGameManager.instance.characterData.SaveEquipmentItem (-1, equipmentSlotIndex);
 		SavedGameManager.instance.SaveCharacterData ();
 
 		SetAttributeValues ();
@@ -235,24 +248,40 @@ public class CharacterMenuManager : MonoBehaviour {
 	void SetupInventory () {
 		for (int i = 0; i < inventory.Length; i++) {
 			inventory [i].slotNumber = i;
-			inventory [i].SetData (null);
+
+			// Set default display for slots that don't have items that were loaded in
+			if (inventory [i].sourceData == null) {
+				inventory [i].SetData (null);
+			}
 		}
 
 		itemOnMouse.SetData (null);
 		itemOnMouse.Hide ();
 	}
 
-	public void AddItemToInventory (int itemID) {
+	public void AddItemToInventory (int itemID, int addAtSlot = -1, bool autoSave = true) {
 
-		int nextOpenSlot = FindOpenInventorySlot ();
+		int nextOpenSlot;
+
+		// Automatically find the next open slot
+		if (addAtSlot == -1)
+			nextOpenSlot = FindOpenInventorySlot ();
+		else
+			nextOpenSlot = addAtSlot;
+
 
 		if (nextOpenSlot == -1) {
 			print ("Inventory is full");
 		}
 		else {
+
 			inventory [nextOpenSlot].SetData (InventoryItemDatabase.GetItem (itemID));
+
+			// Save Inventory Data
+			if (autoSave) {
+				SavedGameManager.instance.characterData.SaveInventory (inventory);
+			}
 		}
-		
 	}
 
 	public bool IsItemOnMouse () {
@@ -283,7 +312,6 @@ public class CharacterMenuManager : MonoBehaviour {
 			return;
 		}
 
-
 		// Clicking on an empty inventory or equipment slot
 		if (newItemLocation.sourceData == null) {
 
@@ -294,7 +322,8 @@ public class CharacterMenuManager : MonoBehaviour {
 				}
 				EquipItem (itemOnMouse.sourceData, GetSlotIndex (newItemLocation.equipmentSlot));
 			}
-			
+
+			originalItemLocation.SetData (null);
 			newItemLocation.SetData (itemOnMouse.sourceData);
 
 			GUIManager.instance.itemStatsWindow.ShowWindow (itemOnMouse.sourceData, newItemLocation.trans);
@@ -302,6 +331,7 @@ public class CharacterMenuManager : MonoBehaviour {
 
 			itemOnMouse.SetData (null);
 			itemOnMouse.Hide ();
+			SavedGameManager.instance.characterData.SaveInventory (inventory);
 		}
 
 		// Clicking on an inventory or equipment slot that already has an item in it -> swap items
@@ -362,6 +392,9 @@ public class CharacterMenuManager : MonoBehaviour {
 
 		GUIManager.instance.playerUnitFrame.SetHealthBar ();
 		GUIManager.instance.playerUnitFrame.SetEnergyBar ();
+
+		// Set gold
+		gold_Txt.text = "x " + gold;
 	}
 
 	void SetHealthDisplay () {
