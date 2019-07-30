@@ -23,6 +23,9 @@ public class LootItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 	public void ShowSlot () {
 		itemSlot_GO.SetActive (true);
 	}
+	public bool IsVisible () {
+		return itemSlot_GO.activeInHierarchy;
+	}
 
 	public void OnPointerEnter (PointerEventData eventData) {
 		if (itemData != null) {
@@ -104,6 +107,9 @@ public class LootItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
 	public void LootItem () {
 
+		// Hide item stats window incase an item was looted
+		GUIManager.instance.itemStatsWindow.HideWindow ();
+
 		// Determine what item is being looted
 		if (gold > 0) {
 			GUIManager.instance.characterMenu.gold += gold;
@@ -117,10 +123,18 @@ public class LootItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 			GUIManager.instance.lootWindow.enemyBeingLooted.energyPotionsDropped = 0;
 		}
 		else if (itemData != null) {
+
+			if (GUIManager.instance.characterMenu.IsInventoryFull ()) {
+				print ("Inventory is full!");
+				return;
+			}
 			GUIManager.instance.characterMenu.AddItemToInventory (itemData.itemID);
 		}
+
 		HideSlot ();
 
+		// Hide the loot window if there are no more items to loot
+		GUIManager.instance.lootWindow.HideWindowIfLootingIsFinished ();
 	}
 
 	void ClearItems () {

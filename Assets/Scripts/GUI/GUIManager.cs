@@ -16,6 +16,9 @@ public class GUIManager : MonoBehaviour {
 	public TargetFrameManager targetFrameManager;
 	public LootWindowManager lootWindow;
 
+	[Header ("Misc")]
+	public CursorManager cursorManager;
+
 	private void Awake () {
 		if (instance == null) {
 			instance = this;

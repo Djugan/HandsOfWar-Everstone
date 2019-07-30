@@ -76,6 +76,18 @@ public class EnemyNPCManager : NPCManager {
 		}
 
 	}
+	public override void HandleMouseOver () {
+
+		if (isAlive) {
+			GUIManager.instance.cursorManager.SetCombatCursor ();
+		}
+		else {
+			GUIManager.instance.cursorManager.SetLootCursor ();
+		}
+	}
+	public override void HandleMouseExit () {
+		GUIManager.instance.cursorManager.SetDefaultCursor ();
+	}
 	public bool IsThisTheCurrentTarget () {
 		return TargetManager.instance.GetTarget () == this;
 	}

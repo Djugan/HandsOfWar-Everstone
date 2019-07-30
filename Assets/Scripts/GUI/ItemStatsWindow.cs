@@ -15,8 +15,14 @@ public class ItemStatsWindow : MonoBehaviour {
 	[SerializeField] private GameObject itemSet_GO;
 	[SerializeField] private TextMeshProUGUI itemSet_Txt;
 	[SerializeField] private RectTransform trans;
+	private Rect screenRect;
+	private Vector3 [] windowCorners;
 
 	private InventoryItemData sourceData;
+
+	private void Start () {
+		windowCorners = new Vector3 [4];
+	}
 
 	public void ShowWindow (InventoryItemData _sourceData, RectTransform _trans) {
 
@@ -56,18 +62,44 @@ public class ItemStatsWindow : MonoBehaviour {
 			itemSet_GO.SetActive (true);
 			itemSet_Txt.text = GetItemSetText ();
 		}
-		
-		SetLocation (_trans);
 
 		mainWindow.SetActive (true);
+		SetLocation (_trans);
+
+		
 	}
 	public void HideWindow () {
+		trans.position = Vector3.zero;
 		mainWindow.SetActive (false);
 	}
 
 	public void SetLocation (RectTransform _trans) {
 		Vector3 position = new Vector3 (_trans.position.x, _trans.position.y, 0f);
 		trans.position = position;
+
+		// Make sure the window is displayed completely within the window
+		StartCoroutine (FitInWindow ());
+
+	}
+	private IEnumerator FitInWindow () {
+
+		// Wait a frame to allow the autosizer to make the window the correct size
+		yield return null;
+
+		// Grab the size of the screen
+		screenRect = new Rect (0, 0, Screen.width, Screen.height);
+
+		// Get the four corners of the item stats window
+		trans.GetWorldCorners (windowCorners);
+
+		// Bottom left of the window is not on the screen -> window is too low
+		if (screenRect.Contains (windowCorners [0]) == false) {
+			float newY = trans.position.y + (trans.rect.height / 1.4f);
+			trans.position = new Vector3 (trans.position.x, newY, 0f);
+		}
+
+		// Top right of the window is not on the screen -> window is too far right
+		// if (screenRect.Contains (windowCorners [2]) == false) {}
 	}
 
 	#region Item Header

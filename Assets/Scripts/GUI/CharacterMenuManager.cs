@@ -69,6 +69,9 @@ public class CharacterMenuManager : MonoBehaviour {
 		*/
 	}
 
+
+
+	#region Main Show, Hide, and Update Functions
 	private void Update () {
 		if (IsItemOnMouse ()) {
 			itemOnMouse.SetPosition (Input.mousePosition);
@@ -78,8 +81,6 @@ public class CharacterMenuManager : MonoBehaviour {
 			AddItemToInventory (Random.Range (1, 50));
 		}
 	}
-
-	#region Main Show/Hide Functions
 	public bool IsVisible () {
 		return mainWindow.activeInHierarchy;
 	}
@@ -97,6 +98,10 @@ public class CharacterMenuManager : MonoBehaviour {
 	}
 
 	public void HideWindow () {
+
+		// Hide item stats window in case an item is being shown at the time the window is closed
+		GUIManager.instance.itemStatsWindow.HideWindow ();
+
 		mainWindow.SetActive (false);
 	}
 	#endregion
@@ -350,6 +355,10 @@ public class CharacterMenuManager : MonoBehaviour {
 			newItemLocation.SetData (itemOnMouse.sourceData);
 			itemOnMouse.SetData (_tempSourceData);
 		}
+	}
+
+	public bool IsInventoryFull () {
+		return FindOpenInventorySlot () == -1;
 	}
 
 	int FindOpenInventorySlot () {

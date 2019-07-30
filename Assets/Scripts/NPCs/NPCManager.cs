@@ -22,7 +22,16 @@ public class NPCManager : MonoBehaviour {
 		}
 	}
 
+	private void OnMouseExit () {
+
+		HandleMouseExit ();
+	}
+
 	public virtual void HandleMouseOver () {
+
+	}
+
+	public virtual void HandleMouseExit () {
 
 	}
 	public virtual void HandleLeftMouseClick () {

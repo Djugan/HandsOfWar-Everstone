@@ -47,10 +47,10 @@ public class SavedGameManager : MonoBehaviour {
 		binaryFormatter.Serialize (file, characterData);
 		file.Close ();
 	}
-	public SGD_Character LoadCharacterData () {
+	public SGD_Character LoadCharacterData (int _saveSlot) {
 
 		SGD_Character data = null;
-		string fullPath = saveDataPath + characterData.GetFileName () + saveSlot + saveFileExt;
+		string fullPath = saveDataPath + characterData.GetFileName () + _saveSlot + saveFileExt;
 
 		if (File.Exists (fullPath)) {
 			FileStream file = File.Open (fullPath, FileMode.Open);
@@ -60,6 +60,14 @@ public class SavedGameManager : MonoBehaviour {
 
 		return data;
 	}
+
+	/// <summary>
+	/// Loads the character data at save slot. Must set SavedGameManager.saveSlot before calling this
+	/// </summary>
+	public SGD_Character LoadCharacterData () {
+		return LoadCharacterData (saveSlot);
+	}
+
 	public void DeleteCharacterData () {
 
 		string fullPath = saveDataPath + characterData.GetFileName () + saveSlot + saveFileExt;

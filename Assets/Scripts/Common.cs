@@ -5,7 +5,7 @@ using UnityEngine;
 public enum Rarity { Common, Rare, Epic }
 public enum Slot { None, Head, Chest, Hands, Legs, Feet, Jewel, Weapon1H, Weapon2H, OffHand }
 
-public enum Class { Warrior, Wizard, Ranger }
+public enum PlayerClass { Warrior, Wizard, Ranger }
 
 public class Common : MonoBehaviour {
 

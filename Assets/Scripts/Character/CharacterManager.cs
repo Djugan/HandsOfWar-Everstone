@@ -17,6 +17,8 @@ public class CharacterManager : MonoBehaviour
 	[Header ("Attributes")]
 	[HideInInspector]
 	public string playerName;
+	public PlayerClass playerClass;
+
 	public int maxHealth, currentHealth;
 	public int maxEnergy, currentEnergy;
 

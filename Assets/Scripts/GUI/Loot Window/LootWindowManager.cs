@@ -51,4 +51,15 @@ public class LootWindowManager : MonoBehaviour {
 
 		ShowWindow ();
 	}
+
+	public void HideWindowIfLootingIsFinished () {
+
+		for (int i = 0; i < lootItemSlots.Length; i++) {
+			if (lootItemSlots [i].IsVisible ()) {
+				return;
+			}
+		}
+		
+		HideWindow ();
+	}
 }

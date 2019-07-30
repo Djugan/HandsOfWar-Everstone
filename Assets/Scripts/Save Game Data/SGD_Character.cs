@@ -11,6 +11,7 @@ public class SGD_Character {
 	// Save data
 	public string playerName;
 	public int level;
+	public PlayerClass playerClass;
 	public int [] equipment;
 	public int [] inventory;
 
@@ -24,7 +25,9 @@ public class SGD_Character {
 	}
 
 	private void SetDefaultValues () {
-		playerName = "Default Name";
+
+		playerName = "Default";
+		playerClass = PlayerClass.Warrior;
 		level = 1;
 
 		for (int i = 0; i < inventory.Length; i++) {
