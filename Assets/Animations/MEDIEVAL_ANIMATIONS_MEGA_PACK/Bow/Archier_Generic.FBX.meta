@@ -13,262 +13,773 @@ labels:
 - Arrow
 - Bow
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Bip01 L Foot
-    100002: Bip01 R Finger4
-    100004: Bip01 R Foot
-    100006: Bip01 L Toe0
-    100008: Long_bow_01
-    100010: Bip01 L Thigh
-    100012: Bip01 R Finger3
-    100014: //RootNode
-    100016: Bip01 R Toe0
-    100018: Bip01 L Calf
-    100020: Bip01 R Hand
-    100022: Bip01 R Forearm
-    100024: bone_bow
-    100026: Bip01 L Finger4
-    100028: Bip01 L Finger3
-    100030: Bip01 L Finger2
-    100032: Bip01 L Finger1
-    100034: Bip01 R Thigh
-    100036: Bip01 R Finger2
-    100038: Bip01 R Calf
-    100040: Bip01 R Finger1
-    100042: Bip01 R Finger0
-    100044: Bip01 L Finger0
-    100046: Bip01 L Hand
-    100048: Bip01 L Forearm
-    100050: Bip01 zeye_left
-    100052: Bip01 zJaw
-    100054: Bip01 Head
-    100056: Bip01 Neck
-    100058: arrow_01
-    100060: arrow_05
-    100062: arrow_04
-    100064: arrow_03
-    100066: arrow_02
-    100068: qiuver_01
-    100070: Long_bow_02
-    100072: Bip01 Spine1
-    100074: Bip01 Spine
-    100076: Bip01 Pelvis
-    100078: Bip01
-    100080: Bip01 right_Wmount
-    100082: Bip01 left_Wmount
-    100084: Bip01 R Finger42
-    100086: Bip01 R Finger41
-    100088: Bip01 R Finger32
-    100090: Bip01 R Finger31
-    100092: Bip01 R Finger22
-    100094: Bip01 R Finger21
-    100096: Bip01 Rhand_Weapon
-    100098: Bip01 R Finger12
-    100100: Bip01 R Finger11
-    100102: Bip01 R Finger02
-    100104: Bip01 R Finger01
-    100106: Bip01 R UpperArm
-    100108: Bip01 R Clavicle
-    100110: Bip01 shield_mount
-    100112: Bow_animation_controller
-    100114: Bip01 L Finger42
-    100116: Bip01 L Finger41
-    100118: Bip01 L Finger32
-    100120: Bip01 L Finger31
-    100122: Bip01 L Finger22
-    100124: Bip01 L Finger21
-    100126: Bip01 Rhand_WeaponOpp
-    100128: Bip01 L Finger12
-    100130: Bip01 L Finger11
-    100132: Bip01 L Finger02
-    100134: Bip01 L Finger01
-    100136: Bip01 L UpperArm
-    100138: Bip01 L Clavicle
-    100140: Bip01 zeye_right
-    100142: Bip01 back_shield_mount
-    100144: Bip01 back_left_Wmount
-    100146: Bip01 back_center_Wmount
-    100148: Bip01 back_right_Wmount
-    100150: hero
-    100152: arrow_00
-    400000: Bip01 L Foot
-    400002: Bip01 R Finger4
-    400004: Bip01 R Foot
-    400006: Bip01 L Toe0
-    400008: Long_bow_01
-    400010: Bip01 L Thigh
-    400012: Bip01 R Finger3
-    400014: //RootNode
-    400016: Bip01 R Toe0
-    400018: Bip01 L Calf
-    400020: Bip01 R Hand
-    400022: Bip01 R Forearm
-    400024: bone_bow
-    400026: Bip01 L Finger4
-    400028: Bip01 L Finger3
-    400030: Bip01 L Finger2
-    400032: Bip01 L Finger1
-    400034: Bip01 R Thigh
-    400036: Bip01 R Finger2
-    400038: Bip01 R Calf
-    400040: Bip01 R Finger1
-    400042: Bip01 R Finger0
-    400044: Bip01 L Finger0
-    400046: Bip01 L Hand
-    400048: Bip01 L Forearm
-    400050: Bip01 zeye_left
-    400052: Bip01 zJaw
-    400054: Bip01 Head
-    400056: Bip01 Neck
-    400058: arrow_01
-    400060: arrow_05
-    400062: arrow_04
-    400064: arrow_03
-    400066: arrow_02
-    400068: qiuver_01
-    400070: Long_bow_02
-    400072: Bip01 Spine1
-    400074: Bip01 Spine
-    400076: Bip01 Pelvis
-    400078: Bip01
-    400080: Bip01 right_Wmount
-    400082: Bip01 left_Wmount
-    400084: Bip01 R Finger42
-    400086: Bip01 R Finger41
-    400088: Bip01 R Finger32
-    400090: Bip01 R Finger31
-    400092: Bip01 R Finger22
-    400094: Bip01 R Finger21
-    400096: Bip01 Rhand_Weapon
-    400098: Bip01 R Finger12
-    400100: Bip01 R Finger11
-    400102: Bip01 R Finger02
-    400104: Bip01 R Finger01
-    400106: Bip01 R UpperArm
-    400108: Bip01 R Clavicle
-    400110: Bip01 shield_mount
-    400112: Bow_animation_controller
-    400114: Bip01 L Finger42
-    400116: Bip01 L Finger41
-    400118: Bip01 L Finger32
-    400120: Bip01 L Finger31
-    400122: Bip01 L Finger22
-    400124: Bip01 L Finger21
-    400126: Bip01 Rhand_WeaponOpp
-    400128: Bip01 L Finger12
-    400130: Bip01 L Finger11
-    400132: Bip01 L Finger02
-    400134: Bip01 L Finger01
-    400136: Bip01 L UpperArm
-    400138: Bip01 L Clavicle
-    400140: Bip01 zeye_right
-    400142: Bip01 back_shield_mount
-    400144: Bip01 back_left_Wmount
-    400146: Bip01 back_center_Wmount
-    400148: Bip01 back_right_Wmount
-    400150: hero
-    400152: arrow_00
-    2300000: bone_bow
-    2300002: arrow_01
-    2300004: arrow_05
-    2300006: arrow_04
-    2300008: arrow_03
-    2300010: arrow_02
-    2300012: qiuver_01
-    2300014: Long_bow_02
-    2300016: Bow_animation_controller
-    2300018: arrow_00
-    3300000: bone_bow
-    3300002: arrow_01
-    3300004: arrow_05
-    3300006: arrow_04
-    3300008: arrow_03
-    3300010: arrow_02
-    3300012: qiuver_01
-    3300014: Long_bow_02
-    3300016: Bow_animation_controller
-    3300018: arrow_00
-    4300000: Long_bow_02
-    4300002: qiuver_01
-    4300004: arrow_02
-    4300006: arrow_03
-    4300008: arrow_04
-    4300010: arrow_05
-    4300012: arrow_01
-    4300014: bone_bow
-    4300016: Bow_animation_controller
-    4300018: Long_bow_01
-    4300020: arrow_00
-    4300022: hero
-    7400000: Bow_Hero
-    7400002: Archer_COMBAT_mode
-    7400004: Archer_putBow_back
-    7400006: IDLE
-    7400008: Archer_takeBow_out
-    7400010: Archer_dodge_backwards
-    7400012: Archer_Dodge_Jump_Backward
-    7400014: Archer_Dodge_Jump_Left
-    7400016: Archer_Dodge_Jump_Right
-    7400018: Archer_duck_below_swing
-    7400020: Archer_taking_hit
-    7400022: Archer_get_arrow_fromBack
-    7400024: Archer_charging
-    7400026: Archer_aim
-    7400028: Archer_shoting
-    7400030: Archer_Knocked_backward
-    7400032: Archer_Down_back
-    7400034: Archer_Recover_from_knocked_backward
-    7400036: Archer_Knocked_forward
-    7400038: Archer_Down_forward
-    7400040: Archer_Recover_from_knocked_forward
-    7400042: Archer_aim_fromLeft_toRight
-    7400044: Archer_aim_fromUp_toDown
-    7400046: Archer_Die_knocked_backward
-    7400048: Archer_Die_knocked_forward
-    7400050: Archer_Dying
-    7400052: Archer_strife_left
-    7400054: Archer_strife_right
-    7400056: Archer_walk_Combat
-    7400058: Archer_walk_get_arrow_fromBack
-    7400060: Archer_walk_charging
-    7400062: Archer_walk_Aim_forward
-    7400064: Archer_walk_shoting
-    7400066: Archer_walk_Aim_leftRight
-    7400068: Archer_walk_Aim_UpDown
-    7400070: Archer_walking_back
-    7400072: RM_Archer_Die_knocked_backward
-    7400074: RM_Archer_Die_knocked_forward
-    7400076: RM_Archer_Dodge_Jump_Backward
-    7400078: RM_Archer_Dodge_Jump_Left
-    7400080: RM_Archer_Dodge_Jump_Right
-    7400082: RM_Archer_Knocked_backward
-    7400084: RM_Archer_Knocked_forward
-    7400086: RM_Archer_strife_left
-    7400088: RM_Archer_strife_right
-    7400090: RM_Archer_walk_Aim_forward
-    7400092: RM_Archer_walk_Aim_leftRight
-    7400094: RM_Archer_walk_Aim_UpDown
-    7400096: RM_Archer_walk_charging
-    7400098: RM_Archer_walk_Combat
-    7400100: RM_Archer_walk_get_arrow_fromBack
-    7400102: RM_Archer_walk_shoting
-    7400104: RM_Archer_walking_back
-    7400106: Archer_rising_bow_45_d
-    7400108: Archer_charge_bow_up_45_d
-    7400110: 'Archer_fire_up_45_d:'
-    7400112: Archer_aiming_up_45_d
-    7400114: Archer_get_arrow_fromBack_45_d
-    7400116: Archer_aim_fromLeft_toRight
-    7400118: Archer_strife_right_Aim
-    7400120: Archer_strife_left_Aim
-    7400122: RM_Archer_strife_left_Aim
-    7400124: RM_Archer_strife_right_Aim
-    9500000: //RootNode
-    11100000: //RootNode
-    13700000: Long_bow_01
-    13700002: hero
-    2186277476908879412: ImportLogs
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Bip01 L Foot
+  - first:
+      1: 100002
+    second: Bip01 R Finger4
+  - first:
+      1: 100004
+    second: Bip01 R Foot
+  - first:
+      1: 100006
+    second: Bip01 L Toe0
+  - first:
+      1: 100008
+    second: Long_bow_01
+  - first:
+      1: 100010
+    second: Bip01 L Thigh
+  - first:
+      1: 100012
+    second: Bip01 R Finger3
+  - first:
+      1: 100014
+    second: //RootNode
+  - first:
+      1: 100016
+    second: Bip01 R Toe0
+  - first:
+      1: 100018
+    second: Bip01 L Calf
+  - first:
+      1: 100020
+    second: Bip01 R Hand
+  - first:
+      1: 100022
+    second: Bip01 R Forearm
+  - first:
+      1: 100024
+    second: bone_bow
+  - first:
+      1: 100026
+    second: Bip01 L Finger4
+  - first:
+      1: 100028
+    second: Bip01 L Finger3
+  - first:
+      1: 100030
+    second: Bip01 L Finger2
+  - first:
+      1: 100032
+    second: Bip01 L Finger1
+  - first:
+      1: 100034
+    second: Bip01 R Thigh
+  - first:
+      1: 100036
+    second: Bip01 R Finger2
+  - first:
+      1: 100038
+    second: Bip01 R Calf
+  - first:
+      1: 100040
+    second: Bip01 R Finger1
+  - first:
+      1: 100042
+    second: Bip01 R Finger0
+  - first:
+      1: 100044
+    second: Bip01 L Finger0
+  - first:
+      1: 100046
+    second: Bip01 L Hand
+  - first:
+      1: 100048
+    second: Bip01 L Forearm
+  - first:
+      1: 100050
+    second: Bip01 zeye_left
+  - first:
+      1: 100052
+    second: Bip01 zJaw
+  - first:
+      1: 100054
+    second: Bip01 Head
+  - first:
+      1: 100056
+    second: Bip01 Neck
+  - first:
+      1: 100058
+    second: arrow_01
+  - first:
+      1: 100060
+    second: arrow_05
+  - first:
+      1: 100062
+    second: arrow_04
+  - first:
+      1: 100064
+    second: arrow_03
+  - first:
+      1: 100066
+    second: arrow_02
+  - first:
+      1: 100068
+    second: qiuver_01
+  - first:
+      1: 100070
+    second: Long_bow_02
+  - first:
+      1: 100072
+    second: Bip01 Spine1
+  - first:
+      1: 100074
+    second: Bip01 Spine
+  - first:
+      1: 100076
+    second: Bip01 Pelvis
+  - first:
+      1: 100078
+    second: Bip01
+  - first:
+      1: 100080
+    second: Bip01 right_Wmount
+  - first:
+      1: 100082
+    second: Bip01 left_Wmount
+  - first:
+      1: 100084
+    second: Bip01 R Finger42
+  - first:
+      1: 100086
+    second: Bip01 R Finger41
+  - first:
+      1: 100088
+    second: Bip01 R Finger32
+  - first:
+      1: 100090
+    second: Bip01 R Finger31
+  - first:
+      1: 100092
+    second: Bip01 R Finger22
+  - first:
+      1: 100094
+    second: Bip01 R Finger21
+  - first:
+      1: 100096
+    second: Bip01 Rhand_Weapon
+  - first:
+      1: 100098
+    second: Bip01 R Finger12
+  - first:
+      1: 100100
+    second: Bip01 R Finger11
+  - first:
+      1: 100102
+    second: Bip01 R Finger02
+  - first:
+      1: 100104
+    second: Bip01 R Finger01
+  - first:
+      1: 100106
+    second: Bip01 R UpperArm
+  - first:
+      1: 100108
+    second: Bip01 R Clavicle
+  - first:
+      1: 100110
+    second: Bip01 shield_mount
+  - first:
+      1: 100112
+    second: Bow_animation_controller
+  - first:
+      1: 100114
+    second: Bip01 L Finger42
+  - first:
+      1: 100116
+    second: Bip01 L Finger41
+  - first:
+      1: 100118
+    second: Bip01 L Finger32
+  - first:
+      1: 100120
+    second: Bip01 L Finger31
+  - first:
+      1: 100122
+    second: Bip01 L Finger22
+  - first:
+      1: 100124
+    second: Bip01 L Finger21
+  - first:
+      1: 100126
+    second: Bip01 Rhand_WeaponOpp
+  - first:
+      1: 100128
+    second: Bip01 L Finger12
+  - first:
+      1: 100130
+    second: Bip01 L Finger11
+  - first:
+      1: 100132
+    second: Bip01 L Finger02
+  - first:
+      1: 100134
+    second: Bip01 L Finger01
+  - first:
+      1: 100136
+    second: Bip01 L UpperArm
+  - first:
+      1: 100138
+    second: Bip01 L Clavicle
+  - first:
+      1: 100140
+    second: Bip01 zeye_right
+  - first:
+      1: 100142
+    second: Bip01 back_shield_mount
+  - first:
+      1: 100144
+    second: Bip01 back_left_Wmount
+  - first:
+      1: 100146
+    second: Bip01 back_center_Wmount
+  - first:
+      1: 100148
+    second: Bip01 back_right_Wmount
+  - first:
+      1: 100150
+    second: hero
+  - first:
+      1: 100152
+    second: arrow_00
+  - first:
+      4: 400000
+    second: Bip01 L Foot
+  - first:
+      4: 400002
+    second: Bip01 R Finger4
+  - first:
+      4: 400004
+    second: Bip01 R Foot
+  - first:
+      4: 400006
+    second: Bip01 L Toe0
+  - first:
+      4: 400008
+    second: Long_bow_01
+  - first:
+      4: 400010
+    second: Bip01 L Thigh
+  - first:
+      4: 400012
+    second: Bip01 R Finger3
+  - first:
+      4: 400014
+    second: //RootNode
+  - first:
+      4: 400016
+    second: Bip01 R Toe0
+  - first:
+      4: 400018
+    second: Bip01 L Calf
+  - first:
+      4: 400020
+    second: Bip01 R Hand
+  - first:
+      4: 400022
+    second: Bip01 R Forearm
+  - first:
+      4: 400024
+    second: bone_bow
+  - first:
+      4: 400026
+    second: Bip01 L Finger4
+  - first:
+      4: 400028
+    second: Bip01 L Finger3
+  - first:
+      4: 400030
+    second: Bip01 L Finger2
+  - first:
+      4: 400032
+    second: Bip01 L Finger1
+  - first:
+      4: 400034
+    second: Bip01 R Thigh
+  - first:
+      4: 400036
+    second: Bip01 R Finger2
+  - first:
+      4: 400038
+    second: Bip01 R Calf
+  - first:
+      4: 400040
+    second: Bip01 R Finger1
+  - first:
+      4: 400042
+    second: Bip01 R Finger0
+  - first:
+      4: 400044
+    second: Bip01 L Finger0
+  - first:
+      4: 400046
+    second: Bip01 L Hand
+  - first:
+      4: 400048
+    second: Bip01 L Forearm
+  - first:
+      4: 400050
+    second: Bip01 zeye_left
+  - first:
+      4: 400052
+    second: Bip01 zJaw
+  - first:
+      4: 400054
+    second: Bip01 Head
+  - first:
+      4: 400056
+    second: Bip01 Neck
+  - first:
+      4: 400058
+    second: arrow_01
+  - first:
+      4: 400060
+    second: arrow_05
+  - first:
+      4: 400062
+    second: arrow_04
+  - first:
+      4: 400064
+    second: arrow_03
+  - first:
+      4: 400066
+    second: arrow_02
+  - first:
+      4: 400068
+    second: qiuver_01
+  - first:
+      4: 400070
+    second: Long_bow_02
+  - first:
+      4: 400072
+    second: Bip01 Spine1
+  - first:
+      4: 400074
+    second: Bip01 Spine
+  - first:
+      4: 400076
+    second: Bip01 Pelvis
+  - first:
+      4: 400078
+    second: Bip01
+  - first:
+      4: 400080
+    second: Bip01 right_Wmount
+  - first:
+      4: 400082
+    second: Bip01 left_Wmount
+  - first:
+      4: 400084
+    second: Bip01 R Finger42
+  - first:
+      4: 400086
+    second: Bip01 R Finger41
+  - first:
+      4: 400088
+    second: Bip01 R Finger32
+  - first:
+      4: 400090
+    second: Bip01 R Finger31
+  - first:
+      4: 400092
+    second: Bip01 R Finger22
+  - first:
+      4: 400094
+    second: Bip01 R Finger21
+  - first:
+      4: 400096
+    second: Bip01 Rhand_Weapon
+  - first:
+      4: 400098
+    second: Bip01 R Finger12
+  - first:
+      4: 400100
+    second: Bip01 R Finger11
+  - first:
+      4: 400102
+    second: Bip01 R Finger02
+  - first:
+      4: 400104
+    second: Bip01 R Finger01
+  - first:
+      4: 400106
+    second: Bip01 R UpperArm
+  - first:
+      4: 400108
+    second: Bip01 R Clavicle
+  - first:
+      4: 400110
+    second: Bip01 shield_mount
+  - first:
+      4: 400112
+    second: Bow_animation_controller
+  - first:
+      4: 400114
+    second: Bip01 L Finger42
+  - first:
+      4: 400116
+    second: Bip01 L Finger41
+  - first:
+      4: 400118
+    second: Bip01 L Finger32
+  - first:
+      4: 400120
+    second: Bip01 L Finger31
+  - first:
+      4: 400122
+    second: Bip01 L Finger22
+  - first:
+      4: 400124
+    second: Bip01 L Finger21
+  - first:
+      4: 400126
+    second: Bip01 Rhand_WeaponOpp
+  - first:
+      4: 400128
+    second: Bip01 L Finger12
+  - first:
+      4: 400130
+    second: Bip01 L Finger11
+  - first:
+      4: 400132
+    second: Bip01 L Finger02
+  - first:
+      4: 400134
+    second: Bip01 L Finger01
+  - first:
+      4: 400136
+    second: Bip01 L UpperArm
+  - first:
+      4: 400138
+    second: Bip01 L Clavicle
+  - first:
+      4: 400140
+    second: Bip01 zeye_right
+  - first:
+      4: 400142
+    second: Bip01 back_shield_mount
+  - first:
+      4: 400144
+    second: Bip01 back_left_Wmount
+  - first:
+      4: 400146
+    second: Bip01 back_center_Wmount
+  - first:
+      4: 400148
+    second: Bip01 back_right_Wmount
+  - first:
+      4: 400150
+    second: hero
+  - first:
+      4: 400152
+    second: arrow_00
+  - first:
+      23: 2300000
+    second: bone_bow
+  - first:
+      23: 2300002
+    second: arrow_01
+  - first:
+      23: 2300004
+    second: arrow_05
+  - first:
+      23: 2300006
+    second: arrow_04
+  - first:
+      23: 2300008
+    second: arrow_03
+  - first:
+      23: 2300010
+    second: arrow_02
+  - first:
+      23: 2300012
+    second: qiuver_01
+  - first:
+      23: 2300014
+    second: Long_bow_02
+  - first:
+      23: 2300016
+    second: Bow_animation_controller
+  - first:
+      23: 2300018
+    second: arrow_00
+  - first:
+      33: 3300000
+    second: bone_bow
+  - first:
+      33: 3300002
+    second: arrow_01
+  - first:
+      33: 3300004
+    second: arrow_05
+  - first:
+      33: 3300006
+    second: arrow_04
+  - first:
+      33: 3300008
+    second: arrow_03
+  - first:
+      33: 3300010
+    second: arrow_02
+  - first:
+      33: 3300012
+    second: qiuver_01
+  - first:
+      33: 3300014
+    second: Long_bow_02
+  - first:
+      33: 3300016
+    second: Bow_animation_controller
+  - first:
+      33: 3300018
+    second: arrow_00
+  - first:
+      43: 4300000
+    second: Long_bow_02
+  - first:
+      43: 4300002
+    second: qiuver_01
+  - first:
+      43: 4300004
+    second: arrow_02
+  - first:
+      43: 4300006
+    second: arrow_03
+  - first:
+      43: 4300008
+    second: arrow_04
+  - first:
+      43: 4300010
+    second: arrow_05
+  - first:
+      43: 4300012
+    second: arrow_01
+  - first:
+      43: 4300014
+    second: bone_bow
+  - first:
+      43: 4300016
+    second: Bow_animation_controller
+  - first:
+      43: 4300018
+    second: Long_bow_01
+  - first:
+      43: 4300020
+    second: arrow_00
+  - first:
+      43: 4300022
+    second: hero
+  - first:
+      74: 7400000
+    second: Bow_Hero
+  - first:
+      74: 7400002
+    second: Archer_COMBAT_mode
+  - first:
+      74: 7400004
+    second: Archer_putBow_back
+  - first:
+      74: 7400006
+    second: IDLE
+  - first:
+      74: 7400008
+    second: Archer_takeBow_out
+  - first:
+      74: 7400010
+    second: Archer_dodge_backwards
+  - first:
+      74: 7400012
+    second: Archer_Dodge_Jump_Backward
+  - first:
+      74: 7400014
+    second: Archer_Dodge_Jump_Left
+  - first:
+      74: 7400016
+    second: Archer_Dodge_Jump_Right
+  - first:
+      74: 7400018
+    second: Archer_duck_below_swing
+  - first:
+      74: 7400020
+    second: Archer_taking_hit
+  - first:
+      74: 7400022
+    second: Archer_get_arrow_fromBack
+  - first:
+      74: 7400024
+    second: Archer_charging
+  - first:
+      74: 7400026
+    second: Archer_aim
+  - first:
+      74: 7400028
+    second: Archer_shoting
+  - first:
+      74: 7400030
+    second: Archer_Knocked_backward
+  - first:
+      74: 7400032
+    second: Archer_Down_back
+  - first:
+      74: 7400034
+    second: Archer_Recover_from_knocked_backward
+  - first:
+      74: 7400036
+    second: Archer_Knocked_forward
+  - first:
+      74: 7400038
+    second: Archer_Down_forward
+  - first:
+      74: 7400040
+    second: Archer_Recover_from_knocked_forward
+  - first:
+      74: 7400042
+    second: Archer_aim_fromLeft_toRight
+  - first:
+      74: 7400044
+    second: Archer_aim_fromUp_toDown
+  - first:
+      74: 7400046
+    second: Archer_Die_knocked_backward
+  - first:
+      74: 7400048
+    second: Archer_Die_knocked_forward
+  - first:
+      74: 7400050
+    second: Archer_Dying
+  - first:
+      74: 7400052
+    second: Archer_strife_left
+  - first:
+      74: 7400054
+    second: Archer_strife_right
+  - first:
+      74: 7400056
+    second: Archer_walk_Combat
+  - first:
+      74: 7400058
+    second: Archer_walk_get_arrow_fromBack
+  - first:
+      74: 7400060
+    second: Archer_walk_charging
+  - first:
+      74: 7400062
+    second: Archer_walk_Aim_forward
+  - first:
+      74: 7400064
+    second: Archer_walk_shoting
+  - first:
+      74: 7400066
+    second: Archer_walk_Aim_leftRight
+  - first:
+      74: 7400068
+    second: Archer_walk_Aim_UpDown
+  - first:
+      74: 7400070
+    second: Archer_walking_back
+  - first:
+      74: 7400072
+    second: RM_Archer_Die_knocked_backward
+  - first:
+      74: 7400074
+    second: RM_Archer_Die_knocked_forward
+  - first:
+      74: 7400076
+    second: RM_Archer_Dodge_Jump_Backward
+  - first:
+      74: 7400078
+    second: RM_Archer_Dodge_Jump_Left
+  - first:
+      74: 7400080
+    second: RM_Archer_Dodge_Jump_Right
+  - first:
+      74: 7400082
+    second: RM_Archer_Knocked_backward
+  - first:
+      74: 7400084
+    second: RM_Archer_Knocked_forward
+  - first:
+      74: 7400086
+    second: RM_Archer_strife_left
+  - first:
+      74: 7400088
+    second: RM_Archer_strife_right
+  - first:
+      74: 7400090
+    second: RM_Archer_walk_Aim_forward
+  - first:
+      74: 7400092
+    second: RM_Archer_walk_Aim_leftRight
+  - first:
+      74: 7400094
+    second: RM_Archer_walk_Aim_UpDown
+  - first:
+      74: 7400096
+    second: RM_Archer_walk_charging
+  - first:
+      74: 7400098
+    second: RM_Archer_walk_Combat
+  - first:
+      74: 7400100
+    second: RM_Archer_walk_get_arrow_fromBack
+  - first:
+      74: 7400102
+    second: RM_Archer_walk_shoting
+  - first:
+      74: 7400104
+    second: RM_Archer_walking_back
+  - first:
+      74: 7400106
+    second: Archer_rising_bow_45_d
+  - first:
+      74: 7400108
+    second: Archer_charge_bow_up_45_d
+  - first:
+      74: 7400110
+    second: 'Archer_fire_up_45_d:'
+  - first:
+      74: 7400112
+    second: Archer_aiming_up_45_d
+  - first:
+      74: 7400114
+    second: Archer_get_arrow_fromBack_45_d
+  - first:
+      74: 7400116
+    second: Archer_aim_fromLeft_toRight
+  - first:
+      74: 7400118
+    second: Archer_strife_right_Aim
+  - first:
+      74: 7400120
+    second: Archer_strife_left_Aim
+  - first:
+      74: 7400122
+    second: RM_Archer_strife_left_Aim
+  - first:
+      74: 7400124
+    second: RM_Archer_strife_right_Aim
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Long_bow_01
+  - first:
+      137: 13700002
+    second: hero
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  - first:
+      74: 2429354914299670108
+    second: Archer_aim_fromLeft_toRight
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -311,6 +822,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_COMBAT_mode
       takeName: 
+      internalID: 0
       firstFrame: 0
       lastFrame: 75
       wrapMode: 1
@@ -339,6 +851,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_putBow_back
       takeName: 
+      internalID: 0
       firstFrame: 76
       lastFrame: 121
       wrapMode: 1
@@ -367,6 +880,7 @@ ModelImporter:
     - serializedVersion: 16
       name: IDLE
       takeName: 
+      internalID: 0
       firstFrame: 122
       lastFrame: 222
       wrapMode: 1
@@ -395,6 +909,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_takeBow_out
       takeName: 
+      internalID: 0
       firstFrame: 223
       lastFrame: 268
       wrapMode: 1
@@ -423,6 +938,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_dodge_backwards
       takeName: 
+      internalID: 0
       firstFrame: 269
       lastFrame: 304
       wrapMode: 1
@@ -451,6 +967,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Dodge_Jump_Backward
       takeName: 
+      internalID: 0
       firstFrame: 305
       lastFrame: 330
       wrapMode: 1
@@ -479,6 +996,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Dodge_Jump_Left
       takeName: 
+      internalID: 0
       firstFrame: 331
       lastFrame: 356
       wrapMode: 1
@@ -507,6 +1025,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Dodge_Jump_Right
       takeName: 
+      internalID: 0
       firstFrame: 357
       lastFrame: 382
       wrapMode: 1
@@ -535,6 +1054,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_duck_below_swing
       takeName: 
+      internalID: 0
       firstFrame: 383
       lastFrame: 418
       wrapMode: 1
@@ -563,6 +1083,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_taking_hit
       takeName: 
+      internalID: 0
       firstFrame: 419
       lastFrame: 454
       wrapMode: 1
@@ -591,6 +1112,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_get_arrow_fromBack
       takeName: 
+      internalID: 0
       firstFrame: 455
       lastFrame: 505
       wrapMode: 1
@@ -619,6 +1141,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_charging
       takeName: 
+      internalID: 0
       firstFrame: 506
       lastFrame: 546
       wrapMode: 1
@@ -647,6 +1170,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_aim
       takeName: 
+      internalID: 0
       firstFrame: 547
       lastFrame: 647
       wrapMode: 1
@@ -675,6 +1199,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_shoting
       takeName: 
+      internalID: 0
       firstFrame: 648
       lastFrame: 683
       wrapMode: 1
@@ -703,6 +1228,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Knocked_backward
       takeName: 
+      internalID: 0
       firstFrame: 684
       lastFrame: 725
       wrapMode: 1
@@ -731,6 +1257,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Down_back
       takeName: 
+      internalID: 0
       firstFrame: 726
       lastFrame: 766
       wrapMode: 1
@@ -759,6 +1286,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Recover_from_knocked_backward
       takeName: 
+      internalID: 0
       firstFrame: 767
       lastFrame: 807
       wrapMode: 1
@@ -787,6 +1315,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Knocked_forward
       takeName: 
+      internalID: 0
       firstFrame: 808
       lastFrame: 836
       wrapMode: 1
@@ -815,6 +1344,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Down_forward
       takeName: 
+      internalID: 0
       firstFrame: 837
       lastFrame: 877
       wrapMode: 1
@@ -843,6 +1373,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Recover_from_knocked_forward
       takeName: 
+      internalID: 0
       firstFrame: 878
       lastFrame: 910
       wrapMode: 1
@@ -871,6 +1402,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_aim_fromLeft_toRight
       takeName: 
+      internalID: 0
       firstFrame: 915
       lastFrame: 1005
       wrapMode: 1
@@ -899,6 +1431,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_aim_fromUp_toDown
       takeName: 
+      internalID: 0
       firstFrame: 1010
       lastFrame: 1100
       wrapMode: 1
@@ -927,6 +1460,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Die_knocked_backward
       takeName: 
+      internalID: 0
       firstFrame: 1105
       lastFrame: 1122
       wrapMode: 1
@@ -955,6 +1489,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Die_knocked_forward
       takeName: 
+      internalID: 0
       firstFrame: 1127
       lastFrame: 1144
       wrapMode: 1
@@ -983,6 +1518,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_Dying
       takeName: 
+      internalID: 0
       firstFrame: 1149
       lastFrame: 1189
       wrapMode: 1
@@ -1011,6 +1547,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_strife_left
       takeName: 
+      internalID: 0
       firstFrame: 1194
       lastFrame: 1229
       wrapMode: 1
@@ -1039,6 +1576,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_strife_right
       takeName: 
+      internalID: 0
       firstFrame: 1234
       lastFrame: 1269
       wrapMode: 1
@@ -1067,6 +1605,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_walk_Combat
       takeName: 
+      internalID: 0
       firstFrame: 1276
       lastFrame: 1321
       wrapMode: 1
@@ -1095,6 +1634,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_walk_get_arrow_fromBack
       takeName: 
+      internalID: 0
       firstFrame: 1322
       lastFrame: 1367
       wrapMode: 1
@@ -1123,6 +1663,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_walk_charging
       takeName: 
+      internalID: 0
       firstFrame: 1368
       lastFrame: 1413
       wrapMode: 1
@@ -1151,6 +1692,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_walk_Aim_forward
       takeName: 
+      internalID: 0
       firstFrame: 1414
       lastFrame: 1459
       wrapMode: 1
@@ -1179,6 +1721,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_walk_shoting
       takeName: 
+      internalID: 0
       firstFrame: 1460
       lastFrame: 1505
       wrapMode: 1
@@ -1207,6 +1750,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_walk_Aim_leftRight
       takeName: 
+      internalID: 0
       firstFrame: 1510
       lastFrame: 1600
       wrapMode: 1
@@ -1235,6 +1779,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_walk_Aim_UpDown
       takeName: 
+      internalID: 0
       firstFrame: 1605
       lastFrame: 1695
       wrapMode: 1
@@ -1263,6 +1808,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_walking_back
       takeName: 
+      internalID: 0
       firstFrame: 1700
       lastFrame: 1735
       wrapMode: 1
@@ -1291,6 +1837,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_Die_knocked_backward
       takeName: 
+      internalID: 0
       firstFrame: 1740
       lastFrame: 1757
       wrapMode: 1
@@ -1319,6 +1866,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_Die_knocked_forward
       takeName: 
+      internalID: 0
       firstFrame: 1762
       lastFrame: 1779
       wrapMode: 1
@@ -1347,6 +1895,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_Dodge_Jump_Backward
       takeName: 
+      internalID: 0
       firstFrame: 1784
       lastFrame: 1809
       wrapMode: 1
@@ -1375,6 +1924,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_Dodge_Jump_Left
       takeName: 
+      internalID: 0
       firstFrame: 1814
       lastFrame: 1839
       wrapMode: 1
@@ -1403,6 +1953,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_Dodge_Jump_Right
       takeName: 
+      internalID: 0
       firstFrame: 1844
       lastFrame: 1869
       wrapMode: 1
@@ -1431,6 +1982,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_Knocked_backward
       takeName: 
+      internalID: 0
       firstFrame: 1874
       lastFrame: 1915
       wrapMode: 1
@@ -1459,6 +2011,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_Knocked_forward
       takeName: 
+      internalID: 0
       firstFrame: 1920
       lastFrame: 1948
       wrapMode: 1
@@ -1487,6 +2040,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_strife_left
       takeName: 
+      internalID: 0
       firstFrame: 1953
       lastFrame: 1988.0001
       wrapMode: 1
@@ -1515,6 +2069,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_strife_right
       takeName: 
+      internalID: 0
       firstFrame: 1993
       lastFrame: 2028
       wrapMode: 1
@@ -1543,6 +2098,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_walk_Aim_forward
       takeName: 
+      internalID: 0
       firstFrame: 2034.0001
       lastFrame: 2078
       wrapMode: 1
@@ -1571,6 +2127,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_walk_Aim_leftRight
       takeName: 
+      internalID: 0
       firstFrame: 2083
       lastFrame: 2173
       wrapMode: 1
@@ -1599,6 +2156,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_walk_Aim_UpDown
       takeName: 
+      internalID: 0
       firstFrame: 2179
       lastFrame: 2268
       wrapMode: 1
@@ -1627,6 +2185,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_walk_charging
       takeName: 
+      internalID: 0
       firstFrame: 2273
       lastFrame: 2318
       wrapMode: 1
@@ -1655,6 +2214,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_walk_Combat
       takeName: 
+      internalID: 0
       firstFrame: 2323
       lastFrame: 2368
       wrapMode: 1
@@ -1683,6 +2243,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_walk_get_arrow_fromBack
       takeName: 
+      internalID: 0
       firstFrame: 2373
       lastFrame: 2418
       wrapMode: 1
@@ -1711,6 +2272,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_walk_shoting
       takeName: 
+      internalID: 0
       firstFrame: 2423
       lastFrame: 2468
       wrapMode: 1
@@ -1739,6 +2301,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_walking_back
       takeName: 
+      internalID: 0
       firstFrame: 2473
       lastFrame: 2508
       wrapMode: 1
@@ -1767,6 +2330,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_rising_bow_45_d
       takeName: Bow_Hero_v1.1
+      internalID: 0
       firstFrame: 2513
       lastFrame: 2528
       wrapMode: 0
@@ -1921,6 +2485,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_charge_bow_up_45_d
       takeName: Bow_Hero_v1.1
+      internalID: 0
       firstFrame: 2529
       lastFrame: 2549
       wrapMode: 0
@@ -2075,6 +2640,7 @@ ModelImporter:
     - serializedVersion: 16
       name: 'Archer_fire_up_45_d:'
       takeName: Bow_Hero_v1.1
+      internalID: 0
       firstFrame: 2550
       lastFrame: 2590
       wrapMode: 0
@@ -2229,6 +2795,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_aiming_up_45_d
       takeName: Bow_Hero_v1.1
+      internalID: 0
       firstFrame: 2591
       lastFrame: 2641
       wrapMode: 0
@@ -2383,6 +2950,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_get_arrow_fromBack_45_d
       takeName: Bow_Hero_v1.1
+      internalID: 0
       firstFrame: 2642
       lastFrame: 2692
       wrapMode: 0
@@ -2537,6 +3105,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_aim_fromLeft_toRight
       takeName: Take 001
+      internalID: 0
       firstFrame: 2697
       lastFrame: 2787
       wrapMode: 0
@@ -2774,6 +3343,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_strife_right_Aim
       takeName: Take 001
+      internalID: 0
       firstFrame: 2793
       lastFrame: 2827
       wrapMode: 0
@@ -3011,6 +3581,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Archer_strife_left_Aim
       takeName: Take 001
+      internalID: 0
       firstFrame: 2833
       lastFrame: 2867
       wrapMode: 0
@@ -3248,6 +3819,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_strife_left_Aim
       takeName: Take 001
+      internalID: 0
       firstFrame: 2873
       lastFrame: 2907
       wrapMode: 0
@@ -3485,6 +4057,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RM_Archer_strife_right_Aim
       takeName: Take 001
+      internalID: 0
       firstFrame: 2913
       lastFrame: 2947
       wrapMode: 0
@@ -3725,6 +4298,8 @@ ModelImporter:
     globalScale: 0.01
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -3732,27 +4307,32 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Bip01 Pelvis
       humanName: Hips
@@ -4542,6 +5122,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.01
     rootMotionBoneName: Bip01
     hasTranslationDoF: 0
     hasExtraRoot: 0
