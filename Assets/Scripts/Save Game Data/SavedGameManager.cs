@@ -38,6 +38,7 @@ public class SavedGameManager : MonoBehaviour {
 
 	#endregion
 
+
 	#region Character Data
 	public void SaveCharacterData () {
 

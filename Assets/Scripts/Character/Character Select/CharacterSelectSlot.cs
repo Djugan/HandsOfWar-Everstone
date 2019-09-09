@@ -17,6 +17,10 @@ public class CharacterSelectSlot : MonoBehaviour {
 	private int saveSlot;	// The save slot that is associated with this character select slot
 
 
+	public void SetSaveSlot (int s) {
+		saveSlot = s;
+	}
+
 	// Populate or hide the character select slot
 	public void SetCharacterData (SGD_Character characterData) {
 
@@ -36,10 +40,15 @@ public class CharacterSelectSlot : MonoBehaviour {
 
 	public void SelectCharacterSlot () {
 		selectedIndicator_GO.SetActive (true);
+		SavedGameManager.instance.saveSlot = saveSlot;
 	}
 
 	public void DeselectCharacterSlot () {
 		selectedIndicator_GO.SetActive (false);
+	}
+
+	public bool IsSelected () {
+		return selectedIndicator_GO.activeInHierarchy;
 	}
 
 }
