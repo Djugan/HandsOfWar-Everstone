@@ -15,250 +15,734 @@ labels:
 - skaven
 - fantasy
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Bip01
-    100002: Bip01 back_left_Wmount
-    100004: Bip01 back_shield_mount
-    100006: Bip01 Head
-    100008: Bip01 L Calf
-    100010: Bip01 L Clavicle
-    100012: Bip01 L Finger0
-    100014: Bip01 L Finger01
-    100016: Bip01 L Finger02
-    100018: Bip01 L Finger1
-    100020: Bip01 L Finger11
-    100022: Bip01 L Finger12
-    100024: Bip01 L Finger2
-    100026: Bip01 L Finger21
-    100028: Bip01 L Finger22
-    100030: Bip01 L Finger3
-    100032: Bip01 L Finger31
-    100034: Bip01 L Finger32
-    100036: Bip01 L Finger4
-    100038: Bip01 L Finger41
-    100040: Bip01 L Finger42
-    100042: Bip01 L Foot
-    100044: Bip01 L Forearm
-    100046: Bip01 L ForeTwist
-    100048: Bip01 L ForeTwist1
-    100050: Bip01 L Hand
-    100052: Bip01 L HorseLink
-    100054: Bip01 L Thigh
-    100056: Bip01 L Toe0
-    100058: Bip01 L UpperArm
-    100060: Bip01 Neck
-    100062: Bip01 Pelvis
-    100064: Bip01 R Calf
-    100066: Bip01 R Clavicle
-    100068: Bip01 R Finger0
-    100070: Bip01 R Finger01
-    100072: Bip01 R Finger02
-    100074: Bip01 R Finger1
-    100076: Bip01 R Finger11
-    100078: Bip01 R Finger12
-    100080: Bip01 R Finger2
-    100082: Bip01 R Finger21
-    100084: Bip01 R Finger22
-    100086: Bip01 R Finger3
-    100088: Bip01 R Finger31
-    100090: Bip01 R Finger32
-    100092: Bip01 R Finger4
-    100094: Bip01 R Finger41
-    100096: Bip01 R Finger42
-    100098: Bip01 R Foot
-    100100: Bip01 R ForeTwist
-    100102: Bip01 R ForeTwist1
-    100104: Bip01 R Hand
-    100106: Bip01 R HorseLink
-    100108: Bip01 R Thigh
-    100110: Bip01 R Toe0
-    100112: Bip01 R UpperArm
-    100114: Bip01 Rhand_Weapon
-    100116: Bip01 shield_mount
-    100118: Bip01 skirt_front
-    100120: Bip01 Spine
-    100122: Bip01 Spine1
-    100124: Bip01 Tail
-    100126: Bip01 Tail1
-    100128: Bip01 Tail2
-    100130: Bip01 Tail3
-    100132: Bip01 zeye_left
-    100134: Bip01 zeye_right
-    100136: Bip01 zJaw
-    100138: ratkin_body
-    100140: Ratkin_Warr_Armor
-    100142: Ratkin_Warr_Helmet
-    100144: Ratkin_Warr_Shield
-    100146: Ratkin_Warr_Sword
-    100148: //RootNode
-    100150: Ratkin_Warr_Shield03
-    100152: Ratkin_Warr_Sword01
-    400000: Bip01
-    400002: Bip01 back_left_Wmount
-    400004: Bip01 back_shield_mount
-    400006: Bip01 Head
-    400008: Bip01 L Calf
-    400010: Bip01 L Clavicle
-    400012: Bip01 L Finger0
-    400014: Bip01 L Finger01
-    400016: Bip01 L Finger02
-    400018: Bip01 L Finger1
-    400020: Bip01 L Finger11
-    400022: Bip01 L Finger12
-    400024: Bip01 L Finger2
-    400026: Bip01 L Finger21
-    400028: Bip01 L Finger22
-    400030: Bip01 L Finger3
-    400032: Bip01 L Finger31
-    400034: Bip01 L Finger32
-    400036: Bip01 L Finger4
-    400038: Bip01 L Finger41
-    400040: Bip01 L Finger42
-    400042: Bip01 L Foot
-    400044: Bip01 L Forearm
-    400046: Bip01 L ForeTwist
-    400048: Bip01 L ForeTwist1
-    400050: Bip01 L Hand
-    400052: Bip01 L HorseLink
-    400054: Bip01 L Thigh
-    400056: Bip01 L Toe0
-    400058: Bip01 L UpperArm
-    400060: Bip01 Neck
-    400062: Bip01 Pelvis
-    400064: Bip01 R Calf
-    400066: Bip01 R Clavicle
-    400068: Bip01 R Finger0
-    400070: Bip01 R Finger01
-    400072: Bip01 R Finger02
-    400074: Bip01 R Finger1
-    400076: Bip01 R Finger11
-    400078: Bip01 R Finger12
-    400080: Bip01 R Finger2
-    400082: Bip01 R Finger21
-    400084: Bip01 R Finger22
-    400086: Bip01 R Finger3
-    400088: Bip01 R Finger31
-    400090: Bip01 R Finger32
-    400092: Bip01 R Finger4
-    400094: Bip01 R Finger41
-    400096: Bip01 R Finger42
-    400098: Bip01 R Foot
-    400100: Bip01 R ForeTwist
-    400102: Bip01 R ForeTwist1
-    400104: Bip01 R Hand
-    400106: Bip01 R HorseLink
-    400108: Bip01 R Thigh
-    400110: Bip01 R Toe0
-    400112: Bip01 R UpperArm
-    400114: Bip01 Rhand_Weapon
-    400116: Bip01 shield_mount
-    400118: Bip01 skirt_front
-    400120: Bip01 Spine
-    400122: Bip01 Spine1
-    400124: Bip01 Tail
-    400126: Bip01 Tail1
-    400128: Bip01 Tail2
-    400130: Bip01 Tail3
-    400132: Bip01 zeye_left
-    400134: Bip01 zeye_right
-    400136: Bip01 zJaw
-    400138: ratkin_body
-    400140: Ratkin_Warr_Armor
-    400142: Ratkin_Warr_Helmet
-    400144: Ratkin_Warr_Shield
-    400146: Ratkin_Warr_Sword
-    400148: //RootNode
-    400150: Ratkin_Warr_Shield03
-    400152: Ratkin_Warr_Sword01
-    2300000: Ratkin_Warr_Helmet
-    2300002: Ratkin_Warr_Shield
-    2300004: Ratkin_Warr_Sword
-    2300006: Ratkin_Warr_Shield03
-    2300008: Ratkin_Warr_Sword01
-    3300000: Ratkin_Warr_Helmet
-    3300002: Ratkin_Warr_Shield
-    3300004: Ratkin_Warr_Sword
-    3300006: Ratkin_Warr_Shield03
-    3300008: Ratkin_Warr_Sword01
-    4300000: Ratkin_Warr_Helmet
-    4300002: ratkin_body
-    4300004: Ratkin_Warr_Armor
-    4300006: Ratkin_Warr_Shield
-    4300008: Ratkin_Warr_Sword
-    4300010: Ratkin_Warr_Sword01
-    4300012: Ratkin_Warr_Shield03
-    7400134: Ratkin_IDLE
-    7400136: Ratkin_anger
-    7400138: Ratkin_Eating
-    7400140: Ratkin_Looking_around
-    7400142: Ratkin_Pick_object
-    7400144: Ratkin_pointing_A
-    7400146: Ratkin_Shrugs
-    7400148: Ratkin_Stretching
-    7400150: Ratkin_Talking_A
-    7400152: Ratkin_Talking_B
-    7400154: Ratkin_Jump_standing
-    7400156: Ratkin_Climbing_wall
-    7400158: Ratkin_Crawling
-    7400160: Ratkin_falling_down
-    7400162: Ratkin_Walking_back_A
-    7400164: Ratkin_1H_Casual_walk
-    7400166: Ratkin_1H_Cautious_walk
-    7400168: Ratkin_1H_combat_run
-    7400170: Ratkin_1H_run
-    7400172: Ratkin_1H_Jump_runing
-    7400174: Ratkin_1H_COMBAT_mode
-    7400176: Ratkin_1H_banging_shield
-    7400178: Ratkin_1H_Dodge_Jump_Backward
-    7400180: Ratkin_1H_Dodge_Jump_Left
-    7400182: Ratkin_1H_Dodge_Jump_Right
-    7400184: Ratkin_1H_Moving_left
-    7400186: Ratkin_1H_Moving_right
-    7400188: Ratkin_1H_Tracking
-    7400190: Ratkin_1H_warning
-    7400192: Ratkin_1H_moveTOblock
-    7400194: Ratkin_1H_shield_block_keeping
-    7400196: Ratkin_1H_moveFROMblock
-    7400198: 1H_Wide_Slash_Combo
-    7400200: Ratkin_1H_5X_Combo
-    7400202: Ratkin_1H_360_Jump_swing
-    7400204: Ratkin_1H_Heavy Smash
-    7400206: Ratkin_1H_Jump_Swing
-    7400208: Ratkin_1H_Hit_from_back
-    7400210: Ratkin_1H_Hit_from_front
-    7400212: Ratkin_1H_Hit_from_left
-    7400214: Ratkin_1H_Hit_from_righ
-    7400216: Ratkin_1H_shield_block_high_left
-    7400218: Ratkin_1H_shield_block_high_right
-    7400220: Ratkin_1H_sword_parry_from_stright_down
-    7400222: Ratkin_1H_sword_parry_high_left
-    7400224: Ratkin_1H_sword_parry_high_right
-    7400226: Ratkin_1H_sword_parry_low_front
-    7400228: Ratkin_1H_sword_shield_blow
-    7400230: Ratkin_1H_sword_swing_high_left
-    7400232: Ratkin_1H_sword_swing_high_right
-    7400234: Ratkin_1H_sword_swing_high_straight_down
-    7400236: Ratkin_1H_sword_swing_low_left
-    7400238: Ratkin_1H_sword_swing_low_right
-    7400240: Ratkin_1H_sword_thrust_high
-    7400242: Ratkin_1H_sword_thrust_low
-    7400244: Ratkin_1H_sword_thrust_mid
-    7400246: Ratkin_1H_Die_knocked_backward
-    7400248: Ratkin_1H_Die_knocked_forward
-    7400250: Ratkin_1H_Dying_A
-    7400252: Ratkin_1H_Dying_B
-    7400254: Ratkin_1H_Knocked_backward
-    7400256: Ratkin_1H_Down_back
-    7400258: Ratkin_1H_Recover_from_knocked_backward
-    7400260: Ratkin_1H_Knocked_forward
-    7400262: Ratkin_1H_Down_forward
-    7400264: Ratkin_1H_Recover_from_knocked_forward
-    9500000: //RootNode
-    11100000: //RootNode
-    13700000: ratkin_body
-    13700002: Ratkin_Warr_Armor
-    2186277476908879412: ImportLogs
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Bip01
+  - first:
+      1: 100002
+    second: Bip01 back_left_Wmount
+  - first:
+      1: 100004
+    second: Bip01 back_shield_mount
+  - first:
+      1: 100006
+    second: Bip01 Head
+  - first:
+      1: 100008
+    second: Bip01 L Calf
+  - first:
+      1: 100010
+    second: Bip01 L Clavicle
+  - first:
+      1: 100012
+    second: Bip01 L Finger0
+  - first:
+      1: 100014
+    second: Bip01 L Finger01
+  - first:
+      1: 100016
+    second: Bip01 L Finger02
+  - first:
+      1: 100018
+    second: Bip01 L Finger1
+  - first:
+      1: 100020
+    second: Bip01 L Finger11
+  - first:
+      1: 100022
+    second: Bip01 L Finger12
+  - first:
+      1: 100024
+    second: Bip01 L Finger2
+  - first:
+      1: 100026
+    second: Bip01 L Finger21
+  - first:
+      1: 100028
+    second: Bip01 L Finger22
+  - first:
+      1: 100030
+    second: Bip01 L Finger3
+  - first:
+      1: 100032
+    second: Bip01 L Finger31
+  - first:
+      1: 100034
+    second: Bip01 L Finger32
+  - first:
+      1: 100036
+    second: Bip01 L Finger4
+  - first:
+      1: 100038
+    second: Bip01 L Finger41
+  - first:
+      1: 100040
+    second: Bip01 L Finger42
+  - first:
+      1: 100042
+    second: Bip01 L Foot
+  - first:
+      1: 100044
+    second: Bip01 L Forearm
+  - first:
+      1: 100046
+    second: Bip01 L ForeTwist
+  - first:
+      1: 100048
+    second: Bip01 L ForeTwist1
+  - first:
+      1: 100050
+    second: Bip01 L Hand
+  - first:
+      1: 100052
+    second: Bip01 L HorseLink
+  - first:
+      1: 100054
+    second: Bip01 L Thigh
+  - first:
+      1: 100056
+    second: Bip01 L Toe0
+  - first:
+      1: 100058
+    second: Bip01 L UpperArm
+  - first:
+      1: 100060
+    second: Bip01 Neck
+  - first:
+      1: 100062
+    second: Bip01 Pelvis
+  - first:
+      1: 100064
+    second: Bip01 R Calf
+  - first:
+      1: 100066
+    second: Bip01 R Clavicle
+  - first:
+      1: 100068
+    second: Bip01 R Finger0
+  - first:
+      1: 100070
+    second: Bip01 R Finger01
+  - first:
+      1: 100072
+    second: Bip01 R Finger02
+  - first:
+      1: 100074
+    second: Bip01 R Finger1
+  - first:
+      1: 100076
+    second: Bip01 R Finger11
+  - first:
+      1: 100078
+    second: Bip01 R Finger12
+  - first:
+      1: 100080
+    second: Bip01 R Finger2
+  - first:
+      1: 100082
+    second: Bip01 R Finger21
+  - first:
+      1: 100084
+    second: Bip01 R Finger22
+  - first:
+      1: 100086
+    second: Bip01 R Finger3
+  - first:
+      1: 100088
+    second: Bip01 R Finger31
+  - first:
+      1: 100090
+    second: Bip01 R Finger32
+  - first:
+      1: 100092
+    second: Bip01 R Finger4
+  - first:
+      1: 100094
+    second: Bip01 R Finger41
+  - first:
+      1: 100096
+    second: Bip01 R Finger42
+  - first:
+      1: 100098
+    second: Bip01 R Foot
+  - first:
+      1: 100100
+    second: Bip01 R ForeTwist
+  - first:
+      1: 100102
+    second: Bip01 R ForeTwist1
+  - first:
+      1: 100104
+    second: Bip01 R Hand
+  - first:
+      1: 100106
+    second: Bip01 R HorseLink
+  - first:
+      1: 100108
+    second: Bip01 R Thigh
+  - first:
+      1: 100110
+    second: Bip01 R Toe0
+  - first:
+      1: 100112
+    second: Bip01 R UpperArm
+  - first:
+      1: 100114
+    second: Bip01 Rhand_Weapon
+  - first:
+      1: 100116
+    second: Bip01 shield_mount
+  - first:
+      1: 100118
+    second: Bip01 skirt_front
+  - first:
+      1: 100120
+    second: Bip01 Spine
+  - first:
+      1: 100122
+    second: Bip01 Spine1
+  - first:
+      1: 100124
+    second: Bip01 Tail
+  - first:
+      1: 100126
+    second: Bip01 Tail1
+  - first:
+      1: 100128
+    second: Bip01 Tail2
+  - first:
+      1: 100130
+    second: Bip01 Tail3
+  - first:
+      1: 100132
+    second: Bip01 zeye_left
+  - first:
+      1: 100134
+    second: Bip01 zeye_right
+  - first:
+      1: 100136
+    second: Bip01 zJaw
+  - first:
+      1: 100138
+    second: ratkin_body
+  - first:
+      1: 100140
+    second: Ratkin_Warr_Armor
+  - first:
+      1: 100142
+    second: Ratkin_Warr_Helmet
+  - first:
+      1: 100144
+    second: Ratkin_Warr_Shield
+  - first:
+      1: 100146
+    second: Ratkin_Warr_Sword
+  - first:
+      1: 100148
+    second: //RootNode
+  - first:
+      1: 100150
+    second: Ratkin_Warr_Shield03
+  - first:
+      1: 100152
+    second: Ratkin_Warr_Sword01
+  - first:
+      4: 400000
+    second: Bip01
+  - first:
+      4: 400002
+    second: Bip01 back_left_Wmount
+  - first:
+      4: 400004
+    second: Bip01 back_shield_mount
+  - first:
+      4: 400006
+    second: Bip01 Head
+  - first:
+      4: 400008
+    second: Bip01 L Calf
+  - first:
+      4: 400010
+    second: Bip01 L Clavicle
+  - first:
+      4: 400012
+    second: Bip01 L Finger0
+  - first:
+      4: 400014
+    second: Bip01 L Finger01
+  - first:
+      4: 400016
+    second: Bip01 L Finger02
+  - first:
+      4: 400018
+    second: Bip01 L Finger1
+  - first:
+      4: 400020
+    second: Bip01 L Finger11
+  - first:
+      4: 400022
+    second: Bip01 L Finger12
+  - first:
+      4: 400024
+    second: Bip01 L Finger2
+  - first:
+      4: 400026
+    second: Bip01 L Finger21
+  - first:
+      4: 400028
+    second: Bip01 L Finger22
+  - first:
+      4: 400030
+    second: Bip01 L Finger3
+  - first:
+      4: 400032
+    second: Bip01 L Finger31
+  - first:
+      4: 400034
+    second: Bip01 L Finger32
+  - first:
+      4: 400036
+    second: Bip01 L Finger4
+  - first:
+      4: 400038
+    second: Bip01 L Finger41
+  - first:
+      4: 400040
+    second: Bip01 L Finger42
+  - first:
+      4: 400042
+    second: Bip01 L Foot
+  - first:
+      4: 400044
+    second: Bip01 L Forearm
+  - first:
+      4: 400046
+    second: Bip01 L ForeTwist
+  - first:
+      4: 400048
+    second: Bip01 L ForeTwist1
+  - first:
+      4: 400050
+    second: Bip01 L Hand
+  - first:
+      4: 400052
+    second: Bip01 L HorseLink
+  - first:
+      4: 400054
+    second: Bip01 L Thigh
+  - first:
+      4: 400056
+    second: Bip01 L Toe0
+  - first:
+      4: 400058
+    second: Bip01 L UpperArm
+  - first:
+      4: 400060
+    second: Bip01 Neck
+  - first:
+      4: 400062
+    second: Bip01 Pelvis
+  - first:
+      4: 400064
+    second: Bip01 R Calf
+  - first:
+      4: 400066
+    second: Bip01 R Clavicle
+  - first:
+      4: 400068
+    second: Bip01 R Finger0
+  - first:
+      4: 400070
+    second: Bip01 R Finger01
+  - first:
+      4: 400072
+    second: Bip01 R Finger02
+  - first:
+      4: 400074
+    second: Bip01 R Finger1
+  - first:
+      4: 400076
+    second: Bip01 R Finger11
+  - first:
+      4: 400078
+    second: Bip01 R Finger12
+  - first:
+      4: 400080
+    second: Bip01 R Finger2
+  - first:
+      4: 400082
+    second: Bip01 R Finger21
+  - first:
+      4: 400084
+    second: Bip01 R Finger22
+  - first:
+      4: 400086
+    second: Bip01 R Finger3
+  - first:
+      4: 400088
+    second: Bip01 R Finger31
+  - first:
+      4: 400090
+    second: Bip01 R Finger32
+  - first:
+      4: 400092
+    second: Bip01 R Finger4
+  - first:
+      4: 400094
+    second: Bip01 R Finger41
+  - first:
+      4: 400096
+    second: Bip01 R Finger42
+  - first:
+      4: 400098
+    second: Bip01 R Foot
+  - first:
+      4: 400100
+    second: Bip01 R ForeTwist
+  - first:
+      4: 400102
+    second: Bip01 R ForeTwist1
+  - first:
+      4: 400104
+    second: Bip01 R Hand
+  - first:
+      4: 400106
+    second: Bip01 R HorseLink
+  - first:
+      4: 400108
+    second: Bip01 R Thigh
+  - first:
+      4: 400110
+    second: Bip01 R Toe0
+  - first:
+      4: 400112
+    second: Bip01 R UpperArm
+  - first:
+      4: 400114
+    second: Bip01 Rhand_Weapon
+  - first:
+      4: 400116
+    second: Bip01 shield_mount
+  - first:
+      4: 400118
+    second: Bip01 skirt_front
+  - first:
+      4: 400120
+    second: Bip01 Spine
+  - first:
+      4: 400122
+    second: Bip01 Spine1
+  - first:
+      4: 400124
+    second: Bip01 Tail
+  - first:
+      4: 400126
+    second: Bip01 Tail1
+  - first:
+      4: 400128
+    second: Bip01 Tail2
+  - first:
+      4: 400130
+    second: Bip01 Tail3
+  - first:
+      4: 400132
+    second: Bip01 zeye_left
+  - first:
+      4: 400134
+    second: Bip01 zeye_right
+  - first:
+      4: 400136
+    second: Bip01 zJaw
+  - first:
+      4: 400138
+    second: ratkin_body
+  - first:
+      4: 400140
+    second: Ratkin_Warr_Armor
+  - first:
+      4: 400142
+    second: Ratkin_Warr_Helmet
+  - first:
+      4: 400144
+    second: Ratkin_Warr_Shield
+  - first:
+      4: 400146
+    second: Ratkin_Warr_Sword
+  - first:
+      4: 400148
+    second: //RootNode
+  - first:
+      4: 400150
+    second: Ratkin_Warr_Shield03
+  - first:
+      4: 400152
+    second: Ratkin_Warr_Sword01
+  - first:
+      23: 2300000
+    second: Ratkin_Warr_Helmet
+  - first:
+      23: 2300002
+    second: Ratkin_Warr_Shield
+  - first:
+      23: 2300004
+    second: Ratkin_Warr_Sword
+  - first:
+      23: 2300006
+    second: Ratkin_Warr_Shield03
+  - first:
+      23: 2300008
+    second: Ratkin_Warr_Sword01
+  - first:
+      33: 3300000
+    second: Ratkin_Warr_Helmet
+  - first:
+      33: 3300002
+    second: Ratkin_Warr_Shield
+  - first:
+      33: 3300004
+    second: Ratkin_Warr_Sword
+  - first:
+      33: 3300006
+    second: Ratkin_Warr_Shield03
+  - first:
+      33: 3300008
+    second: Ratkin_Warr_Sword01
+  - first:
+      43: 4300000
+    second: Ratkin_Warr_Helmet
+  - first:
+      43: 4300002
+    second: ratkin_body
+  - first:
+      43: 4300004
+    second: Ratkin_Warr_Armor
+  - first:
+      43: 4300006
+    second: Ratkin_Warr_Shield
+  - first:
+      43: 4300008
+    second: Ratkin_Warr_Sword
+  - first:
+      43: 4300010
+    second: Ratkin_Warr_Sword01
+  - first:
+      43: 4300012
+    second: Ratkin_Warr_Shield03
+  - first:
+      74: 7400134
+    second: Ratkin_IDLE
+  - first:
+      74: 7400136
+    second: Ratkin_anger
+  - first:
+      74: 7400138
+    second: Ratkin_Eating
+  - first:
+      74: 7400140
+    second: Ratkin_Looking_around
+  - first:
+      74: 7400142
+    second: Ratkin_Pick_object
+  - first:
+      74: 7400144
+    second: Ratkin_pointing_A
+  - first:
+      74: 7400146
+    second: Ratkin_Shrugs
+  - first:
+      74: 7400148
+    second: Ratkin_Stretching
+  - first:
+      74: 7400150
+    second: Ratkin_Talking_A
+  - first:
+      74: 7400152
+    second: Ratkin_Talking_B
+  - first:
+      74: 7400154
+    second: Ratkin_Jump_standing
+  - first:
+      74: 7400156
+    second: Ratkin_Climbing_wall
+  - first:
+      74: 7400158
+    second: Ratkin_Crawling
+  - first:
+      74: 7400160
+    second: Ratkin_falling_down
+  - first:
+      74: 7400162
+    second: Ratkin_Walking_back_A
+  - first:
+      74: 7400164
+    second: Ratkin_1H_Casual_walk
+  - first:
+      74: 7400166
+    second: Ratkin_1H_Cautious_walk
+  - first:
+      74: 7400168
+    second: Ratkin_1H_combat_run
+  - first:
+      74: 7400170
+    second: Ratkin_1H_run
+  - first:
+      74: 7400172
+    second: Ratkin_1H_Jump_runing
+  - first:
+      74: 7400174
+    second: Ratkin_1H_COMBAT_mode
+  - first:
+      74: 7400176
+    second: Ratkin_1H_banging_shield
+  - first:
+      74: 7400178
+    second: Ratkin_1H_Dodge_Jump_Backward
+  - first:
+      74: 7400180
+    second: Ratkin_1H_Dodge_Jump_Left
+  - first:
+      74: 7400182
+    second: Ratkin_1H_Dodge_Jump_Right
+  - first:
+      74: 7400184
+    second: Ratkin_1H_Moving_left
+  - first:
+      74: 7400186
+    second: Ratkin_1H_Moving_right
+  - first:
+      74: 7400188
+    second: Ratkin_1H_Tracking
+  - first:
+      74: 7400190
+    second: Ratkin_1H_warning
+  - first:
+      74: 7400192
+    second: Ratkin_1H_moveTOblock
+  - first:
+      74: 7400194
+    second: Ratkin_1H_shield_block_keeping
+  - first:
+      74: 7400196
+    second: Ratkin_1H_moveFROMblock
+  - first:
+      74: 7400198
+    second: 1H_Wide_Slash_Combo
+  - first:
+      74: 7400200
+    second: Ratkin_1H_5X_Combo
+  - first:
+      74: 7400202
+    second: Ratkin_1H_360_Jump_swing
+  - first:
+      74: 7400204
+    second: Ratkin_1H_Heavy Smash
+  - first:
+      74: 7400206
+    second: Ratkin_1H_Jump_Swing
+  - first:
+      74: 7400208
+    second: Ratkin_1H_Hit_from_back
+  - first:
+      74: 7400210
+    second: Ratkin_1H_Hit_from_front
+  - first:
+      74: 7400212
+    second: Ratkin_1H_Hit_from_left
+  - first:
+      74: 7400214
+    second: Ratkin_1H_Hit_from_righ
+  - first:
+      74: 7400216
+    second: Ratkin_1H_shield_block_high_left
+  - first:
+      74: 7400218
+    second: Ratkin_1H_shield_block_high_right
+  - first:
+      74: 7400220
+    second: Ratkin_1H_sword_parry_from_stright_down
+  - first:
+      74: 7400222
+    second: Ratkin_1H_sword_parry_high_left
+  - first:
+      74: 7400224
+    second: Ratkin_1H_sword_parry_high_right
+  - first:
+      74: 7400226
+    second: Ratkin_1H_sword_parry_low_front
+  - first:
+      74: 7400228
+    second: Ratkin_1H_sword_shield_blow
+  - first:
+      74: 7400230
+    second: Ratkin_1H_sword_swing_high_left
+  - first:
+      74: 7400232
+    second: Ratkin_1H_sword_swing_high_right
+  - first:
+      74: 7400234
+    second: Ratkin_1H_sword_swing_high_straight_down
+  - first:
+      74: 7400236
+    second: Ratkin_1H_sword_swing_low_left
+  - first:
+      74: 7400238
+    second: Ratkin_1H_sword_swing_low_right
+  - first:
+      74: 7400240
+    second: Ratkin_1H_sword_thrust_high
+  - first:
+      74: 7400242
+    second: Ratkin_1H_sword_thrust_low
+  - first:
+      74: 7400244
+    second: Ratkin_1H_sword_thrust_mid
+  - first:
+      74: 7400246
+    second: Ratkin_1H_Die_knocked_backward
+  - first:
+      74: 7400248
+    second: Ratkin_1H_Die_knocked_forward
+  - first:
+      74: 7400250
+    second: Ratkin_1H_Dying_A
+  - first:
+      74: 7400252
+    second: Ratkin_1H_Dying_B
+  - first:
+      74: 7400254
+    second: Ratkin_1H_Knocked_backward
+  - first:
+      74: 7400256
+    second: Ratkin_1H_Down_back
+  - first:
+      74: 7400258
+    second: Ratkin_1H_Recover_from_knocked_backward
+  - first:
+      74: 7400260
+    second: Ratkin_1H_Knocked_forward
+  - first:
+      74: 7400262
+    second: Ratkin_1H_Down_forward
+  - first:
+      74: 7400264
+    second: Ratkin_1H_Recover_from_knocked_forward
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: ratkin_body
+  - first:
+      137: 13700002
+    second: Ratkin_Warr_Armor
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -322,6 +806,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_IDLE
       takeName: 
+      internalID: 0
       firstFrame: 0
       lastFrame: 100
       wrapMode: 2
@@ -350,6 +835,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_anger
       takeName: 
+      internalID: 0
       firstFrame: 101
       lastFrame: 151
       wrapMode: 2
@@ -378,6 +864,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Eating
       takeName: 
+      internalID: 0
       firstFrame: 152
       lastFrame: 272
       wrapMode: 2
@@ -406,6 +893,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Looking_around
       takeName: 
+      internalID: 0
       firstFrame: 273
       lastFrame: 449
       wrapMode: 2
@@ -434,6 +922,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Pick_object
       takeName: 
+      internalID: 0
       firstFrame: 451
       lastFrame: 491
       wrapMode: 2
@@ -462,6 +951,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_pointing_A
       takeName: 
+      internalID: 0
       firstFrame: 492
       lastFrame: 552
       wrapMode: 2
@@ -490,6 +980,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Shrugs
       takeName: 
+      internalID: 0
       firstFrame: 553
       lastFrame: 598
       wrapMode: 2
@@ -518,6 +1009,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Stretching
       takeName: 
+      internalID: 0
       firstFrame: 599
       lastFrame: 699
       wrapMode: 2
@@ -546,6 +1038,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Talking_A
       takeName: 
+      internalID: 0
       firstFrame: 700
       lastFrame: 740
       wrapMode: 2
@@ -574,6 +1067,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Talking_B
       takeName: 
+      internalID: 0
       firstFrame: 741
       lastFrame: 891
       wrapMode: 2
@@ -602,6 +1096,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Jump_standing
       takeName: 
+      internalID: 0
       firstFrame: 892
       lastFrame: 967
       wrapMode: 2
@@ -630,6 +1125,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Climbing_wall
       takeName: 
+      internalID: 0
       firstFrame: 972
       lastFrame: 1002
       wrapMode: 2
@@ -658,6 +1154,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Crawling
       takeName: 
+      internalID: 0
       firstFrame: 1007
       lastFrame: 1037
       wrapMode: 2
@@ -686,6 +1183,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_falling_down
       takeName: 
+      internalID: 0
       firstFrame: 1042
       lastFrame: 1082
       wrapMode: 2
@@ -714,6 +1212,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_Walking_back_A
       takeName: 
+      internalID: 0
       firstFrame: 1087
       lastFrame: 1122
       wrapMode: 2
@@ -742,6 +1241,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Casual_walk
       takeName: 
+      internalID: 0
       firstFrame: 1127
       lastFrame: 1163
       wrapMode: 2
@@ -770,6 +1270,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Cautious_walk
       takeName: 
+      internalID: 0
       firstFrame: 1168
       lastFrame: 1208
       wrapMode: 2
@@ -798,6 +1299,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_combat_run
       takeName: 
+      internalID: 0
       firstFrame: 1213
       lastFrame: 1235
       wrapMode: 2
@@ -826,6 +1328,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_run
       takeName: 
+      internalID: 0
       firstFrame: 1240
       lastFrame: 1266
       wrapMode: 2
@@ -854,6 +1357,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Jump_runing
       takeName: 
+      internalID: 0
       firstFrame: 1271
       lastFrame: 1311
       wrapMode: 1
@@ -882,6 +1386,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_COMBAT_mode
       takeName: 
+      internalID: 0
       firstFrame: 1316
       lastFrame: 1365
       wrapMode: 2
@@ -910,6 +1415,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_banging_shield
       takeName: 
+      internalID: 0
       firstFrame: 1367
       lastFrame: 1387
       wrapMode: 2
@@ -938,6 +1444,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Dodge_Jump_Backward
       takeName: 
+      internalID: 0
       firstFrame: 1388
       lastFrame: 1413
       wrapMode: 2
@@ -966,6 +1473,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Dodge_Jump_Left
       takeName: 
+      internalID: 0
       firstFrame: 1414
       lastFrame: 1439
       wrapMode: 2
@@ -994,6 +1502,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Dodge_Jump_Right
       takeName: 
+      internalID: 0
       firstFrame: 1440
       lastFrame: 1465
       wrapMode: 2
@@ -1022,6 +1531,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Moving_left
       takeName: 
+      internalID: 0
       firstFrame: 1466
       lastFrame: 1486
       wrapMode: 2
@@ -1050,6 +1560,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Moving_right
       takeName: 
+      internalID: 0
       firstFrame: 1487
       lastFrame: 1507
       wrapMode: 2
@@ -1078,6 +1589,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Tracking
       takeName: 
+      internalID: 0
       firstFrame: 1508
       lastFrame: 1683
       wrapMode: 2
@@ -1106,6 +1618,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_warning
       takeName: 
+      internalID: 0
       firstFrame: 1684
       lastFrame: 1744
       wrapMode: 2
@@ -1134,6 +1647,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_moveTOblock
       takeName: 
+      internalID: 0
       firstFrame: 1745
       lastFrame: 1751
       wrapMode: 1
@@ -1162,6 +1676,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_shield_block_keeping
       takeName: 
+      internalID: 0
       firstFrame: 1752
       lastFrame: 1782
       wrapMode: 2
@@ -1190,6 +1705,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_moveFROMblock
       takeName: 
+      internalID: 0
       firstFrame: 1783
       lastFrame: 1789
       wrapMode: 1
@@ -1218,6 +1734,7 @@ ModelImporter:
     - serializedVersion: 16
       name: 1H_Wide_Slash_Combo
       takeName: 
+      internalID: 0
       firstFrame: 1790
       lastFrame: 1840
       wrapMode: 2
@@ -1464,6 +1981,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_5X_Combo
       takeName: 
+      internalID: 0
       firstFrame: 1841
       lastFrame: 1936
       wrapMode: 2
@@ -1492,6 +2010,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_360_Jump_swing
       takeName: 
+      internalID: 0
       firstFrame: 1937
       lastFrame: 1982
       wrapMode: 2
@@ -1520,6 +2039,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Heavy Smash
       takeName: 
+      internalID: 0
       firstFrame: 1983
       lastFrame: 2023
       wrapMode: 2
@@ -1548,6 +2068,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Jump_Swing
       takeName: 
+      internalID: 0
       firstFrame: 2024
       lastFrame: 2069
       wrapMode: 2
@@ -1576,6 +2097,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Hit_from_back
       takeName: 
+      internalID: 0
       firstFrame: 2070
       lastFrame: 2105
       wrapMode: 2
@@ -1604,6 +2126,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Hit_from_front
       takeName: 
+      internalID: 0
       firstFrame: 2106
       lastFrame: 2141
       wrapMode: 2
@@ -1632,6 +2155,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Hit_from_left
       takeName: 
+      internalID: 0
       firstFrame: 2142
       lastFrame: 2177
       wrapMode: 2
@@ -1660,6 +2184,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Hit_from_righ
       takeName: 
+      internalID: 0
       firstFrame: 2178
       lastFrame: 2213
       wrapMode: 2
@@ -1688,6 +2213,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_shield_block_high_left
       takeName: 
+      internalID: 0
       firstFrame: 2214
       lastFrame: 2249
       wrapMode: 2
@@ -1716,6 +2242,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_shield_block_high_right
       takeName: 
+      internalID: 0
       firstFrame: 2250
       lastFrame: 2285
       wrapMode: 2
@@ -1744,6 +2271,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_parry_from_stright_down
       takeName: 
+      internalID: 0
       firstFrame: 2286
       lastFrame: 2321
       wrapMode: 2
@@ -1772,6 +2300,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_parry_high_left
       takeName: 
+      internalID: 0
       firstFrame: 2322
       lastFrame: 2357
       wrapMode: 2
@@ -1800,6 +2329,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_parry_high_right
       takeName: 
+      internalID: 0
       firstFrame: 2358
       lastFrame: 2393
       wrapMode: 2
@@ -1828,6 +2358,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_parry_low_front
       takeName: 
+      internalID: 0
       firstFrame: 2394
       lastFrame: 2429
       wrapMode: 2
@@ -1856,6 +2387,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_shield_blow
       takeName: 
+      internalID: 0
       firstFrame: 2430
       lastFrame: 2465
       wrapMode: 2
@@ -1884,6 +2416,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_swing_high_left
       takeName: 
+      internalID: 0
       firstFrame: 2466
       lastFrame: 2501
       wrapMode: 2
@@ -1912,6 +2445,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_swing_high_right
       takeName: 
+      internalID: 0
       firstFrame: 2502
       lastFrame: 2537
       wrapMode: 2
@@ -1940,6 +2474,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_swing_high_straight_down
       takeName: 
+      internalID: 0
       firstFrame: 2538
       lastFrame: 2573
       wrapMode: 2
@@ -1968,6 +2503,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_swing_low_left
       takeName: 
+      internalID: 0
       firstFrame: 2574
       lastFrame: 2609
       wrapMode: 2
@@ -1996,6 +2532,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_swing_low_right
       takeName: 
+      internalID: 0
       firstFrame: 2610
       lastFrame: 2645
       wrapMode: 2
@@ -2024,6 +2561,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_thrust_high
       takeName: 
+      internalID: 0
       firstFrame: 2646
       lastFrame: 2681
       wrapMode: 2
@@ -2052,6 +2590,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_thrust_low
       takeName: 
+      internalID: 0
       firstFrame: 2682
       lastFrame: 2717
       wrapMode: 2
@@ -2080,6 +2619,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_sword_thrust_mid
       takeName: 
+      internalID: 0
       firstFrame: 2718
       lastFrame: 2753
       wrapMode: 2
@@ -2108,6 +2648,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Die_knocked_backward
       takeName: 
+      internalID: 0
       firstFrame: 2758
       lastFrame: 2775
       wrapMode: 1
@@ -2136,6 +2677,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Die_knocked_forward
       takeName: 
+      internalID: 0
       firstFrame: 2780
       lastFrame: 2797
       wrapMode: 1
@@ -2164,6 +2706,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Dying_A
       takeName: 
+      internalID: 0
       firstFrame: 2802
       lastFrame: 2867
       wrapMode: 1
@@ -2192,6 +2735,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Dying_B
       takeName: 
+      internalID: 0
       firstFrame: 2872
       lastFrame: 2912
       wrapMode: 1
@@ -2220,6 +2764,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Knocked_backward
       takeName: 
+      internalID: 0
       firstFrame: 2917
       lastFrame: 2957
       wrapMode: 1
@@ -2248,6 +2793,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Down_back
       takeName: 
+      internalID: 0
       firstFrame: 2958
       lastFrame: 2998
       wrapMode: 2
@@ -2276,6 +2822,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Recover_from_knocked_backward
       takeName: 
+      internalID: 0
       firstFrame: 2999
       lastFrame: 3039
       wrapMode: 1
@@ -2304,6 +2851,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Knocked_forward
       takeName: 
+      internalID: 0
       firstFrame: 3040
       lastFrame: 3068
       wrapMode: 1
@@ -2332,6 +2880,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Down_forward
       takeName: 
+      internalID: 0
       firstFrame: 3069
       lastFrame: 3109
       wrapMode: 2
@@ -2360,6 +2909,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ratkin_1H_Recover_from_knocked_forward
       takeName: 
+      internalID: 0
       firstFrame: 3110
       lastFrame: 3142
       wrapMode: 1
@@ -2391,6 +2941,8 @@ ModelImporter:
     globalScale: 0.01
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -2398,27 +2950,32 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Bip01 Pelvis
       humanName: Hips
@@ -3235,9 +3792,10 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3

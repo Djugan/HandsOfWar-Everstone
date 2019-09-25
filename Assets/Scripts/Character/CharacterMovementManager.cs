@@ -88,10 +88,10 @@ public class CharacterMovementManager : MonoBehaviour {
 		// Check if the jump button is pressed down
 		if (Input.GetButtonDown ("Jump")) {
 			Jump ();
-			animator.SetBool ("Jumping", true);
+			animator.SetBool (HashIDs.jumping_bool, true);
 		}
 		else {
-			animator.SetBool ("Jumping", false);
+			animator.SetBool (HashIDs.jumping_bool, false);
 		}
 
 		#endregion
@@ -102,8 +102,8 @@ public class CharacterMovementManager : MonoBehaviour {
 	}
 
 	private void ManageAnimations (int v, int hs) {
-		animator.SetInteger ("Velocity", v);
-		animator.SetInteger ("HorizontalStrafe", hs);
+		animator.SetInteger (HashIDs.velocity_int, v);
+		animator.SetInteger (HashIDs.horizontalStrafe_int, hs);
 
 	}
 

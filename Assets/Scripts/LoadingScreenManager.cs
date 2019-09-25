@@ -10,6 +10,7 @@ public class LoadingScreenManager : MonoBehaviour
 	public static LoadingScreenManager instance;
 
 	[SerializeField] private GameObject main_GO;
+	[SerializeField] private Image loadingBar_Img;
 
 	private void Awake () {
 		if (instance == null) {
@@ -38,8 +39,15 @@ public class LoadingScreenManager : MonoBehaviour
 
 		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync (scene);
 
+		ShowWindow ();
+		loadingBar_Img.fillAmount = 0f;
+
 		while (!asyncLoad.isDone) {
+
+			loadingBar_Img.fillAmount = asyncLoad.progress;
 			yield return null;
+
+
 		}
 
 		//Finished!

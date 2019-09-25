@@ -9,10 +9,17 @@ public class CharacterManager : MonoBehaviour
 	public CharacterMovementManager movementManager;
 	public int weaponType;
 	public bool inCombat;
+	public Transform trans;
 
 	private RuntimeAnimatorController runtimeAnimController;
-	public AnimationClip [] combatIdleAnims;
-	public GameObject [] weapons;
+	[SerializeField] private AnimationClip [] combatIdleAnims;
+	[SerializeField] private AnimationClip [] meleeAttack1_Anims;
+	[SerializeField] private AnimationClip [] meleeAttack2_Anims;
+	[SerializeField] private AnimationClip [] meleeAttack3_Anims;
+	[SerializeField] private AnimationClip [] meleeAttack4_Anims;
+	[SerializeField] private AnimationClip [] meleeAttack5_Anims;
+	[SerializeField] private AnimationClip [] meleeAttack6_Anims;
+	[SerializeField] private GameObject [] weapons;
 
 	[Header ("Attributes")]
 	[HideInInspector]
@@ -43,6 +50,7 @@ public class CharacterManager : MonoBehaviour
 
 	// Misc
 	private int regenTimer;
+	private AnimatorOverrideController animationOverrideController;
 
 	private void Awake () {
 
@@ -61,7 +69,10 @@ public class CharacterManager : MonoBehaviour
 		inCombat = false;
 		weaponType = 1;
 		regenTimer = 0;
+
 		runtimeAnimController = movementManager.animator.runtimeAnimatorController;
+		animationOverrideController = new AnimatorOverrideController ();
+		animationOverrideController.runtimeAnimatorController = runtimeAnimController;
 
 		SetInitialAttributeValues ();
 	}
@@ -243,6 +254,10 @@ public class CharacterManager : MonoBehaviour
 		GUIManager.instance.playerUnitFrame.SetHealthBar ();
 	}
 
+	public void SetInCombat () {
+		inCombat = true;
+	}
+
 	/// <summary>
 	/// Adds the amount to the current energy
 	/// </summary>
@@ -295,14 +310,14 @@ public class CharacterManager : MonoBehaviour
 			weapons [6].SetActive (true);
 		}
 
-		if (Input.GetKeyDown (KeyCode.C)) {
+		if (Input.GetKeyDown (KeyCode.O)) {
 			if (inCombat) {
 				inCombat = false;
 			}
 			else {
 				inCombat = true;
 			}
-			movementManager.animator.SetBool ("InCombat", inCombat);
+			movementManager.animator.SetBool (HashIDs.inCombat_bool, inCombat);
 		}
 		#endregion
 
@@ -325,12 +340,15 @@ public class CharacterManager : MonoBehaviour
 		}
 
 		weaponType = t;
-		movementManager.animator.SetInteger ("WeaponType", weaponType);
+		movementManager.animator.SetInteger (HashIDs.weaponType_int, weaponType);
 
-		AnimatorOverrideController myOverrideController = new AnimatorOverrideController ();
-		myOverrideController.runtimeAnimatorController = runtimeAnimController;
-		myOverrideController ["1H_COMBAT_mode"] = combatIdleAnims [weaponType - 1];
+		// Switch Combat Idle Animation
+		animationOverrideController ["1H_COMBAT_mode"] = combatIdleAnims [weaponType - 1];
 
-		movementManager.animator.runtimeAnimatorController = myOverrideController;
+		// Switch Melee Attack 1 Animation
+		animationOverrideController ["1H_sword_swing_high_right"] = meleeAttack1_Anims [weaponType - 1];
+
+
+		movementManager.animator.runtimeAnimatorController = animationOverrideController;
 	}
 }

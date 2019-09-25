@@ -6,6 +6,7 @@ public class EnemyNPCManager : NPCManager {
 
 	[SerializeField] private int indexInZone;
 	[SerializeField] private Animator animator;
+	[SerializeField] private Transform trans;
 
 	private EnemyNPCData sourceData;
 	private EnemyNPCInstanceLink instanceLink;
@@ -14,18 +15,24 @@ public class EnemyNPCManager : NPCManager {
 	private int maxHealth;
 	private int currentHealth;
 	private bool isAlive;
+	private bool isAggro;
+	private float aggroRadius;
 	private int numberOfDeathAnimations;
 	private int despawnTimer;
 	private static int defaultDespawnTime = 50 * 60;        // 50 frames * seconds
 	private static int noLootDespawnTime = 50 * 5;	
 	private int respawnTimer;
 	private Vector3 spawnPoint;
+	private EnemyState currentState;
+
+	private static CharacterManager character;
 
 	// Dropped Items
 	[HideInInspector] public int goldDropped;
 	[HideInInspector] public List<InventoryItemData> itemsDropped;
 	[HideInInspector] public int healthPotionsDropped;
 	[HideInInspector] public int energyPotionsDropped;
+
 
 	#region Start and Update
 	private void Start () {
@@ -43,6 +50,8 @@ public class EnemyNPCManager : NPCManager {
 			return;
 		}
 
+		character = CharacterManager.instance;
+
 		spawnPoint = transform.position;
 		Spawn ();
 		// print ("My name is: " + sourceData.npcName + " and I deal " + sourceData.damage + " damage");
@@ -56,15 +65,27 @@ public class EnemyNPCManager : NPCManager {
 			despawnTimer--;
 			if (despawnTimer <= 0) {
 				Despawn ();
-
-				// Add to respawn manager
-				// Do that here <-- here
-				// ^ right there
-
-				// Also... make HashIDs for the animator parameters
-
 			}
 		}
+	}
+
+	private void Update () {
+
+		if (isAlive == false)
+			return;
+
+		if (currentState == EnemyState.Patrol) {
+			Patrol ();
+		}
+		else if (currentState == EnemyState.Attack) {
+			Attack ();
+		}
+		else if (currentState == EnemyState.Chase) {
+			Chase ();
+		} else {
+			Debug.Log ("Unknown State Found: " + currentState);
+		}
+
 	}
 	#endregion
 
@@ -113,12 +134,17 @@ public class EnemyNPCManager : NPCManager {
 
 		transform.position = spawnPoint;
 		isAlive = true;
+		isAggro = false;
 		damage = sourceData.damage;
 		maxHealth = sourceData.baseHealth;
 		currentHealth = maxHealth;
 		numberOfDeathAnimations = sourceData.numberOfDeathAnimations;
 		respawnTimer = instanceLink.respawnTimer;
+		aggroRadius = sourceData.aggroRadius;
 
+		StartCoroutine (CheckForAggro ());
+
+		SetState (EnemyState.Patrol);
 		gameObject.SetActive (true);
 	}
 
@@ -169,7 +195,7 @@ public class EnemyNPCManager : NPCManager {
 			energyPotionsDropped = 1;
 		}
 		else {
-			healthPotionsDropped = 0;
+			energyPotionsDropped = 0;
 		}
 
 		itemsDropped.Clear ();
@@ -205,6 +231,35 @@ public class EnemyNPCManager : NPCManager {
 	#endregion
 
 	#region Combat Functions
+	private void RunCombatSequence () {
+
+
+	}
+
+	IEnumerator CheckForAggro () {
+
+		while (isAggro == false) {
+
+			yield return Common.oneSecond_WFS;
+
+			// Check distance to aggro
+			float d = Vector3.Distance (trans.position, character.trans.position);
+
+			if (d < aggroRadius) {
+				Aggro ();
+			}
+		}
+	}
+
+	public void Aggro () {
+
+		isAggro = true;
+		character.SetInCombat ();
+
+		SetState (EnemyState.Chase);
+
+	}
+
 	public override void ReceiveDamage (int amount) {
 		currentHealth -= amount;
 
@@ -226,7 +281,27 @@ public class EnemyNPCManager : NPCManager {
 	}
 	#endregion
 
+
+	#region State Functions
+	private void Patrol () {
+
+	}
+	private void Chase () {
+
+		// Check to see if we're in attack range
+
+	}
+	private void Attack () {
+
+	}
+
+	#endregion
+
 	#region Misc
+	public void SetState (EnemyState state) {
+		currentState = state;
+	}
+
 	public override NPCData GetSourceData () {
 		return sourceData;
 	}
