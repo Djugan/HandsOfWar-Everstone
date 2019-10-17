@@ -4,6 +4,15 @@ using System.Collections;
 public class CharacterManager : MonoBehaviour
 {
 
+
+	// START HERE
+	/* We have abilities loading and getting set in slots (done in Start () of this script).
+	 * We need to associate key presses with particular slots in the hotbar
+	 * We need to add parameters to the AbilityData objects to specify animation type
+	 * 
+	 */ 
+	// 
+
 	public static CharacterManager instance;
 
 	public CharacterMovementManager movementManager;
@@ -18,7 +27,6 @@ public class CharacterManager : MonoBehaviour
 	[SerializeField] private AnimationClip [] meleeAttack3_Anims;
 	[SerializeField] private AnimationClip [] meleeAttack4_Anims;
 	[SerializeField] private AnimationClip [] meleeAttack5_Anims;
-	[SerializeField] private AnimationClip [] meleeAttack6_Anims;
 	[SerializeField] private GameObject [] weapons;
 
 	[Header ("Attributes")]
@@ -58,6 +66,9 @@ public class CharacterManager : MonoBehaviour
 		if (instance == null) {
 			instance = this;
 			DontDestroyOnLoad (gameObject);
+
+			// Initialize Key Bindings
+			KeybindingManager.Init ();
 		}
 		else {
 			Destroy (gameObject);
@@ -75,6 +86,10 @@ public class CharacterManager : MonoBehaviour
 		animationOverrideController.runtimeAnimatorController = runtimeAnimController;
 
 		SetInitialAttributeValues ();
+
+
+		GUIManager.instance.actionBar.SetAbilityInSlot (AbilityDatabase.GetAbility (1), 0);
+		GUIManager.instance.actionBar.SetAbilityInSlot (AbilityDatabase.GetAbility (2), 1);
 	}
 
 	#region Get/Set Attributes
@@ -238,6 +253,17 @@ public class CharacterManager : MonoBehaviour
 	#endregion
 
 	#region Combat Functions
+	public void CheckForAbilities () {
+
+		// Checks for pressing 1-0
+		for (int i = 0; i < 10; i++) {
+			if (Input.GetKeyDown (KeybindingManager.actionBarKeys [i])) {
+				print ("Pressed Key: " + KeybindingManager.actionBarKeys [i]);
+				BeginAttack (i);
+			}
+		}
+
+	}
 	/// <summary>
 	/// Adds the amount to the current health
 	/// </summary>
@@ -256,6 +282,7 @@ public class CharacterManager : MonoBehaviour
 
 	public void SetInCombat () {
 		inCombat = true;
+		movementManager.animator.SetBool (HashIDs.inCombat_bool, inCombat);
 	}
 
 	/// <summary>
@@ -274,6 +301,45 @@ public class CharacterManager : MonoBehaviour
 		GUIManager.instance.playerUnitFrame.SetEnergyBar ();
 	}
 
+	private void BeginAttack (int actionBarSlotNumber) {
+
+		AbilityData activeAbility = GUIManager.instance.actionBar.GetAbilityInSlot (actionBarSlotNumber);
+
+		if (activeAbility == null) {
+			print ("No ability in that slot");
+			return;
+		}
+
+		if (TargetManager.instance.IsTargetAnEnemy () == false) {
+			print ("You need to target an enemy");
+			return;
+		}
+
+		if (TargetManager.instance.IsTargetDead ()) {
+			print ("You can't attack a dead thing");
+			return;
+		}
+
+		print ("Ability Name: " + activeAbility.abilityName);
+
+		// Send the attack number value to the animator
+		//movementManager.animator.SetInteger (HashIDs.attackNumber_int, attackNumber);
+
+		StartCoroutine (ResetAttackNumber ());
+	}
+
+	IEnumerator ResetAttackNumber () {
+
+		// Wait a frame and set the attack number back to 0
+		yield return null;
+		movementManager.animator.SetInteger (HashIDs.attackNumber_int, 0);
+	}
+
+	public void TriggerDamage () {
+		TargetManager.instance.DamageTarget (5);
+
+	}
+
 	#endregion
 
 	void Update () {
@@ -287,40 +353,33 @@ public class CharacterManager : MonoBehaviour
 
 		#region Weapon Switch Testing
 		//Set weapon type to 1
-		if (Input.GetKeyDown (KeyCode.Alpha1)) {        //1h & shield
+		if (Input.GetKeyDown (KeyCode.Keypad1)) {        //1h & shield
 			SetWeaponType (1);
 			weapons [0].SetActive (true);
 			weapons [1].SetActive (true);
 		}
-		else if (Input.GetKeyDown (KeyCode.Alpha2)) {   //2h
+		else if (Input.GetKeyDown (KeyCode.Keypad2)) {   //2h
 			SetWeaponType (2);
 			weapons [2].SetActive (true);
 		}
-		else if (Input.GetKeyDown (KeyCode.Alpha3)) {   //dual wield
+		else if (Input.GetKeyDown (KeyCode.Keypad3)) {   //dual wield
 			SetWeaponType (3);
 			weapons [3].SetActive (true);
 			weapons [4].SetActive (true);
 		}
-		else if (Input.GetKeyDown (KeyCode.Alpha4)) {   //bow
+		else if (Input.GetKeyDown (KeyCode.Keypad4)) {   //bow
 			SetWeaponType (4);
 			weapons [5].SetActive (true);
 		}
-		else if (Input.GetKeyDown (KeyCode.Alpha5)) {   //staff
+		else if (Input.GetKeyDown (KeyCode.Keypad5)) {   //staff
 			SetWeaponType (5);
 			weapons [6].SetActive (true);
 		}
 
-		if (Input.GetKeyDown (KeyCode.O)) {
-			if (inCombat) {
-				inCombat = false;
-			}
-			else {
-				inCombat = true;
-			}
-			movementManager.animator.SetBool (HashIDs.inCombat_bool, inCombat);
-		}
+		
+		
 		#endregion
-
+		CheckForAbilities ();
 	}
 
 	private void FixedUpdate () {
@@ -340,14 +399,16 @@ public class CharacterManager : MonoBehaviour
 		}
 
 		weaponType = t;
-		movementManager.animator.SetInteger (HashIDs.weaponType_int, weaponType);
 
 		// Switch Combat Idle Animation
 		animationOverrideController ["1H_COMBAT_mode"] = combatIdleAnims [weaponType - 1];
 
-		// Switch Melee Attack 1 Animation
-		animationOverrideController ["1H_sword_swing_high_right"] = meleeAttack1_Anims [weaponType - 1];
-
+		// Switch Melee Attack 1-6 Animations
+		animationOverrideController ["1H_sword_swing_high_right"] =			meleeAttack1_Anims [weaponType - 1];
+		animationOverrideController ["1H_sword_thrust_mid"] =				meleeAttack2_Anims [weaponType - 1];
+		animationOverrideController ["1H_sword_swing_high_straight_down"] = meleeAttack3_Anims [weaponType - 1];
+		animationOverrideController ["1H_sword_swing_low_left"] =			meleeAttack4_Anims [weaponType - 1];
+		animationOverrideController ["1H_Jump_Swing"] =						meleeAttack5_Anims [weaponType - 1];
 
 		movementManager.animator.runtimeAnimatorController = animationOverrideController;
 	}

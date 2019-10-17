@@ -17,10 +17,16 @@ public class EnemyNPCManager : NPCManager {
 	private bool isAlive;
 	private bool isAggro;
 	private float aggroRadius;
+	private float attackRange;
 	private int numberOfDeathAnimations;
 	private int despawnTimer;
+	private Vector3 originalSpawnPoint;
 	private static int defaultDespawnTime = 50 * 60;        // 50 frames * seconds
-	private static int noLootDespawnTime = 50 * 5;	
+	private static int noLootDespawnTime = 50 * 5;
+	private static float turnSpeed = 5f;
+	private static float moveSpeed = 4f;
+	private static float leashDistance = 30f;
+
 	private int respawnTimer;
 	private Vector3 spawnPoint;
 	private EnemyState currentState;
@@ -82,7 +88,11 @@ public class EnemyNPCManager : NPCManager {
 		}
 		else if (currentState == EnemyState.Chase) {
 			Chase ();
-		} else {
+		}
+		else if (currentState == EnemyState.ReturnHome) {
+			ReturnHome ();
+		}
+		else {
 			Debug.Log ("Unknown State Found: " + currentState);
 		}
 
@@ -134,15 +144,15 @@ public class EnemyNPCManager : NPCManager {
 
 		transform.position = spawnPoint;
 		isAlive = true;
-		isAggro = false;
+		SetAggro (false);
 		damage = sourceData.damage;
 		maxHealth = sourceData.baseHealth;
 		currentHealth = maxHealth;
 		numberOfDeathAnimations = sourceData.numberOfDeathAnimations;
 		respawnTimer = instanceLink.respawnTimer;
 		aggroRadius = sourceData.aggroRadius;
-
-		StartCoroutine (CheckForAggro ());
+		attackRange = sourceData.attackRange;
+		originalSpawnPoint = trans.position;
 
 		SetState (EnemyState.Patrol);
 		gameObject.SetActive (true);
@@ -156,7 +166,8 @@ public class EnemyNPCManager : NPCManager {
 		isAlive = false;
 
 		// Play dying animation
-		animator.SetInteger ("DeathValue", Random.Range (1, numberOfDeathAnimations + 1));
+		animator.SetInteger (HashIDs.deathValue_int, Random.Range (1, numberOfDeathAnimations + 1));
+
 		StartCoroutine (ResetDeathValue ());
 
 		// Get drops from loot table
@@ -167,6 +178,10 @@ public class EnemyNPCManager : NPCManager {
 		} else {
 			despawnTimer = noLootDespawnTime;
 		}
+	}
+
+	public override bool IsDead () {
+		return !isAlive;
 	}
 
 	IEnumerator ResetDeathValue () {
@@ -253,15 +268,28 @@ public class EnemyNPCManager : NPCManager {
 
 	public void Aggro () {
 
-		isAggro = true;
+		SetAggro (true);
 		character.SetInCombat ();
 
 		SetState (EnemyState.Chase);
 
 	}
+	private void SetAggro (bool value) {
+
+		animator.SetBool (HashIDs.isAggro_bool, value);
+		isAggro = value;
+	}
 
 	public override void ReceiveDamage (int amount) {
+
+		if (currentState == EnemyState.ReturnHome)
+			return;
+
+		if (currentState == EnemyState.Patrol)
+			Aggro ();
+
 		currentHealth -= amount;
+		currentHealth = Mathf.Clamp (currentHealth, 0, maxHealth);
 
 		// Update target display
 		if (IsThisTheCurrentTarget ()) {
@@ -281,18 +309,77 @@ public class EnemyNPCManager : NPCManager {
 	}
 	#endregion
 
-
 	#region State Functions
 	private void Patrol () {
 
 	}
 	private void Chase () {
 
-		// Check to see if we're in attack range
+		Vector3 towardsPlayer = character.trans.position - trans.position;
+		Vector3 towardsSpawnPoint = trans.position - originalSpawnPoint;
+		FacePlayer ();
 
+		// Are we close enough to attack -> Attack state
+		if (towardsPlayer.magnitude < attackRange) {
+			animator.SetBool (HashIDs.isMoving_bool, false);
+			SetState (EnemyState.Attack);
+		}
+
+		// Are we too far from our original spawn point -> Return Home state
+		else if (towardsSpawnPoint.magnitude > leashDistance) {
+			ReceiveDamage (-1000000);
+			SetState (EnemyState.ReturnHome);
+		}
+
+		// Move closer to player
+		else {
+
+			animator.SetBool (HashIDs.isMoving_bool, true);
+
+			towardsPlayer.Normalize ();
+			towardsPlayer *= moveSpeed * Time.deltaTime;
+
+			trans.position += towardsPlayer;// new Vector3 (trans.position.x + towardsPlayer.x, trans.position.y, trans.position.z + towardsPlayer.z);
+		}
 	}
+
 	private void Attack () {
 
+		Vector3 towardsPlayer = character.trans.position - trans.position;
+		FacePlayer ();
+
+		// Is the player too far away -> Chase state
+		if (towardsPlayer.magnitude > attackRange) {
+			SetState (EnemyState.Chase);
+			return;
+		} 
+	
+		// Run Attack Sequence
+
+
+		
+
+	}
+	private void ReturnHome () {
+
+		// Face our destination
+		Vector3 towardsHome = originalSpawnPoint - trans.position;
+
+		// Have we reached our original spawn point -> Patrol state
+		if (towardsHome.magnitude < 2f) {
+			animator.SetBool (HashIDs.isMoving_bool, false);
+			SetState (EnemyState.Patrol);
+			return;
+		}
+
+		// Move towards original spawn point
+		towardsHome.Normalize ();
+		towardsHome *= moveSpeed * Time.deltaTime;
+		trans.position += towardsHome;
+
+		// Face home
+		Quaternion targetRotation = Quaternion.LookRotation (towardsHome);
+		trans.rotation = Quaternion.Lerp (trans.rotation, targetRotation, turnSpeed * Time.deltaTime);
 	}
 
 	#endregion
@@ -300,10 +387,24 @@ public class EnemyNPCManager : NPCManager {
 	#region Misc
 	public void SetState (EnemyState state) {
 		currentState = state;
+
+		if (currentState == EnemyState.Patrol) {
+			SetAggro (false);
+
+			StartCoroutine (CheckForAggro ());
+		}
 	}
 
 	public override NPCData GetSourceData () {
 		return sourceData;
+	}
+
+	private void FacePlayer () {
+		Vector3 towardsPlayer = character.trans.position - trans.position;
+		towardsPlayer.y = 0f;
+
+		Quaternion targetRotation = Quaternion.LookRotation (towardsPlayer);
+		trans.rotation = Quaternion.Lerp (trans.rotation, targetRotation, turnSpeed * Time.deltaTime);
 	}
 	#endregion
 }

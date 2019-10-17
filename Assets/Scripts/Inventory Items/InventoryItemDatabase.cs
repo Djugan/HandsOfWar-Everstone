@@ -44,7 +44,6 @@ public class InventoryItemDatabase : MonoBehaviour {
 		}
 	}
 
-
 	public static InventoryItemData GetItem (int itemID) {
 		if (itemDatabase.ContainsKey (itemID))
 			return itemDatabase [itemID];

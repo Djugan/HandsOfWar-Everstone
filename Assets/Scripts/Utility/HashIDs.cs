@@ -9,6 +9,9 @@ public class HashIDs : MonoBehaviour {
 
 	public static int velocity_int =			Animator.StringToHash ("Velocity");
 	public static int horizontalStrafe_int =	Animator.StringToHash ("HorizontalStrafe");
-	public static int weaponType_int =			Animator.StringToHash ("WeaponType");
-	
+	public static int attackNumber_int =		Animator.StringToHash ("AttackNumber");
+
+	public static int deathValue_int =			Animator.StringToHash ("DeathValue");
+	public static int isAggro_bool =			Animator.StringToHash ("IsAggro");
+	public static int isMoving_bool =			Animator.StringToHash ("IsMoving");
 }

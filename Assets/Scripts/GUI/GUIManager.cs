@@ -9,6 +9,7 @@ public class GUIManager : MonoBehaviour {
 	[Header ("Menus")]
 	public CharacterMenuManager characterMenu;
 	public MapMenuManager mapMenu;
+	public ActionBarManager actionBar;
 
 	[Header ("Windows")]
 	public ItemStatsWindow itemStatsWindow;

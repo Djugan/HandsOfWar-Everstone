@@ -60,6 +60,10 @@ public class TargetManager : MonoBehaviour {
 		return false;
 	}
 
+	public bool IsTargetDead () {
+		return target.IsDead ();
+	}
+
 
 	
 }

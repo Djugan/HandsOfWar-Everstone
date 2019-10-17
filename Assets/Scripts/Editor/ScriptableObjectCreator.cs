@@ -24,5 +24,8 @@ public class ScriptableObjectCreator {
 		ScriptableObjectUtility.CreateAsset<LootTable> ();
 	}
 
-
+	[MenuItem ("Assets/Create/Scriptable Object/Ability")]
+	static public void CreateAbility () {
+		ScriptableObjectUtility.CreateAsset<AbilityData> ();
+	}
 }

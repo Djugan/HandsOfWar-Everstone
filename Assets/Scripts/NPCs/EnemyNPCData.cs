@@ -11,4 +11,5 @@ public class EnemyNPCData : NPCData {
 	public LootTable lootTable;
 	public float goldDropMultiplier = 1f;
 	public float aggroRadius = 7f;
+	public float attackRange = 5f;
 }

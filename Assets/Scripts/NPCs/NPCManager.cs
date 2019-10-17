@@ -46,4 +46,5 @@ public class NPCManager : MonoBehaviour {
 	}
 
 	public virtual void ReceiveDamage (int amount) {}
+	public virtual bool IsDead () { return false; }
 }
