@@ -37,6 +37,8 @@ public class RPGCamera : MonoBehaviour {
 	private float _desiredMouseY = 0;
 	private Renderer[] _renderersToFade;
 
+	public static bool rotateCamera = true;
+
 	private void Awake() {
 		// Check if there is a main camera in the scene to use
 		if (Camera.main == null) {
@@ -53,6 +55,9 @@ public class RPGCamera : MonoBehaviour {
 	private void LateUpdate() {
 
 		if (GUIManager.instance.IsMenuVisible ())
+			return;
+
+		if (rotateCamera == false)
 			return;
 
 		// Set the camera's pivot position in world coordinates

@@ -8,18 +8,27 @@ using UnityEngine.EventSystems;
 public class AbilitySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IDragHandler, IDropHandler, IPointerClickHandler {
 
 
-	[SerializeField] private Button button;
+	[SerializeField] private GameObject slot_GO;
+	public Button button;
 	[SerializeField] private Image abilityIcon_Img;
 	[SerializeField] private GameObject hotkey_GO;
 	[SerializeField] private TextMeshProUGUI hotKey_Txt;
+	public RectTransform trans;
+	public int slotNumber;
 
 	private AbilityData sourceAbility;
 
+	public static ActionBarManager actionBarManager;
 
 	#region Mouse Interactions
 	public void OnPointerEnter (PointerEventData eventData) {
 
-		// Show Ability Information
+		// Currently an ability attached to the mouse
+		if (actionBarManager.IsAbilityOnMouse ()) {
+
+			// Save this slot as the place to put the ability if the user drops it here
+			actionBarManager.newAbilityLocation = this;
+		}
 	}
 
 	public void OnPointerExit (PointerEventData eventData) {
@@ -30,18 +39,24 @@ public class AbilitySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
 	public void OnPointerClick (PointerEventData eventData) {
 
-		print ("Pointer Enter: " + sourceAbility);
+		//print ("Pointer Enter: " + sourceAbility);
 		// Use Ability
 
 	}
 
 	public void OnDrag (PointerEventData eventData) {
-		
 
+		if (sourceAbility == null)
+			return;
+
+		if (actionBarManager.IsAbilityOnMouse ())
+			return;
+
+		actionBarManager.BeginAbilityDrag (this);
 	}
 
 	public void OnDrop (PointerEventData eventData) {
-
+		actionBarManager.EndAbilityDrag ();
 	}
 
 	#endregion
@@ -59,13 +74,23 @@ public class AbilitySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 		abilityIcon_Img.color = Color.white;
 		button.interactable = true;
 	}
+	public AbilityData GetAbility () {
+		return sourceAbility;
+	}
+	#endregion
 
+	#region Display Functions
 	public void ClearSlot () {
-
 		sourceAbility = null;
 		abilityIcon_Img.sprite = null;
 		abilityIcon_Img.color = Color.clear;
 		button.interactable = false;
+	}
+	public void HideSlot () {
+		slot_GO.SetActive (false);
+	}
+	public void ShowSlot () {
+		slot_GO.SetActive (true);
 	}
 
 	public void HideHotkeyDisplay () {
@@ -76,4 +101,11 @@ public class AbilitySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 	}
 	#endregion
 
+
+	public void SetPosition (RectTransform _trans) {
+		trans.position = _trans.position;
+	}
+	public void SetPosition (Vector3 position) {
+		trans.position = position;
+	}
 }

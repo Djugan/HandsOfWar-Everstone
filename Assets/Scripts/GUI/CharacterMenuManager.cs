@@ -91,7 +91,7 @@ public class CharacterMenuManager : MonoBehaviour {
 
 	public void ShowWindow () {
 		GUIManager.instance.HideAllWindows ();
-
+		
 		mainWindow.SetActive (true);
 
 		SetAttributeValues ();

@@ -6,28 +6,39 @@ using TMPro;
 
 public class ActionBarManager : MonoBehaviour {
 
-	private AbilityData [] abilities;
 	[SerializeField] private AbilitySlot [] actionBarAbilities;
 
-	private void Awake () {
-		abilities = new AbilityData [10];
-	}
+	public AbilitySlot abilityOnMouse;
+	public AbilitySlot newAbilityLocation;
 
 	private void Start () {
 
+		abilityOnMouse.HideSlot ();
+		abilityOnMouse.HideHotkeyDisplay ();
+
+		AbilitySlot.actionBarManager = this;
 		SetActionBarHotkeys ();
 		SetActionBarAbilities ();
 	}
 
+	private void Update () {
+		if (IsAbilityOnMouse ()) {
+			abilityOnMouse.SetPosition (Input.mousePosition);
+		}
+	}
+
+	public bool IsAbilityOnMouse () {
+		return abilityOnMouse.GetAbility () != null;
+	}
+
 	private void SetActionBarAbilities () {
 
-		for (int i = 0; i < abilities.Length; i++) {
-			if (abilities [i] != null) {
-				actionBarAbilities [i].SetAbility (abilities [i]);
-			} else {
-				actionBarAbilities [i].ClearSlot ();
-			}
+		for (int i = 0; i < actionBarAbilities.Length; i++) {
+			actionBarAbilities [i].ClearSlot ();
+			actionBarAbilities [i].slotNumber = i;
 		}
+		actionBarAbilities [0].SetAbility (AbilityDatabase.GetAbility (1));
+		actionBarAbilities [1].SetAbility (AbilityDatabase.GetAbility (2));
 	}
 
 	private void SetActionBarHotkeys () {
@@ -38,11 +49,47 @@ public class ActionBarManager : MonoBehaviour {
 	}
 
 	public void SetAbilityInSlot (AbilityData ability, int slot) {
-		abilities [slot] = ability;
+		actionBarAbilities [slot].SetAbility (ability);
 	}
 
 	public AbilityData GetAbilityInSlot (int slot) {
-		return abilities [slot];
+		return actionBarAbilities [slot].GetAbility ();
+	}
+
+	public void MouseEnter () {
+		RPGCamera.rotateCamera = false;
+	}
+	public void MouseExit () {
+		RPGCamera.rotateCamera = true;
+	}
+
+	public void BeginAbilityDrag (AbilitySlot abilitySlot) {
+
+		// Store original location of this item
+		//originalItemLocation = item;
+
+		abilityOnMouse.SetAbility (abilitySlot.GetAbility ());
+		abilityOnMouse.SetPosition (abilitySlot.trans);
+		abilityOnMouse.ShowSlot ();
+		abilityOnMouse.button.interactable = false;
+
+		abilitySlot.ClearSlot ();
+	}
+
+	public void EndAbilityDrag () {
+
+		// Mouse currently is not over another slot
+		if (newAbilityLocation == null) {
+			return;
+		}
+
+		// Dropping on an empty ability slot
+		if (newAbilityLocation.GetAbility () == null) {
+
+			newAbilityLocation.SetAbility (abilityOnMouse.GetAbility ());
+			abilityOnMouse.ClearSlot ();
+			abilityOnMouse.HideSlot ();
+		}
 	}
 
 }
