@@ -14,4 +14,5 @@ public class HashIDs : MonoBehaviour {
 	public static int deathValue_int =			Animator.StringToHash ("DeathValue");
 	public static int isAggro_bool =			Animator.StringToHash ("IsAggro");
 	public static int isMoving_bool =			Animator.StringToHash ("IsMoving");
+	public static int attackValue_int =			Animator.StringToHash ("AttackValue");
 }

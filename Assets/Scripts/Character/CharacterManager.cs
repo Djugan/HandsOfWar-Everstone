@@ -3,16 +3,6 @@ using System.Collections;
 
 public class CharacterManager : MonoBehaviour
 {
-
-
-	// START HERE
-	/* We have abilities loading and getting set in slots (done in Start () of this script).
-	 * We need to associate key presses with particular slots in the hotbar
-	 * We need to add parameters to the AbilityData objects to specify animation type
-	 * 
-	 */ 
-	// 
-
 	public static CharacterManager instance;
 
 	public CharacterMovementManager movementManager;
@@ -50,6 +40,8 @@ public class CharacterManager : MonoBehaviour
 
 	private int healthRegen, energyRegen;
 	private int moveSpeed;
+
+	private AbilityData activeAbility;
 
 	// Statistics
 	[HideInInspector]
@@ -258,8 +250,7 @@ public class CharacterManager : MonoBehaviour
 		// Checks for pressing 1-0
 		for (int i = 0; i < 10; i++) {
 			if (Input.GetKeyDown (KeybindingManager.actionBarKeys [i])) {
-				print ("Pressed Key: " + KeybindingManager.actionBarKeys [i]);
-				BeginAttack (i);
+				BeginAbility (i);
 			}
 		}
 
@@ -267,17 +258,27 @@ public class CharacterManager : MonoBehaviour
 	/// <summary>
 	/// Adds the amount to the current health
 	/// </summary>
-	public void ChangeHealth (int amount) {
+	public void ChangeHealth (int amount, bool showScrollingText = true) {
 
 		currentHealth += amount;
 
 		if (currentHealth < 0) {
 			currentHealth = 0;
-		} else if (currentHealth > maxHealth) {
+		}
+		else if (currentHealth > maxHealth) {
 			currentHealth = maxHealth;
 		}
 
 		GUIManager.instance.playerUnitFrame.SetHealthBar ();
+
+		if (showScrollingText) { 
+
+			Color textColor = HandsOfWarColors.red;
+			if (amount > 0) {
+				textColor = HandsOfWarColors.green;
+			}
+			ScrollingTextManager.instance.ShowScrollingText (amount, textColor, Vector3.zero, trans.position);
+		}
 	}
 
 	public void SetInCombat () {
@@ -301,29 +302,41 @@ public class CharacterManager : MonoBehaviour
 		GUIManager.instance.playerUnitFrame.SetEnergyBar ();
 	}
 
-	private void BeginAttack (int actionBarSlotNumber) {
+	public void BeginAbility (int actionBarSlotNumber) {
 
-		AbilityData activeAbility = GUIManager.instance.actionBar.GetAbilityInSlot (actionBarSlotNumber);
+		activeAbility = GUIManager.instance.actionBar.GetAbilityInSlot (actionBarSlotNumber);
 
 		if (activeAbility == null) {
 			print ("No ability in that slot");
 			return;
 		}
 
-		if (TargetManager.instance.IsTargetAnEnemy () == false) {
-			print ("You need to target an enemy");
-			return;
+		if (activeAbility.requiresTarget) { 
+			if (TargetManager.instance.HasTarget () == false) {
+				print ("You need to target something");
+				return;
+			}
+			float distanceToTarget = TargetManager.instance.GetDistanceToTarget ();
+			if (distanceToTarget > activeAbility.range) {
+				print ("Target out of range");
+				return;
+			}
 		}
 
-		if (TargetManager.instance.IsTargetDead ()) {
-			print ("You can't attack a dead thing");
-			return;
-		}
+		if (activeAbility.harmfulAbility) { 
+			if (TargetManager.instance.IsTargetAnEnemy () == false) {
+				print ("You need to target an enemy");
+				return;
+			}
 
-		print ("Ability Name: " + activeAbility.abilityName);
+			if (TargetManager.instance.IsTargetDead ()) {
+				print ("You can't attack a dead thing");
+				return;
+			}
+		}
 
 		// Send the attack number value to the animator
-		//movementManager.animator.SetInteger (HashIDs.attackNumber_int, attackNumber);
+		movementManager.animator.SetInteger (HashIDs.attackNumber_int, activeAbility.animationNumber);
 
 		StartCoroutine (ResetAttackNumber ());
 	}
@@ -336,7 +349,9 @@ public class CharacterManager : MonoBehaviour
 	}
 
 	public void TriggerDamage () {
-		TargetManager.instance.DamageTarget (5);
+
+		print ("Called Trigger Damage. Active Ability is: " + activeAbility.abilityName);
+		TargetManager.instance.DamageTarget (activeAbility.damage);
 
 	}
 
@@ -386,7 +401,7 @@ public class CharacterManager : MonoBehaviour
 		regenTimer++;
 		if (regenTimer == 50) { 
 			regenTimer = 0;
-			ChangeHealth (Mathf.RoundToInt (healthRegen));
+			ChangeHealth (Mathf.RoundToInt (healthRegen), false);
 			ChangeEnergy (Mathf.RoundToInt (energyRegen));
 		}
 	}

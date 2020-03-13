@@ -1,31 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyNPCManager : NPCManager {
 
 	[SerializeField] private int indexInZone;
 	[SerializeField] private Animator animator;
 	[SerializeField] private Transform trans;
+	[SerializeField] private NavMeshAgent navMeshAgent;
 
 	private EnemyNPCData sourceData;
 	private EnemyNPCInstanceLink instanceLink;
 
-	private int damage;
 	private int maxHealth;
 	private int currentHealth;
 	private bool isAlive;
 	private bool isAggro;
+	private bool isAttacking;
 	private float aggroRadius;
-	private float attackRange;
 	private int numberOfDeathAnimations;
 	private int despawnTimer;
-	private Vector3 originalSpawnPoint;
+	private EnemyAbility nextAbility;   // The ability the character wants to use next     
+	private EnemyAbility savedAbility;  // The ability that the character just used
+
+	private EnemyAbility ability1, ability2, ability3, ability4;
+   
+	private float ability1Cooldown, ability2Cooldown, ability3Cooldown, ability4Cooldown;
+
 	private static int defaultDespawnTime = 50 * 60;        // 50 frames * seconds
 	private static int noLootDespawnTime = 50 * 5;
 	private static float turnSpeed = 5f;
 	private static float moveSpeed = 4f;
 	private static float leashDistance = 30f;
+	private static float defaultStoppingDistance = 5f;
 
 	private int respawnTimer;
 	private Vector3 spawnPoint;
@@ -44,7 +52,7 @@ public class EnemyNPCManager : NPCManager {
 	private void Start () {
 
 		// Find InstanceLink from zone list in WorldManager
-		instanceLink = WorldManager.instance.FindInstanceLink (indexInZone);
+		instanceLink = WorldManager.instance.FindInstanceLink_EnemyNPC (indexInZone);
 
 		instanceLink.instanceManager = this;
 		sourceData = (EnemyNPCData)instanceLink.sourceData;
@@ -65,7 +73,10 @@ public class EnemyNPCManager : NPCManager {
 
 	private void FixedUpdate () {
 
-		if (isAlive == false) {
+		if (isAlive) {
+			UpdateCooldowns ();
+		}
+		else {
 
 			// Check for despawning corpse
 			despawnTimer--;
@@ -142,20 +153,40 @@ public class EnemyNPCManager : NPCManager {
 
 	public void Spawn () {
 
+		// Create EnemyAbility objects from the EnemyAbilityData source objects
+		if (sourceData.ability1 != null) {
+			ability1 = new EnemyAbility (sourceData.ability1, sourceData.abilityValue1);
+		}
+		if (sourceData.ability2 != null) {
+			ability2 = new EnemyAbility (sourceData.ability2, sourceData.abilityValue2);
+		}
+		if (sourceData.ability3 != null) {
+			ability3 = new EnemyAbility (sourceData.ability3, sourceData.abilityValue3);
+		}
+		if (sourceData.ability4 != null) {
+			ability4 = new EnemyAbility (sourceData.ability4, sourceData.abilityValue4);
+		}
+
+		nextAbility = ability1;
+
 		transform.position = spawnPoint;
 		isAlive = true;
 		SetAggro (false);
-		damage = sourceData.damage;
 		maxHealth = sourceData.baseHealth;
 		currentHealth = maxHealth;
 		numberOfDeathAnimations = sourceData.numberOfDeathAnimations;
 		respawnTimer = instanceLink.respawnTimer;
 		aggroRadius = sourceData.aggroRadius;
-		attackRange = sourceData.attackRange;
-		originalSpawnPoint = trans.position;
+		spawnPoint = transform.position;
+		navMeshAgent.speed = moveSpeed;
+		navMeshAgent.stoppingDistance = nextAbility.GetAbilityRange ();
+		isAttacking = false;
+		animator.SetInteger (HashIDs.deathValue_int, 0);
+
+		gameObject.SetActive (true);
 
 		SetState (EnemyState.Patrol);
-		gameObject.SetActive (true);
+		StartCoroutine (SetNextAbility ());
 	}
 
 	void KillNPC () {
@@ -166,9 +197,8 @@ public class EnemyNPCManager : NPCManager {
 		isAlive = false;
 
 		// Play dying animation
-		animator.SetInteger (HashIDs.deathValue_int, Random.Range (1, numberOfDeathAnimations + 1));
-
-		StartCoroutine (ResetDeathValue ());
+		int deathAnimationNumber = Random.Range (1, numberOfDeathAnimations + 1);
+		animator.SetInteger (HashIDs.deathValue_int, deathAnimationNumber);
 
 		// Get drops from loot table
 		DetermineDrops ();
@@ -178,15 +208,12 @@ public class EnemyNPCManager : NPCManager {
 		} else {
 			despawnTimer = noLootDespawnTime;
 		}
+
+		GUIManager.instance.mainMenu.questsMenu.CheckForObjective_Kill (sourceData);
 	}
 
 	public override bool IsDead () {
 		return !isAlive;
-	}
-
-	IEnumerator ResetDeathValue () {
-		yield return null;
-		animator.SetInteger ("DeathValue", 0);
 	}
 
 
@@ -246,11 +273,6 @@ public class EnemyNPCManager : NPCManager {
 	#endregion
 
 	#region Combat Functions
-	private void RunCombatSequence () {
-
-
-	}
-
 	IEnumerator CheckForAggro () {
 
 		while (isAggro == false) {
@@ -291,13 +313,137 @@ public class EnemyNPCManager : NPCManager {
 		currentHealth -= amount;
 		currentHealth = Mathf.Clamp (currentHealth, 0, maxHealth);
 
+		ScrollingTextManager.instance.ShowScrollingText (amount, HandsOfWarColors.yellow, CharacterManager.instance.trans.position, trans.position);
+
 		// Update target display
 		if (IsThisTheCurrentTarget ()) {
 			GUIManager.instance.targetFrameManager.SetTargetHealth ();
 		}
 
 		if (currentHealth <= 0) {
+
 			KillNPC ();
+		}
+	}
+
+	/// <summary>
+	/// Sets the next ability that this agent intends to use
+	/// </summary>
+	private WaitForSeconds oneSecond = new WaitForSeconds (1f);
+	IEnumerator SetNextAbility () {
+
+		while (isAlive) {
+
+			yield return oneSecond;
+
+			// Figure out what ability to use next
+			// Called once per second regardless of the state the enemy is in
+			if (isAggro) {
+
+				// Get the abilities this enemy has access to currently
+				EnemyAbility directHeal = GetDirectHealAbility ();
+				EnemyAbility directDamage = GetDirectDamageAbility ();
+
+
+				// Heal if low health
+				if (GetHealthPercent () < 0.4f && directHeal != null) {
+					nextAbility = directHeal;
+				}
+
+				// Deal direct damage
+				else if (directDamage != null){
+					nextAbility = directDamage;
+				}
+			
+				navMeshAgent.stoppingDistance = nextAbility.GetAbilityRange ();
+
+			}
+		}
+	}
+
+	private EnemyAbility GetDirectHealAbility () {
+		if (ability1 != null && 
+			ability1.GetSourceAbility().abilityType == AbilityType.DirectHeal &&
+			ability1.IsOnCooldown () == false) {
+			return ability1;
+		}
+		if (ability2 != null 
+			&& ability2.GetSourceAbility ().abilityType == AbilityType.DirectHeal &&
+			ability2.IsOnCooldown () == false) {
+			return ability2;
+		}
+		if (ability3 != null && 
+			ability3.GetSourceAbility ().abilityType == AbilityType.DirectHeal &&
+			ability3.IsOnCooldown () == false) {
+			return ability3;
+		}
+
+		if (ability4 != null && 
+			ability4.GetSourceAbility ().abilityType == AbilityType.DirectHeal &&
+			ability4.IsOnCooldown () == false) {
+			return ability4;
+		}
+
+		return null;
+	}
+
+	private EnemyAbility GetDirectDamageAbility () {
+
+		EnemyAbility bestAbility = null;
+		int bestDamage = 0;
+
+		if (ability1 != null &&
+			ability1.GetSourceAbility ().abilityType == AbilityType.DirectDamage &&
+			ability1.IsOnCooldown () == false &&
+			ability1.GetAbilityValue () > bestDamage) {
+
+			bestAbility = ability1;
+			bestDamage = bestAbility.GetAbilityValue ();
+		}
+
+		if (ability2 != null &&
+			ability2.GetSourceAbility ().abilityType == AbilityType.DirectDamage &&
+			ability2.IsOnCooldown () == false &&
+			ability2.GetAbilityValue () > bestDamage) {
+
+			bestAbility = ability2;
+			bestDamage = bestAbility.GetAbilityValue ();
+		}
+
+		if (ability3 != null &&
+			ability3.GetSourceAbility ().abilityType == AbilityType.DirectDamage &&
+			ability3.IsOnCooldown () == false &&
+			ability3.GetAbilityValue () > bestDamage) {
+
+			bestAbility = ability3;
+			bestDamage = bestAbility.GetAbilityValue ();
+		}
+
+		if (ability4 != null &&
+			ability4.GetSourceAbility ().abilityType == AbilityType.DirectDamage &&
+			ability4.IsOnCooldown () == false &&
+			ability4.GetAbilityValue () > bestDamage) {
+
+			bestAbility = ability4;
+			bestDamage = bestAbility.GetAbilityValue ();
+		}
+
+		return bestAbility;
+	}
+
+	private void UpdateCooldowns () {
+
+		if (ability1 != null && ability1.IsOnCooldown ()) {
+			ability1.UpdateCooldown ();
+		}
+		if (ability2 != null && ability2.IsOnCooldown ()) {
+			ability2.UpdateCooldown ();
+		}
+		if (ability3 != null && ability3.IsOnCooldown ()) {
+			ability3.UpdateCooldown ();
+		}
+		if (ability4 != null && ability4.IsOnCooldown ()) {
+			ability4.UpdateCooldown ();
 		}
 	}
 
@@ -307,6 +453,27 @@ public class EnemyNPCManager : NPCManager {
 	public float GetHealthPercent () {
 		return (float)currentHealth / maxHealth;
 	}
+
+	/// <summary>
+	/// Called from the animation when the attack/animation should register/trigger the effect
+	/// </summary>
+	public void TriggerDamage () {
+
+		int damage = savedAbility.GetAbilityValue () * -1;
+
+		// Apply armor, magic resist, etc to damage
+		CharacterManager.instance.ChangeHealth (damage);
+	}
+
+	/// <summary>
+	/// Called from the animation when the attack/animation is finished
+	/// </summary>
+	public void FinishAttack () {
+		isAttacking = false;
+		animator.SetInteger (HashIDs.attackValue_int, 0);
+
+
+	}
 	#endregion
 
 	#region State Functions
@@ -315,12 +482,13 @@ public class EnemyNPCManager : NPCManager {
 	}
 	private void Chase () {
 
+
 		Vector3 towardsPlayer = character.trans.position - trans.position;
-		Vector3 towardsSpawnPoint = trans.position - originalSpawnPoint;
-		FacePlayer ();
+		Vector3 towardsSpawnPoint = trans.position - spawnPoint;
+		//FacePlayer ();
 
 		// Are we close enough to attack -> Attack state
-		if (towardsPlayer.magnitude < attackRange) {
+		if (towardsPlayer.magnitude < nextAbility.GetAbilityRange ()) {
 			animator.SetBool (HashIDs.isMoving_bool, false);
 			SetState (EnemyState.Attack);
 		}
@@ -336,10 +504,7 @@ public class EnemyNPCManager : NPCManager {
 
 			animator.SetBool (HashIDs.isMoving_bool, true);
 
-			towardsPlayer.Normalize ();
-			towardsPlayer *= moveSpeed * Time.deltaTime;
-
-			trans.position += towardsPlayer;// new Vector3 (trans.position.x + towardsPlayer.x, trans.position.y, trans.position.z + towardsPlayer.z);
+			navMeshAgent.SetDestination (character.trans.position);
 		}
 	}
 
@@ -349,21 +514,29 @@ public class EnemyNPCManager : NPCManager {
 		FacePlayer ();
 
 		// Is the player too far away -> Chase state
-		if (towardsPlayer.magnitude > attackRange) {
+		if (towardsPlayer.magnitude > nextAbility.GetAbilityRange ()) {
 			SetState (EnemyState.Chase);
 			return;
-		} 
-	
-		// Run Attack Sequence
+		}
 
+		if (isAttacking == false) {
 
-		
+			savedAbility = nextAbility;
 
+			// Put the abililty on cooldown
+			savedAbility.SetCooldown ();
+
+			// Begin playing attack animation
+			animator.SetInteger (HashIDs.attackValue_int, nextAbility.GetAnimationNumber ());
+			isAttacking = true;
+		}
 	}
+
+
 	private void ReturnHome () {
 
 		// Face our destination
-		Vector3 towardsHome = originalSpawnPoint - trans.position;
+		Vector3 towardsHome = spawnPoint - trans.position;
 
 		// Have we reached our original spawn point -> Patrol state
 		if (towardsHome.magnitude < 2f) {
@@ -372,14 +545,7 @@ public class EnemyNPCManager : NPCManager {
 			return;
 		}
 
-		// Move towards original spawn point
-		towardsHome.Normalize ();
-		towardsHome *= moveSpeed * Time.deltaTime;
-		trans.position += towardsHome;
-
-		// Face home
-		Quaternion targetRotation = Quaternion.LookRotation (towardsHome);
-		trans.rotation = Quaternion.Lerp (trans.rotation, targetRotation, turnSpeed * Time.deltaTime);
+		navMeshAgent.SetDestination (spawnPoint);
 	}
 
 	#endregion

@@ -31,8 +31,8 @@ public class CharacterSetupManager : MonoBehaviour {
 		// LOAD DATA - Set loaded in (or default) character data in CharacterManager
 		CharacterManager.instance.playerName = characterData.playerName;
 		CharacterManager.instance.level = characterData.level;
-		GUIManager.instance.characterMenu.SetLoadedInventory (characterData.inventory);
-		GUIManager.instance.characterMenu.SetLoadedEquipment (characterData.equipment);
+		GUIManager.instance.mainMenu.characterMenu.SetLoadedInventory (characterData.inventory);
+		GUIManager.instance.mainMenu.characterMenu.SetLoadedEquipment (characterData.equipment);
 
 		// DISPLAY DATA - Update displays after data is loaded
 		GUIManager.instance.playerUnitFrame.SetPlayerName ();

@@ -7,8 +7,7 @@ public class GUIManager : MonoBehaviour {
 	public static GUIManager instance;
 
 	[Header ("Menus")]
-	public CharacterMenuManager characterMenu;
-	public MapMenuManager mapMenu;
+	public MainMenuManager mainMenu;
 	public ActionBarManager actionBar;
 
 	[Header ("Windows")]
@@ -19,6 +18,7 @@ public class GUIManager : MonoBehaviour {
 
 	[Header ("Misc")]
 	public CursorManager cursorManager;
+
 
 	private void Awake () {
 		if (instance == null) {
@@ -33,6 +33,7 @@ public class GUIManager : MonoBehaviour {
 	#region Startup Functions
 	private void Start () {
 		HideAllWindows ();
+		mainMenu.Init ();
 	}
 	#endregion
 
@@ -42,24 +43,35 @@ public class GUIManager : MonoBehaviour {
 	}
 
 	public bool IsMenuVisible () {
-		return characterMenu.IsVisible ();
+		return mainMenu.IsVisible ();
 	}
 
 	void CheckForMenuHotkeys () {
 
 		if (Input.GetKeyDown (KeyCode.C)) {
-			characterMenu.ToggleWindow ();
+			mainMenu.ToggleCharacterMenu ();
 		}
 		else if (Input.GetKeyDown (KeyCode.M)) {
-			mapMenu.ToggleWindow ();
+			mainMenu.ToggleMapMenu ();
 		}
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			HandleEscapeKeyPress ();
+		}
+	}
+
+	private void HandleEscapeKeyPress () {
+
+		if (actionBar.IsAbilityOnMouse ()) {
+			actionBar.ClearAbilityOnMouse ();
+		}
+
 	}
 
 
 	#region Menu Open and Close
 	public void HideAllWindows () {
-		characterMenu.HideWindow ();
-		mapMenu.HideWindow ();
+		mainMenu.HideWindow ();
 		itemStatsWindow.HideWindow ();
 		lootWindow.HideWindow ();
 	}

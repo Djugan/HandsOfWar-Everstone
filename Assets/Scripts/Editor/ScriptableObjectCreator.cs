@@ -19,6 +19,11 @@ public class ScriptableObjectCreator {
 		ScriptableObjectUtility.CreateAsset<EnemyNPCData> ();
 	}
 
+	[MenuItem ("Assets/Create/Scriptable Object/Dialogue NPC")]
+	static public void CreateDialogueNPC () {
+		ScriptableObjectUtility.CreateAsset<DialogueNPCData> ();
+	}
+
 	[MenuItem ("Assets/Create/Scriptable Object/Loot Table")]
 	static public void CreateLootTable () {
 		ScriptableObjectUtility.CreateAsset<LootTable> ();
@@ -27,5 +32,20 @@ public class ScriptableObjectCreator {
 	[MenuItem ("Assets/Create/Scriptable Object/Ability")]
 	static public void CreateAbility () {
 		ScriptableObjectUtility.CreateAsset<AbilityData> ();
+	}
+
+	[MenuItem ("Assets/Create/Scriptable Object/Enemy Ability")]
+	static public void CreateEnemyAbility () {
+		ScriptableObjectUtility.CreateAsset<EnemyAbilityData> ();
+	}
+
+	[MenuItem ("Assets/Create/Scriptable Object/Quest")]
+	static public void CreateQuest () {
+		ScriptableObjectUtility.CreateAsset<QuestData> ();
+	}
+
+	[MenuItem ("Assets/Create/Scriptable Object/Quest Objective")]
+	static public void CreateQuestObjective () {
+		ScriptableObjectUtility.CreateAsset<QuestObjectiveData> ();
 	}
 }

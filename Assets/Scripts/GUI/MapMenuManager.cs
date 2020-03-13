@@ -9,18 +9,9 @@ public class MapMenuManager : MonoBehaviour {
 	[Header ("Main")]
 	[SerializeField] private GameObject mainWindow;
 
-
-	public void Start () {
-		HideWindow ();
-	}
-
 	#region Show / Hide Functions
 	public bool IsVisible () {
 		return mainWindow.activeInHierarchy;
-	}
-	public void ToggleWindow () {
-		if (IsVisible ()) HideWindow ();
-		else ShowWindow ();
 	}
 
 	public void ShowWindow () {

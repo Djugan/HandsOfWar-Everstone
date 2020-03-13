@@ -62,11 +62,14 @@ public class TargetFrameManager : MonoBehaviour {
 			targetName_Txt.text = target.GetSourceData ().npcName;
 			SetTargetHealth ();
 		}
-		/*
 		// DialogueNPC
-		else if (TargetManager.instance.GetTarget () is DialogueNPC) {
+		else if (target is DialogueNPCManager) {
 			enemyNPCTarget = null;
+			targetName_Txt.text = target.GetSourceData ().npcName;
+			SetNonEnemyTargetHealth ();
 		}
+
+		/*
 		// MerchantNPC
 		else if (TargetManager.instance.GetTarget () is MerchantNPC) {
 			enemyNPCTarget = null;
@@ -79,5 +82,9 @@ public class TargetFrameManager : MonoBehaviour {
 	public void SetTargetHealth () {
 		health_Txt.text = enemyNPCTarget.GetHealthText ();
 		healthBar_Img.fillAmount = enemyNPCTarget.GetHealthPercent ();
+	}
+	public void SetNonEnemyTargetHealth () {
+		healthBar_Img.fillAmount = 1f;
+		health_Txt.text = "";
 	}
 }

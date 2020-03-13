@@ -15,6 +15,15 @@ public class SharedGraphics : MonoBehaviour {
 	public Sprite inventoryItem_Epic;
 	public Sprite inventoryItem_Quest;
 
+	[Header ("Faction Logos")]
+	public Sprite allianceLogo_128;
+	public Sprite blademastersLogo_128;
+	public Sprite gloriousLegionLogo_128;
+	public Sprite keepersOfTheRedSandLogo_128;
+	public Sprite magiciansLogo_128;
+	public Sprite voidbringersLogo_128;
+	public Sprite wardersLogo_128;
+
 	[Header ("Misc Icons")]
 	public Sprite goldIcon;
 	public Sprite healthPotionIcon;

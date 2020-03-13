@@ -84,16 +84,9 @@ public class CharacterMenuManager : MonoBehaviour {
 	public bool IsVisible () {
 		return mainWindow.activeInHierarchy;
 	}
-	public void ToggleWindow () {
-		if (IsVisible ()) 	HideWindow ();
-		else				ShowWindow ();
-	}
 
 	public void ShowWindow () {
-		GUIManager.instance.HideAllWindows ();
-		
 		mainWindow.SetActive (true);
-
 		SetAttributeValues ();
 	}
 
@@ -309,7 +302,6 @@ public class CharacterMenuManager : MonoBehaviour {
 		itemOnMouse.Show ();
 	}
 
-	private InventoryItemData _tempSourceData;
 	public void EndItemDrag () {
 
 		// Mouse currently is not over another slot
@@ -351,9 +343,9 @@ public class CharacterMenuManager : MonoBehaviour {
 				EquipItem (itemOnMouse.sourceData, GetSlotIndex (newItemLocation.equipmentSlot));
 			}
 
-			_tempSourceData = newItemLocation.sourceData;
+			InventoryItemData tempSourceData = newItemLocation.sourceData;
 			newItemLocation.SetData (itemOnMouse.sourceData);
-			itemOnMouse.SetData (_tempSourceData);
+			itemOnMouse.SetData (tempSourceData);
 		}
 	}
 

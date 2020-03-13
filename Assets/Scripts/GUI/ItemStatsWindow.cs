@@ -179,7 +179,7 @@ public class ItemStatsWindow : MonoBehaviour {
 		// List of items in set
 		for (int i = 0; i < sourceData.itemSet.setItems.Length; i++) {
 
-			bool isItemEquipped = GUIManager.instance.characterMenu.IsItemEquipped (sourceData.itemSet.setItems [i]);
+			bool isItemEquipped = GUIManager.instance.mainMenu.characterMenu.IsItemEquipped (sourceData.itemSet.setItems [i]);
 
 			if (isItemEquipped) {
 				itemSetText += GetEarnedSetBonusColorTag ();

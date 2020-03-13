@@ -37,35 +37,38 @@ public class RPGCamera : MonoBehaviour {
 	private float _desiredMouseY = 0;
 	private Renderer[] _renderersToFade;
 
-	public static bool rotateCamera = true;
-
 	private void Awake() {
-		// Check if there is a main camera in the scene to use
-		if (Camera.main == null) {
-			GameObject mainCamera = new GameObject("Main Camera");
-			mainCamera.AddComponent<Camera>();
-			mainCamera.tag = "MainCamera";
-		}
 
 		ResetView();
 
 		_renderersToFade = GetComponentsInChildren<Renderer>();
 	}
 
-	private void LateUpdate() {
+	/// <summary>
+	/// Runs through all of the different conditions that should prevent the camera from rotating
+	/// </summary>
+	private bool CanCameraRotate () {
 
 		if (GUIManager.instance.IsMenuVisible ())
-			return;
+			return false;
 
-		if (rotateCamera == false)
+		if (GUIManager.instance.actionBar.IsAbilityOnMouse ())
+			return false;
+
+		return true;
+	}
+
+	private void LateUpdate() {
+
+		if (CanCameraRotate () != true)
 			return;
 
 		// Set the camera's pivot position in world coordinates
 		_cameraPivotPosition = transform.position + CameraPivotLocalPosition;
 		// Check if the camera lies on the ground
-		bool mouseYConstrained = Physics.Linecast(Camera.main.transform.position,
-		                                          Camera.main.transform.position + Vector3.down);
-		mouseYConstrained = mouseYConstrained && Camera.main.transform.position.y < _cameraPivotPosition.y;
+		bool mouseYConstrained = Physics.Linecast(CameraManager.instance.mainCameraTrans.position,
+												  CameraManager.instance.mainCameraTrans.position + Vector3.down);
+		mouseYConstrained = mouseYConstrained && CameraManager.instance.mainCameraTrans.position.y < _cameraPivotPosition.y;
 
 		#region Get inputs
 
@@ -126,7 +129,7 @@ public class RPGCamera : MonoBehaviour {
 		
 		if (closestDistance != -1) {
 			// Set the camera distance to the closest distance because the camera is constricted
-			closestDistance -= Camera.main.nearClipPlane;
+			closestDistance -= CameraManager.instance.mainCamera.nearClipPlane;
 			if (_distanceSmooth < closestDistance)
 				// Smooth the distance if we move from a smaller constricted distance to a bigger constricted distance
 				_distanceSmooth = Mathf.SmoothDamp(_distanceSmooth, closestDistance, ref _distanceCurrentVelocity, DistanceSmoothTime);
@@ -140,21 +143,21 @@ public class RPGCamera : MonoBehaviour {
 		}
 		// Compute the new camera position
 		newCameraPosition = GetCameraPosition(_mouseYSmooth, _mouseXSmooth, _distanceSmooth);
-		
+
 		#endregion
 
 		#region Update the camera transform
 
-		Camera.main.transform.position = newCameraPosition;
+		CameraManager.instance.mainCameraTrans.position = newCameraPosition;
 		// Check if we are in third or first person and adjust the camera rotation behavior
 		if (_distanceSmooth > 0.1f)
-			Camera.main.transform.LookAt(_cameraPivotPosition);
+			CameraManager.instance.mainCameraTrans.LookAt(_cameraPivotPosition);
 		else
-			Camera.main.transform.eulerAngles = new Vector3(_mouseYSmooth, _mouseXSmooth, 0);
+			CameraManager.instance.mainCameraTrans.eulerAngles = new Vector3(_mouseYSmooth, _mouseXSmooth, 0);
 
 		if (mouseYConstrained) {			
 			float lookUpDegrees = _desiredMouseY - _mouseY;
-			Camera.main.transform.Rotate(Vector3.right, lookUpDegrees);
+			CameraManager.instance.mainCameraTrans.Rotate(Vector3.right, lookUpDegrees);
 		}
 
 		#endregion
@@ -215,7 +218,7 @@ public class RPGCamera : MonoBehaviour {
 
 	private void CharacterFade() {
 		// Get the actual distance
-		float actualDistance = Vector3.Distance(transform.position, Camera.main.transform.position);
+		float actualDistance = Vector3.Distance(transform.position, CameraManager.instance.mainCameraTrans.position);
 		// Compute the new alpha value depending on the fading start und end distance
 		float characterAlpha = Mathf.Floor(Mathf.Clamp(actualDistance / FadingStartDistance - FadingEndDistance, 0, 1) * 100) / 100;
 		// Set the computed alpha value for all renderers 

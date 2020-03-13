@@ -12,8 +12,14 @@ public class WorldManager : MonoBehaviour {
 	public int defaultRespawnTimer;
 
 	#region EnemyNPCs
+	[Header ("Enemy NPCs")]
 	[SerializeField] private EnemyNPCData weakRatWarrior;
 	[SerializeField] private EnemyNPCData ratWarrior;
+	#endregion
+
+	#region
+	[Header ("Dialogue NPCs")]
+	[SerializeField] private DialogueNPCData questGiver000;
 	#endregion
 
 	private void Awake () {
@@ -37,14 +43,26 @@ public class WorldManager : MonoBehaviour {
 	}
 
 	#region Finding NPCs
-	public EnemyNPCInstanceLink FindInstanceLink (int index) {
+	public EnemyNPCInstanceLink FindInstanceLink_EnemyNPC (int index) {
 		return zones [activeZone - 1].enemyNPCList [index];
 	}
-	public void SpawnEnemy (int index) {
+	public void SpawnEnemy_EnemyNPC (int index) {
 		zones [activeZone - 1].enemyNPCList [index].instanceManager.Spawn ();
 	}
-	public void DespawnEnemy (int index) {
+	public void DespawnEnemy_EnemyNPC (int index) {
 		zones [activeZone - 1].enemyNPCList [index].instanceManager.Despawn ();
+	}
+	#endregion
+
+	#region
+	public DialogueNPCInstanceLink FindInstanceLink_DialogueNPC (int index) {
+		return zones [activeZone - 1].dialogueNPCList [index];
+	}
+	public void SpawnEnemy_DialogueNPC (int index) {
+		zones [activeZone - 1].dialogueNPCList [index].instanceManager.Spawn ();
+	}
+	public void DespawnEnemy_DialogueNPC (int index) {
+		zones [activeZone - 1].dialogueNPCList [index].instanceManager.Despawn ();
 	}
 	#endregion
 
@@ -54,14 +72,18 @@ public class WorldManager : MonoBehaviour {
 		Zone z = new Zone ();
 
 		List<EnemyNPCInstanceLink> enemyNPCList = new List<EnemyNPCInstanceLink> ();
+		List<DialogueNPCInstanceLink> dialogueNPCList = new List<DialogueNPCInstanceLink> ();
 
 
+		// Enemy NPCs																			// Index
+		enemyNPCList.Add (new EnemyNPCInstanceLink (true, zone, weakRatWarrior,		300));		// 0
+		enemyNPCList.Add (new EnemyNPCInstanceLink (true, zone, ratWarrior,			400));      // 1
 
-		// Enemy NPCs
-		enemyNPCList.Add (new EnemyNPCInstanceLink (true, zone, weakRatWarrior,		300));						// 0
-		enemyNPCList.Add (new EnemyNPCInstanceLink (true, zone, ratWarrior,			400));		// 1
+		// Dialogue NPCs																		// Index
+		dialogueNPCList.Add (new DialogueNPCInstanceLink (true, zone, questGiver000));			// 0
 
 		z.enemyNPCList = enemyNPCList;
+		z.dialogueNPCList = dialogueNPCList;
 
 		return z;
 	}

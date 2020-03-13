@@ -22,4 +22,8 @@ public class CursorManager : MonoBehaviour {
 	public void SetCombatCursor () {
 		Cursor.SetCursor (combatCursor, Vector2.zero, CursorMode.Auto);
 	}
+
+	public void SetQuestCursor () {
+		Cursor.SetCursor (questCursor, Vector2.zero, CursorMode.Auto);
+	}
 }

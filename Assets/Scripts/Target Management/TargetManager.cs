@@ -47,6 +47,7 @@ public class TargetManager : MonoBehaviour {
 			return;
 
 		target.ReceiveDamage (damage);
+
 	}
 
 	public bool HasTarget () {
@@ -64,6 +65,9 @@ public class TargetManager : MonoBehaviour {
 		return target.IsDead ();
 	}
 
+	public float GetDistanceToTarget () {
+		return Vector3.Distance (CharacterManager.instance.trans.position, target.transform.position);
+	}
 
 	
 }

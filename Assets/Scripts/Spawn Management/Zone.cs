@@ -5,7 +5,7 @@ using UnityEngine;
 public class Zone {
 
 	public List<EnemyNPCInstanceLink> enemyNPCList;
-	//private List<DialogNPC> dialogNPCList;
+	public List<DialogueNPCInstanceLink> dialogueNPCList;
 	//private List<MerchantNPC> merchantNPCList;
 
 }

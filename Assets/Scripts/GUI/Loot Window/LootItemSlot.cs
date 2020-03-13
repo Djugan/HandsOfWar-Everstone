@@ -112,23 +112,23 @@ public class LootItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
 		// Determine what item is being looted
 		if (gold > 0) {
-			GUIManager.instance.characterMenu.gold += gold;
+			GUIManager.instance.mainMenu.characterMenu.gold += gold;
 			GUIManager.instance.lootWindow.enemyBeingLooted.goldDropped = 0;
 		}else if (healthPotions > 0) {
-			GUIManager.instance.characterMenu.healthPotions += gold;
+			GUIManager.instance.mainMenu.characterMenu.healthPotions += gold;
 			GUIManager.instance.lootWindow.enemyBeingLooted.healthPotionsDropped = 0;
 		}
 		else if (energyPotions > 0) {
-			GUIManager.instance.characterMenu.energyPotions += gold;
+			GUIManager.instance.mainMenu.characterMenu.energyPotions += gold;
 			GUIManager.instance.lootWindow.enemyBeingLooted.energyPotionsDropped = 0;
 		}
 		else if (itemData != null) {
 
-			if (GUIManager.instance.characterMenu.IsInventoryFull ()) {
+			if (GUIManager.instance.mainMenu.characterMenu.IsInventoryFull ()) {
 				print ("Inventory is full!");
 				return;
 			}
-			GUIManager.instance.characterMenu.AddItemToInventory (itemData.itemID);
+			GUIManager.instance.mainMenu.characterMenu.AddItemToInventory (itemData.itemID);
 		}
 
 		HideSlot ();
