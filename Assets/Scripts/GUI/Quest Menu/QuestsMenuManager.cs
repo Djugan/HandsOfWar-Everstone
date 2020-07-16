@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Runtime.InteropServices;
 
 public class QuestsMenuManager : MonoBehaviour {
 
@@ -55,13 +56,19 @@ public class QuestsMenuManager : MonoBehaviour {
 			return;
 		}
 
+		if (quest.isOnQuest)
+		{
+			print("Already on quest!");
+			return;
+		}
+
 		print ("Quest Accepted: " + quest.questName);
 
 		// Set all objective current amount values to zero
 		for (int i = 0; i < quest.questObjectives.Length; i++) {
 			quest.questObjectives [i].currentAmount = 0;
 		}
-
+		quest.isOnQuest = true;
 		activeQuests.Add (quest);
 		questMenuItems [activeQuests.Count - 1].SetQuestInformation (quest);
 	}
@@ -87,6 +94,7 @@ public class QuestsMenuManager : MonoBehaviour {
 
 		questDescription_Txt.text = quest.questDescription;
 		questDescriptionWindow_GO.SetActive (true);
+		
 	}
 	#endregion
 
@@ -145,6 +153,17 @@ public class QuestsMenuManager : MonoBehaviour {
 		quest.isComplete = isQuestComplete;
 
 		print ("Quest is complete: " + quest.isComplete);
+
+		activeQuests.Remove(quest);
+		
+
+		if(quest.isRepeatable)
+		{
+			quest.isQuestAvailable = true;
+			quest.isOnQuest = false;
+		}
+
+		Init();
 
 	}
 	#endregion

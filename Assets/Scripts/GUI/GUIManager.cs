@@ -15,6 +15,7 @@ public class GUIManager : MonoBehaviour {
 	public PlayerFrameManager playerUnitFrame;
 	public TargetFrameManager targetFrameManager;
 	public LootWindowManager lootWindow;
+	public TestingData questWindow;
 
 	[Header ("Misc")]
 	public CursorManager cursorManager;
@@ -74,6 +75,7 @@ public class GUIManager : MonoBehaviour {
 		mainMenu.HideWindow ();
 		itemStatsWindow.HideWindow ();
 		lootWindow.HideWindow ();
+		questWindow.HideWindow();
 	}
 	#endregion
 }

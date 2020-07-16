@@ -6,6 +6,7 @@ using TMPro;
 
 public class TestingData : MonoBehaviour
 {
+    [SerializeField] private GameObject mainWindow;
     [SerializeField] private QuestData quest;
     [SerializeField] private TextMeshProUGUI questName;
     [SerializeField] private TextMeshProUGUI questDescription;
@@ -17,9 +18,14 @@ public class TestingData : MonoBehaviour
     [SerializeField] private QuestObjectiveData objectives3;
 
 
-    private void Awake()
+    public void ShowWindow()
     {
+        mainWindow.SetActive(true);
         QuestWindow();
+    }
+    public void HideWindow()
+    {
+        mainWindow.SetActive(false);
     }
 
     public void QuestWindow()

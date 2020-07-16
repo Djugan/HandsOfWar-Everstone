@@ -54,7 +54,7 @@ public class DialogueNPCManager : NPCManager {
 		TargetManager.instance.SetTarget (this);
 	}
 	public override void HandleRightMouseClick () {
-		GUIManager.instance.mainMenu.questsMenu.AcceptQuest (sourceData.GetQuests () [0]);
+		GUIManager.instance.mainMenu.questsMenu.AcceptQuest (sourceData.GetQuests () [2]);
 	}
 	#endregion
 
