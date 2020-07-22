@@ -58,6 +58,12 @@ public class QuestsMenuManager : MonoBehaviour {
 
 		if (quest.isOnQuest)
 		{
+			if (quest.isComplete)
+			{
+				RemoveCompletedQuest(quest);
+				return;
+			}
+
 			print("Already on quest!");
 			return;
 		}
@@ -68,9 +74,19 @@ public class QuestsMenuManager : MonoBehaviour {
 		for (int i = 0; i < quest.questObjectives.Length; i++) {
 			quest.questObjectives [i].currentAmount = 0;
 		}
-		quest.isOnQuest = true;
-		activeQuests.Add (quest);
-		questMenuItems [activeQuests.Count - 1].SetQuestInformation (quest);
+
+
+		if (quest.isQuestAvailable)
+		{
+			activeQuests.Add(quest);
+			questMenuItems[activeQuests.Count - 1].SetQuestInformation(quest);
+			quest.isOnQuest = true;
+			quest.isQuestAvailable = false;
+		}
+		else
+		{
+			print("Quest Not Available");
+		}
 	}
 
 	public void SetQuestDescriptionWindow (int index) {
@@ -154,17 +170,22 @@ public class QuestsMenuManager : MonoBehaviour {
 
 		print ("Quest is complete: " + quest.isComplete);
 
-		activeQuests.Remove(quest);
-		
+	}
 
-		if(quest.isRepeatable)
+	private void RemoveCompletedQuest(QuestData quest)
+	{
+		quest.isComplete = false;
+		quest.isOnQuest = false;
+
+		activeQuests.Remove(quest);
+
+
+		if (quest.isRepeatable)
 		{
 			quest.isQuestAvailable = true;
-			quest.isOnQuest = false;
 		}
 
 		Init();
-
 	}
 	#endregion
 }
