@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Reflection;
 
 public class QuestMenuItem : MonoBehaviour {
 
 	[SerializeField] private GameObject mainWindow_GO;
 	[SerializeField] private TextMeshProUGUI questTitle_Txt;
 	[SerializeField] private Image factionLogo_Img;
+
 	private int indexInList;
 
 	public void SetIndexInList (int i) {

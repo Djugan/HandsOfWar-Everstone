@@ -17,6 +17,7 @@ public class QuestsMenuManager : MonoBehaviour {
 	[SerializeField] private TextMeshProUGUI [] questObjectives_Txt;
 	[SerializeField] private GameObject [] questObjectives_GO;
 	[SerializeField] private TextMeshProUGUI questDescription_Txt;
+	[SerializeField] private QuestMenuLoot[] rewardSlots_GO;
 
 	private List<QuestData> activeQuests;
 
@@ -110,7 +111,40 @@ public class QuestsMenuManager : MonoBehaviour {
 
 		questDescription_Txt.text = quest.questDescription;
 		questDescriptionWindow_GO.SetActive (true);
-		
+
+		int slot = -1;
+
+		for (int i = 0; i < quest.guaranteedRewards.Length; i++)
+		{
+			rewardSlots_GO[i].SetItem(quest, i);
+			slot++;
+			print(slot);
+		}
+
+		if (quest.goldReward > 0)
+		{
+			
+			slot++;
+			print(slot);
+			rewardSlots_GO[slot].SetGold(quest);
+		}
+
+		if (quest.expReward > 0)
+		{
+			if (quest.goldReward > 0)
+			{
+				print(slot);
+				slot++;
+				rewardSlots_GO[slot].SetExp(quest);
+			}
+			else 
+			{
+				
+				slot++;
+				rewardSlots_GO[slot].SetExp(quest);
+			}
+		}
+
 	}
 	#endregion
 
