@@ -114,6 +114,50 @@ public class QuestMenuLoot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		}
 	}
 
+	public void SetSelectedItem(QuestData quest, int index)
+	{
+		itemIcon_Img.sprite = quest.selectedRewards[index].icon;
+		itemName_Txt.text = quest.selectedRewards[index].itemName;
+
+		if (quest.selectedRewards[index].isEquippable)
+		{
+			if (quest.selectedRewards[index].rarity == Rarity.Common)
+			{
+				itemName_Txt.color = HandsOfWarColors.green;
+				itemIconBackground_Img.sprite = SharedGraphics.instance.inventoryItem_Common;
+			}
+			else if (quest.selectedRewards[index].rarity == Rarity.Rare)
+			{
+				itemName_Txt.color = HandsOfWarColors.blue;
+				itemIconBackground_Img.sprite = SharedGraphics.instance.inventoryItem_Rare;
+			}
+			else if (quest.selectedRewards[index].rarity == Rarity.Epic)
+			{
+				itemName_Txt.color = HandsOfWarColors.purple;
+				itemIconBackground_Img.sprite = SharedGraphics.instance.inventoryItem_Epic;
+			}
+			else
+			{
+				if (quest.selectedRewards[index].isQuestItem)
+				{
+					itemName_Txt.color = HandsOfWarColors.yellow;
+					itemIconBackground_Img.sprite = SharedGraphics.instance.inventoryItem_Quest;
+				}
+				else
+				{
+					itemName_Txt.color = HandsOfWarColors.white;
+					itemIconBackground_Img.sprite = SharedGraphics.instance.inventoryItem_Basic;
+				}
+			}
+
+			//ClearItems();
+			itemData = quest.selectedRewards[index];
+			ShowSlot();
+
+		}
+	}
+
+
 	void ClearItems()
 	{
 		gold = 0;

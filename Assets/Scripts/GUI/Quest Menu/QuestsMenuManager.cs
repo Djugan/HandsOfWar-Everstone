@@ -112,7 +112,7 @@ public class QuestsMenuManager : MonoBehaviour {
 		questDescription_Txt.text = quest.questDescription;
 		questDescriptionWindow_GO.SetActive (true);
 
-		int slot = -1;
+		int slot = 0;
 
 		for (int i = 0; i < quest.guaranteedRewards.Length; i++)
 		{
@@ -120,29 +120,27 @@ public class QuestsMenuManager : MonoBehaviour {
 			slot++;
 			print(slot);
 		}
+			
+		for (int i = 0; i < quest.selectedRewards.Length; i++)
+		{
+			Button selectButton = rewardSlots_GO[slot].GetComponent<Button>();
+			selectButton.interactable = true;
+			rewardSlots_GO[slot].SetSelectedItem(quest, i);
+			slot++;
+		}
 
 		if (quest.goldReward > 0)
 		{
 			
-			slot++;
 			print(slot);
 			rewardSlots_GO[slot].SetGold(quest);
+			slot++;
 		}
 
 		if (quest.expReward > 0)
 		{
-			if (quest.goldReward > 0)
-			{
-				print(slot);
-				slot++;
 				rewardSlots_GO[slot].SetExp(quest);
-			}
-			else 
-			{
-				
 				slot++;
-				rewardSlots_GO[slot].SetExp(quest);
-			}
 		}
 
 	}
