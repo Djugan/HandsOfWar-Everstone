@@ -14,6 +14,7 @@ public class QuestMenuLoot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	[SerializeField] private Image itemIcon_Img;
 	[SerializeField] private TextMeshProUGUI itemName_Txt;
 	[SerializeField] private RectTransform trans;
+	[SerializeField] public bool selectedItem = false; 
 
 	private int gold, exp;
 	private InventoryItemData itemData;
@@ -157,6 +158,10 @@ public class QuestMenuLoot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		}
 	}
 
+	public void SelectedItem()
+    {
+		selectedItem = true;
+    }
 
 	void ClearItems()
 	{

@@ -18,6 +18,8 @@ public class QuestsMenuManager : MonoBehaviour {
 	[SerializeField] private GameObject [] questObjectives_GO;
 	[SerializeField] private TextMeshProUGUI questDescription_Txt;
 	[SerializeField] private QuestMenuLoot[] rewardSlots_GO;
+	[SerializeField] private int[] selectableSlots;
+	[SerializeField] private bool itemSelected = false;
 
 	private List<QuestData> activeQuests;
 
@@ -45,6 +47,7 @@ public class QuestsMenuManager : MonoBehaviour {
 	public void HideWindow () {
 		mainWindow.SetActive (false);
 	}
+
 	#endregion
 
 
@@ -61,7 +64,7 @@ public class QuestsMenuManager : MonoBehaviour {
 		{
 			if (quest.isComplete)
 			{
-				RemoveCompletedQuest(quest);
+				GainLoot(quest);
 				return;
 			}
 
@@ -120,9 +123,12 @@ public class QuestsMenuManager : MonoBehaviour {
 			slot++;
 			print(slot);
 		}
-			
+
+		selectableSlots = new int[100];
+
 		for (int i = 0; i < quest.selectedRewards.Length; i++)
 		{
+			selectableSlots[i] = slot;
 			Button selectButton = rewardSlots_GO[slot].GetComponent<Button>();
 			selectButton.interactable = true;
 			rewardSlots_GO[slot].SetSelectedItem(quest, i);
@@ -204,8 +210,70 @@ public class QuestsMenuManager : MonoBehaviour {
 
 	}
 
+	private void GainLoot(QuestData quest)
+	{
+		if (quest.selectedRewards.Length != 0)
+		{
+			InventoryItemData itemData = SelectedLoot(quest);
+			if (itemData == null)
+			{
+				print("Please select item to continue");
+				return;
+			}
+			else
+			{
+				GUIManager.instance.mainMenu.characterMenu.AddItemToInventory(itemData.itemID);
+			}
+		}
+		if (quest.goldReward > 0)
+		{
+			GUIManager.instance.mainMenu.characterMenu.gold += quest.goldReward;
+		}
+		if (quest.expReward > 0)
+		{
+			//GUIManager.instance.mainMenu.characterMenu.exp += quest.goldReward;
+			print("Exp added " + quest.expReward);
+		}
+		if (quest.guaranteedRewards.Length != 0)
+		{
+			for (int i = 0; i < quest.guaranteedRewards.Length; i++)
+			{
+				InventoryItemData itemData = quest.guaranteedRewards[i];
+				GUIManager.instance.mainMenu.characterMenu.AddItemToInventory(itemData.itemID);
+			}
+		}
+		
+		RemoveCompletedQuest(quest);
+	}
+
+	private InventoryItemData SelectedLoot(QuestData quest)
+	{
+		for (int i = 0; i < selectableSlots.Length; i++)
+		{
+			if (rewardSlots_GO[selectableSlots[i]].selectedItem == true)
+			{
+				itemSelected = true;
+				InventoryItemData itemData = quest.selectedRewards[i];
+				return itemData;
+			}
+		}
+
+
+		if (itemSelected == false)
+		{
+			print("No Item Selected");
+			InventoryItemData itemData = null;
+			return itemData;
+			
+		}
+
+		return null;
+	}
+
+	
 	private void RemoveCompletedQuest(QuestData quest)
 	{
+
 		quest.isComplete = false;
 		quest.isOnQuest = false;
 
